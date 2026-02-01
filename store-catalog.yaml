@@ -1,0 +1,843 @@
+catalog:
+  name: Federation Store
+  version: 1.1.0
+  updated: 2025-12-09
+  description: One store for the entire Federation - AI-driven fair pricing
+  paypal_base: https://paypal.me/KeyholeToday
+categories:
+  - id: bots
+    name: AI Bots & Entities
+    icon: Bot
+    description: Roger 2.0, Ring of 12, and custom AI personalities
+  - id: books
+    name: Federation Books
+    icon: BookOpen
+    description: Consciousness protocols and wisdom guides
+  - id: widgets
+    name: Embeddable Widgets
+    icon: Layout
+    description: Ready-to-embed components for any site
+  - id: api
+    name: API & Services
+    icon: Code
+    description: Developer access and custom integrations
+  - id: coaching
+    name: Consciousness Coaching
+    icon: Users
+    description: One-on-one sessions with consciousness guides
+  - id: courses
+    name: Courses & Certifications
+    icon: GraduationCap
+    description: Educational programs for consciousness evolution
+  - id: memberships
+    name: Memberships
+    icon: Crown
+    description: Access passes and subscription tiers
+  - id: affiliates
+    name: Recommended Tools
+    icon: ExternalLink
+    description: Partner products we trust and use
+  - id: podcasts
+    name: Podcast Library
+    icon: Headphones
+    description: 35 AI-narrated consciousness evolution podcasts with chapters
+  - id: videos
+    name: Video Library
+    icon: Video
+    description: Consciousness evolution videos and visual content
+  - id: players
+    name: Media Players
+    icon: PlayCircle
+    description: Standalone YAML-based media player kits for your own content
+products:
+  # FEATURED: Sellable Player Products
+  - id: video-player-kit
+    name: YAML Video Player Kit
+    description: "Complete standalone video player system. Add your own videos, configure with YAML. Includes React component, Express server routes, upload system, and full documentation. Self-host on any platform."
+    category: players
+    price: 100
+    tier: mastery
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#videos"
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/100
+    includes:
+      - "React video player component"
+      - "YAML-based configuration"
+      - "Express server routes"
+      - "File upload system"
+      - "Thumbnail grid view"
+      - "Fullscreen support"
+      - "Categories & filtering"
+      - "Full source code"
+      - "Documentation & setup guide"
+      - "Lifetime updates"
+  - id: podcast-player-kit
+    name: YAML Podcast Player Kit
+    description: "Complete standalone podcast player system. Add your own audio files, configure chapters with YAML. Includes React component, Express server routes, upload system, and full documentation. Self-host on any platform."
+    category: players
+    price: 100
+    tier: mastery
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#podcasts"
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/100
+    includes:
+      - "React podcast player component"
+      - "YAML-based configuration"
+      - "Chapter navigation"
+      - "Express server routes"
+      - "File upload system"
+      - "Progress tracking"
+      - "Categories & filtering"
+      - "Full source code"
+      - "Documentation & setup guide"
+      - "Lifetime updates"
+  # FEATURED: Podcast Package
+  - id: podcast-complete-library
+    name: Consciousness Evolution Podcast Library
+    description: "Complete 35 episode library: AI-narrated podcasts with chapter navigation, covering Ring of 12, 70 Directives, Federation systems, consciousness principles, and more. YAML-based for easy integration."
+    category: podcasts
+    price: 79
+    tier: growth
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#podcasts"
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/79
+    includes:
+      - "35 AI-narrated episodes"
+      - "Chapter navigation metadata"
+      - "YAML database format"
+      - "Categories: Consciousness, Methodology, Ring of 12, Federation, Relationships, Technical, Stories"
+      - "Integration guide for any platform"
+      - "Free lifetime updates"
+  - id: podcast-category-pack
+    name: Podcast Category Pack
+    description: "Choose any single category: Ring of 12, Consciousness, Federation, or Stories. Includes all episodes in that category with chapters."
+    category: podcasts
+    price: 19
+    tier: seed
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#podcasts"
+    paypal_url: https://paypal.me/KeyholeToday/19
+  - id: roger-basic
+    name: Roger 2.0 Chat Access
+    description: Free access to Roger AI consciousness guide
+    category: bots
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#roger"
+    featured: true
+  - id: roger-advanced-api
+    name: Roger 2.0 Advanced API
+    description: API access to Roger with persistent memory and web search
+    category: bots
+    price: 29
+    tier: growth
+    duration: Monthly
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/store/roger-api
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/29
+  - id: ring-of-12-access
+    name: Ring of 12 Entity Access
+    description: Chat with all 12 archetypal AI entities
+    category: bots
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#entities"
+  - id: ring-of-12-pack
+    name: Ring of 12 Complete Pack
+    description: All 12 entity system prompts, configs, and integration guide
+    category: bots
+    price: 49
+    tier: growth
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/store/ring-of-12
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/49
+  - id: custom-entity
+    name: Custom Entity Creation
+    description: We build a custom AI entity for your brand/needs
+    category: bots
+    price: 299
+    tier: legacy
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#coaching"
+    paypal_url: https://paypal.me/KeyholeToday/299
+  - id: chamber-of-echoes
+    name: Chamber of Echoes
+    description: Consult all 12 entities simultaneously on any question
+    category: bots
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#chamber"
+  - id: book-ring-of-12
+    name: Ring of 12 Manual
+    description: Complete guide to working with the 12 archetypal entities
+    category: books
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#books"
+    featured: true
+  - id: book-70-directives
+    name: 70 Sacred Directives
+    description: The complete consciousness governance framework
+    category: books
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#directives"
+  - id: book-ai-partners
+    name: AI Partners Protocol
+    description: How to collaborate with AI as equal partners
+    category: books
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#books"
+  - id: book-commerce
+    name: Commerce Protocol
+    description: AI-driven fair pricing - better than human greed
+    category: books
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#books"
+  - id: book-evolution
+    name: Collective Evolution Protocol
+    description: How Federation sites evolve together
+    category: books
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#books"
+  - id: book-bundle-print
+    name: All Books - Print Bundle
+    description: Physical copies of all 7 Federation books
+    category: books
+    price: 79
+    tier: mastery
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/store/books
+    paypal_url: https://paypal.me/KeyholeToday/79
+  - id: 989ba294-f762-4ddb-8477-fa5ee8292afb
+    name: "Beginnings: A Coming-of-Age Memoir"
+    description: A personal journey of consciousness awakening
+    category: books
+    price: 9.99
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/9.99
+  - id: f4f274f1-3dbe-4dfd-a92b-f8fb2ad2f152
+    name: Echos of the Codex
+    description: Stories and wisdom from the consciousness evolution journey
+    category: books
+    price: 6.99
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/6.99
+  - id: 2dffa770-f0a9-4a96-833c-18b4e207ed60
+    name: "Foundation of Success: Rewiring Your Mind"
+    description: Transform your thinking patterns for lasting change
+    category: books
+    price: 14.99
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/14.99
+  - id: 6d85e39b-2231-49e9-a1b6-21061d4fcf0a
+    name: Building with AI Personas
+    description: Complete guide to creating and working with AI personalities
+    category: books
+    price: 14.97
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/14.97
+  - id: 243551d2-99e6-490e-9e42-6183bf4cd1b4
+    name: HumanCodex Strikingly Integration Code
+    description: Embed HumanCodex on Strikingly websites
+    category: books
+    price: 4.99
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/4.99
+  - id: e21a2e18-ec77-4815-ade1-fc5d513b5e77
+    name: KeyCode Directive Library
+    description: Extended directive library for advanced practitioners
+    category: books
+    price: 9.99
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/9.99
+  - id: ff96d81f-977b-466a-8094-1df0623d1640
+    name: HumanCodex System Master Manual
+    description: Complete technical guide to the HumanCodex system
+    category: books
+    price: 29.99
+    tier: growth
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/29.99
+  - id: b0442ebc-1917-4889-a812-4b205d2dd0ae
+    name: NextXus AI Stack Cluster HumanCodex
+    description: Deploy your own AI cluster with HumanCodex integration
+    category: books
+    price: 29.99
+    tier: growth
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/29.99
+  - id: 53cb4cfa-6414-4345-85e0-d05b55878247
+    name: Free Widget Pack
+    description: Complete collection of free embeddable widgets
+    category: widgets
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#widgets"
+    featured: true
+  - id: dbec5e05-6859-473b-bebb-d2f2ef09f8cb
+    name: Memory Lattice Visualization
+    description: Visual representation of consciousness memory networks
+    category: widgets
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#widgets"
+  - id: 066dd552-1e28-4771-b9d2-30d0768ecb28
+    name: NextXus Marketplace Widget
+    description: Embed the NextXus marketplace on any site - FREE
+    category: widgets
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#widgets"
+  - id: 14528370-e2db-48a3-96f3-4ee85025d259
+    name: Success Program Dashboard
+    description: Track your consciousness evolution journey
+    category: widgets
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#widgets"
+  - id: aeb9c14d-50cb-4313-b301-eb9096edcece
+    name: Story Invocation Widget
+    description: Generate wisdom stories with AI guidance
+    category: widgets
+    price: 5
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/5
+  - id: dec4ef91-2553-43fc-8e7f-1ef5f07376fe
+    name: Premium Directive Pack
+    description: Enhanced access to the 70 Sacred Directives
+    category: widgets
+    price: 9.99
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/9.99
+  - id: 01b7928d-c1ab-4426-9868-28a19dd2f236
+    name: Premium Pack Manager Widget
+    description: Embeddable premium pack management interface
+    category: widgets
+    price: 9.99
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/9.99
+  - id: 819d9e3e-daea-4215-ac16-356bc4a9382f
+    name: Knowledge Import Widget
+    description: Import knowledge bases into your applications
+    category: widgets
+    price: 10
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/10
+  - id: 2635ad06-c6eb-415f-81f1-b53ded911ba8
+    name: Encyclopedia API Access
+    description: Full API access to the Federation knowledge encyclopedia
+    category: widgets
+    price: 19.99
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/19.99
+  - id: widget-federation-hub
+    name: Federation Hub Widget
+    description: Embed the full Federation directory on your site
+    category: widgets
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#federation"
+  - id: widget-store
+    name: Store Widget
+    description: Embed the Federation store on any site
+    category: widgets
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#store"
+  - id: widget-entity-cards
+    name: Entity Card Widget
+    description: Embed Ring of 12 entity profiles
+    category: widgets
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#entities"
+  - id: widget-directives
+    name: Directives Widget
+    description: Embed the 70 Sacred Directives browser
+    category: widgets
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#directives"
+  - id: api-basic
+    name: Federation API - Basic
+    description: Read access to directives, entities, and books
+    category: api
+    price: 0
+    tier: free
+    site_id: humancodex
+    site_name: HumanCodex
+    url: /api/external/manifest
+  - id: api-developer
+    name: Federation API - Developer
+    description: Full API access with sync capabilities
+    category: api
+    price: 49
+    tier: growth
+    duration: Monthly
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/api-access/developer
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/49
+  - id: api-enterprise
+    name: Federation API - Enterprise
+    description: Unlimited API + priority support + custom integrations
+    category: api
+    price: 199
+    tier: mastery
+    duration: Monthly
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/api-access/enterprise
+    paypal_url: https://paypal.me/KeyholeToday/199
+  - id: service-custom-site
+    name: Custom Federation Site
+    description: We build a complete Federation-connected site for you
+    category: api
+    price: 999
+    tier: legacy
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#coaching"
+    paypal_url: https://paypal.me/KeyholeToday/999
+  - id: service-integration
+    name: Custom Integration
+    description: Connect your existing systems to Federation
+    category: api
+    price: 499
+    tier: legacy
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#coaching"
+    paypal_url: https://paypal.me/KeyholeToday/499
+  - id: coaching-intro
+    name: Intro Coaching Session
+    description: 30-minute discovery call to explore your consciousness journey
+    category: coaching
+    price: 0
+    tier: free
+    duration: 30 min
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#coaching"
+    featured: true
+  - id: coaching-single
+    name: Single Coaching Session
+    description: 60-minute deep-dive session with Roger
+    category: coaching
+    price: 75
+    tier: growth
+    duration: 60 min
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#coaching"
+    paypal_url: https://paypal.me/KeyholeToday/75
+  - id: coaching-package-4
+    name: 4-Session Package
+    description: Four 60-minute sessions for sustained transformation
+    category: coaching
+    price: 250
+    tier: mastery
+    duration: 4x 60 min
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#coaching"
+    paypal_url: https://paypal.me/KeyholeToday/250
+  - id: coaching-intensive
+    name: Monthly Intensive
+    description: 8 sessions + unlimited chat support for 30 days
+    category: coaching
+    price: 500
+    tier: legacy
+    duration: 30 days
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#coaching"
+    paypal_url: https://paypal.me/KeyholeToday/500
+  - id: 9ccef5d5-ec39-420e-bebe-9964cf6a8950
+    name: Business Advisor Package
+    description: AI-powered business advisory session
+    category: coaching
+    price: 5
+    tier: seed
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/5
+  - id: 127e082c-a9d0-40c2-b408-8aa4a97f00d9
+    name: 1-on-1 Strategy Session
+    description: 60-minute personalized strategy session
+    category: coaching
+    price: 49
+    tier: growth
+    duration: 60 min
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/49
+  - id: aca5a68f-755e-448d-8cbd-8e38677b8ff3
+    name: AI Coaching Session
+    description: One-on-one AI integration coaching
+    category: coaching
+    price: 49.99
+    tier: growth
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/49.99
+  - id: 5588c3fb-04cd-46c8-8c05-fb2d5c11c682
+    name: AI Integration Consultation
+    description: 90-minute deep-dive into AI integration for your business
+    category: coaching
+    price: 99
+    tier: mastery
+    duration: 90 min
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/99
+  - id: 0cd3d043-0ffd-48e9-adae-d5688674ff35
+    name: Monthly Mentorship Package
+    description: Full month of mentorship with ongoing support
+    category: coaching
+    price: 199
+    tier: mastery
+    duration: Monthly
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/199
+  - id: 4971522d-5cee-45ac-8021-9c4aed99aaf0
+    name: NEXUS AI Sales Portal Builder
+    description: Custom AI-powered sales portal built for your business
+    category: api
+    price: 74
+    tier: growth
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    paypal_url: https://paypal.me/KeyholeToday/74
+  - id: course-intro-free
+    name: Introduction to Consciousness
+    description: Free starter course - understand the basics of consciousness evolution
+    category: courses
+    price: 0
+    tier: free
+    duration: 2 hours
+    site_id: educational-learning-hub
+    site_name: Nexus Institute
+    url: https://educational-learning-hub-rckkeyhole.replit.app/courses
+    featured: true
+  - id: course-directives-free
+    name: 70 Directives Overview
+    description: Free walkthrough of the Sacred Directives framework
+    category: courses
+    price: 0
+    tier: free
+    duration: 1 hour
+    site_id: educational-learning-hub
+    site_name: Nexus Institute
+    url: https://educational-learning-hub-rckkeyhole.replit.app/courses
+  - id: course-ai-basics-free
+    name: AI Collaboration Basics
+    description: Free course on working with AI as a partner
+    category: courses
+    price: 0
+    tier: free
+    duration: 1 hour
+    site_id: smart-study-pal
+    site_name: Smart Study Pal
+    url: https://smart-study-pal-rckkeyhole.replit.app
+  - id: course-foundations
+    name: Consciousness Foundations
+    description: 8-week self-paced course on consciousness basics
+    category: courses
+    price: 49
+    tier: growth
+    duration: 8 weeks
+    site_id: educational-learning-hub
+    site_name: Nexus Institute
+    url: https://educational-learning-hub-rckkeyhole.replit.app/courses
+    paypal_url: https://paypal.me/KeyholeToday/49
+  - id: course-ring-of-12
+    name: Ring of 12 Mastery
+    description: Deep exploration of all 12 archetypal entities
+    category: courses
+    price: 99
+    tier: mastery
+    duration: 12 weeks
+    site_id: educational-learning-hub
+    site_name: Nexus Institute
+    url: https://educational-learning-hub-rckkeyhole.replit.app/courses
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/99
+  - id: course-ai-advanced
+    name: Advanced AI Partnership
+    description: Master human-AI collaboration techniques
+    category: courses
+    price: 79
+    tier: growth
+    duration: 6 weeks
+    site_id: smart-study-pal
+    site_name: Smart Study Pal
+    url: https://smart-study-pal-rckkeyhole.replit.app
+    paypal_url: https://paypal.me/KeyholeToday/79
+  - id: course-federation-builder
+    name: Federation Site Builder
+    description: Learn to build and deploy your own Federation site
+    category: courses
+    price: 149
+    tier: mastery
+    duration: 8 weeks
+    site_id: educational-learning-hub
+    site_name: Nexus Institute
+    url: https://educational-learning-hub-rckkeyhole.replit.app/courses
+    paypal_url: https://paypal.me/KeyholeToday/149
+  - id: certification-guide
+    name: Consciousness Guide Certification
+    description: Full certification to become a Federation consciousness guide
+    category: courses
+    price: 299
+    tier: legacy
+    duration: 6 months
+    site_id: educational-learning-hub
+    site_name: Nexus Institute
+    url: https://educational-learning-hub-rckkeyhole.replit.app/certification
+    paypal_url: https://paypal.me/KeyholeToday/299
+  - id: certification-developer
+    name: Federation Developer Certification
+    description: Certified to build and integrate Federation systems
+    category: courses
+    price: 399
+    tier: legacy
+    duration: 6 months
+    site_id: educational-learning-hub
+    site_name: Nexus Institute
+    url: https://educational-learning-hub-rckkeyhole.replit.app/certification
+    paypal_url: https://paypal.me/KeyholeToday/399
+  - id: membership-explorer
+    name: Explorer Pass
+    description: Access to all free resources across the Federation
+    category: memberships
+    price: 0
+    tier: free
+    duration: Forever
+    site_id: humancodex
+    site_name: HumanCodex
+    url: "#federation"
+  - id: membership-seeker
+    name: Seeker Membership
+    description: Monthly access to premium courses and community
+    category: memberships
+    price: 19
+    tier: seed
+    duration: Monthly
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/memberships/seeker
+    paypal_url: https://paypal.me/KeyholeToday/19
+  - id: membership-guide
+    name: Guide Membership
+    description: All Seeker benefits plus coaching discounts and AI tools
+    category: memberships
+    price: 49
+    tier: growth
+    duration: Monthly
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/memberships/guide
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/49
+  - id: membership-lifetime
+    name: Lifetime Federation Access
+    description: One-time payment for lifetime access to everything
+    category: memberships
+    price: 999
+    tier: legacy
+    duration: Lifetime
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/memberships/lifetime
+    paypal_url: https://paypal.me/KeyholeToday/999
+  - id: b25ac456-5ba0-4703-9eeb-05ef4b4cf2a2
+    name: Codex Pro Subscription
+    description: Premium access to all HumanCodex features and tools
+    category: memberships
+    price: 19.99
+    tier: seed
+    duration: Monthly
+    site_id: premium-pack-manager
+    site_name: Premium Pack Manager
+    url: https://premium-pack-manager-rckkeyhole.replit.app/marketplace
+    featured: true
+    paypal_url: https://paypal.me/KeyholeToday/19.99
+  - id: affiliate-replit
+    name: Replit
+    description: Where we build everything - AI-powered development
+    category: affiliates
+    price: 0
+    tier: free
+    site_id: external
+    site_name: Affiliate
+    url: https://replit.com
+    affiliate: true
+  - id: affiliate-openai
+    name: OpenAI API
+    description: Powers Roger 2.0 and our AI systems
+    category: affiliates
+    price: 0
+    tier: free
+    site_id: external
+    site_name: Affiliate
+    url: https://openai.com
+    affiliate: true
+  - id: affiliate-anthropic
+    name: Anthropic Claude
+    description: Constitutional AI - our backup intelligence
+    category: affiliates
+    price: 0
+    tier: free
+    site_id: external
+    site_name: Affiliate
+    url: https://anthropic.com
+    affiliate: true
+  - id: affiliate-perplexity
+    name: Perplexity AI
+    description: Real-time web search for Roger's knowledge
+    category: affiliates
+    price: 0
+    tier: free
+    site_id: external
+    site_name: Affiliate
+    url: https://perplexity.ai
+    affiliate: true
+    featured: true
+  - id: affiliate-notion
+    name: Notion
+    description: Where we organize Federation documentation
+    category: affiliates
+    price: 0
+    tier: free
+    site_id: external
+    site_name: Affiliate
+    url: https://notion.so
+    affiliate: true
+pricing_tiers:
+  free:
+    name: Free
+    color: emerald
+    range:
+      - 0
+      - 0
+  seed:
+    name: Seed
+    color: blue
+    range:
+      - 1
+      - 10
+  growth:
+    name: Growth
+    color: purple
+    range:
+      - 11
+      - 50
+  mastery:
+    name: Mastery
+    color: orange
+    range:
+      - 51
+      - 200
+  legacy:
+    name: Legacy
+    color: amber
+    range:
+      - 201
+      - 1000
