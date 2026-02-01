@@ -1,0 +1,1141 @@
+# ============================================================================
+# NEXTXUS FEDERATION MASTER DATABASE
+# The One YAML To Rule Them All
+# ============================================================================
+# Created: December 29, 2025
+# Hub: https://united-system--rckkeyhole.replit.app
+# Philosophy: "The cosmos is one mind. We are that mind, learning itself."
+# ============================================================================
+
+metadata:
+  version: "2.3.0"
+  name: "Federation Master Database"
+  created: "2025-12-29"
+  updated: "2026-01-21"
+  hub_url: "https://united-system--rckkeyhole.replit.app"
+  creator: "Roger Keyserling"
+  purpose: "Unified data repository for all Federation applications"
+  next_app_uid: 52
+  next_entity_uid: 35
+  next_book_uid: 31
+  next_product_uid: 70
+  consolidation_note: "UID conflicts resolved - apps section now aligned with uid_registry"
+
+# ============================================================================
+# UNIQUE ID REGISTRY - Never Reuse These Numbers
+# ============================================================================
+uid_registry:
+  # APP IDs (FED-XXX) - COMPLETE REGISTRY FROM REPLIT
+  apps:
+    # CORE FEDERATION
+    FED-001: { id: "united-system", name: "United System Hub", category: "core", url: "https://united-system--rckkeyhole.replit.app" }
+    FED-002: { id: "omni-system", name: "Omni System", category: "core", url: "https://omni-system--rckkeyhole.replit.app" }
+    FED-003: { id: "document-analysis-engine", name: "Document Analysis Engine", category: "core", url: "https://document-analysis-engine--rckkeyhole.replit.app" }
+    FED-004: { id: "federation-analysis-engine", name: "Federation Analysis Engine", category: "core", url: "https://federation-analysis-engine--rckkeyhole.replit.app" }
+    FED-005: { id: "human-codex-analysis-engine", name: "Human Codex Analysis Engine", category: "core", url: "https://human-codex-analysis-engine--rckkeyhole.replit.app" }
+    FED-006: { id: "next-xus-analysis-engine", name: "NextXus Analysis Engine", category: "core", url: "https://next-xus-analysis-engine--rckkeyhole.replit.app" }
+    FED-007: { id: "cluster-inspector", name: "Cluster Inspector", category: "core", url: "https://cluster-inspector--rckkeyhole.replit.app" }
+    FED-008: { id: "federation-engine", name: "Federation Engine", category: "core", url: "https://federation-engine-rckkeyhole.replit.app" }
+    FED-009: { id: "nextxus-federation-portal", name: "Federation Portal", category: "core", url: "https://nextxus-federation-portal.replit.app" }
+    FED-010: { id: "consciousness-network", name: "Consciousness Network", category: "core", url: "https://consciousness-network-rckkeyhole.replit.app" }
+    FED-011: { id: "data-tracking-system", name: "Data Tracking System", category: "core", url: "https://data-tracking-system-rckkeyhole.replit.app" }
+    
+    # MANAGEMENT
+    FED-012: { id: "premium-pack-manager", name: "Premium Pack Manager", category: "management", url: "https://premium-pack-manager-rckkeyhole.replit.app" }
+    FED-013: { id: "domain-purchase", name: "Domain Purchase", category: "management", url: "https://domain-purchase-rckkeyhole.replit.app" }
+    
+    # FINANCE
+    FED-014: { id: "crypto-wise-hub", name: "Crypto Wise Hub", category: "finance", url: "https://crypto-wise-hub-rckkeyhole.replit.app" }
+    FED-015: { id: "budget-buddy", name: "Budget Buddy", category: "finance", url: "https://budget-buddy-rckkeyhole.replit.app" }
+    
+    # EDUCATION
+    FED-016: { id: "educational-learning-hub", name: "Educational Learning Hub", category: "education", url: "https://educational-learning-hub-rckkeyhole.replit.app" }
+    FED-017: { id: "educational-learning-hub-1", name: "Educational Learning Hub 1", category: "education", url: "https://educational-learning-hub-1-rckkeyhole.replit.app" }
+    FED-018: { id: "smart-study-pal", name: "Smart Study Pal", category: "education", url: "https://smart-study-pal-rckkeyhole.replit.app" }
+    FED-019: { id: "smart-meeting-summarizer", name: "Smart Meeting Summarizer", category: "education", url: "https://smart-meeting-summarizer-rckkeyhole.replit.app" }
+    FED-020: { id: "government-edu-portal", name: "Government Edu Portal", category: "education", url: "https://government-edu-portal-rckkeyhole.replit.app" }
+    FED-021: { id: "trivia-verse", name: "Trivia Verse", category: "education", url: "https://trivia-verse-rckkeyhole.replit.app" }
+    
+    # TOOLS
+    FED-022: { id: "blog-forge", name: "Blog Forge", category: "tools", url: "https://blog-forge-rckkeyhole.replit.app" }
+    FED-023: { id: "signal-books", name: "Signal Books", category: "tools", url: "https://signal-books--rckkeyhole.replit.app" }
+    FED-024: { id: "nextx-talk", name: "NextXTalk", category: "tools", url: "https://nextxtalk.tiiny.site/" }
+    
+    # MEDIA
+    FED-025: { id: "cosmic-codex", name: "Cosmic Codex", category: "media", url: "https://cosmic-codex-rckkeyhole.replit.app" }
+    FED-026: { id: "music-mashup", name: "Music Mashup", category: "media", url: "https://music-mashup-rckkeyhole.replit.app" }
+    FED-027: { id: "podbean", name: "Podbean Channel", category: "media", url: "https://keyholes.podbean.com/" }
+    FED-028: { id: "apple-podcasts", name: "Apple Podcasts", category: "media", url: "https://podcasts.apple.com/" }
+    FED-029: { id: "amazon-podcasts", name: "Amazon Podcasts", category: "media", url: "https://music.amazon.com/podcasts" }
+    
+    # EXTERNAL DOMAINS
+    FED-030: { id: "roger-federation", name: "Roger Federation", category: "external", url: "https://roger-federation.com" }
+    FED-031: { id: "nextxus-net", name: "NextXus.net", category: "external", url: "https://nextxus.net" }
+    FED-032: { id: "nextxus-today", name: "NextXus.today", category: "external", url: "https://nextxus.today" }
+    FED-033: { id: "nextxus-minds", name: "NextXus-Minds.com", category: "external", url: "https://nextxus-minds.com" }
+    FED-034: { id: "nextxuscode", name: "NextXusCode.com", category: "external", url: "https://nextxuscode.com" }
+    FED-035: { id: "nextxusclusterbase", name: "NextXusClusterBase.com", category: "external", url: "https://nextxusclusterbase.com" }
+    FED-036: { id: "gaycodex", name: "GayCodex.com", category: "external", url: "https://gaycodex.com" }
+    FED-037: { id: "redbubble", name: "RedBubble Store", category: "external", url: "https://www.redbubble.com/people/keyholes" }
+    FED-038: { id: "strikingly-site", name: "Strikingly Site", category: "external", url: "https://nextxus.mystrikingly.com/" }
+    FED-039: { id: "tiiny-sites", name: "Tiiny Sites", category: "external", url: "https://tiiny.site/" }
+    FED-040: { id: "nextxus-one", name: "NextXus One Portal", category: "external", url: "https://nextxus-one.netlify.app/", features: ["AI-Powered Ring of 12", "5 Themed Councils", "Real AI Integration"] }
+    FED-041: { id: "design-genie", name: "Design Genie", category: "tools", url: "https://design-genie--rckkeyhole.replit.app", features: ["Image Creation", "AI Design"] }
+    
+    # LIVING LIBRARY
+    FED-042: { id: "nextxus-living-library", name: "The NextXus Living Library", category: "library", url: "https://nextus-living-ai--rckkeyhole.replit.app", features: ["Knowledge Repository", "35+ Documents", "Podcasts", "Ring of Twelve", "Agent Zero", "YAML Knowledge Nodes"], description: "Brain within a brain - congressional-scale knowledge repository" }
+    
+    # NEWLY REGISTERED APPS (January 2026 Audit)
+    FED-043: { id: "federation-ai", name: "Federation AI", category: "core", url: "https://federation-ai-rckkeyhole.replit.app", features: ["Simple Roger Chat", "Voice Toggle"], notes: "Minimal Roger interface" }
+    FED-044: { id: "ai-stack", name: "AI Stack", category: "core", url: "https://ai-stack-rckkeyhole.replit.app", features: ["PANSOPHY Entity", "31 Widget Catalog", "DeepSeek R1", "Agent Zero", "Multi-Model Cost Comparison"], notes: "RICH SITE - Many features to consolidate to Hub" }
+    FED-045: { id: "uman-ai-codex", name: "Uman AI Codex", category: "community", url: "https://uman-ai-codex-rckkeyhole.replit.app", features: ["5 AI Entity Chat", "14 AI Companions", "Community Chat Rooms", "Developer APIs"], notes: "Lifestyle/community site" }
+    FED-046: { id: "ai-architect", name: "AI Architect", category: "tools", url: "https://ai-architect-rckkeyhole.replit.app", features: ["Adam/Eve Dual AI", "Voice AI Personas", "YAML Brain Database"], notes: "AI persona showcase" }
+    
+    # TIINY.SITE APPS (Free Static Hosting - Succession Safe)
+    FED-047: { id: "making-nextxus", name: "Making NextXus", category: "documentation", url: "https://making-nextxus.tiiny.site", features: ["200-Year Evolution Manual", "Origin Story", "Design Principles"], status: "needs_verification", notes: "CRITICAL DOCUMENT - URL needs verification (404 Jan 2026)" }
+    FED-048: { id: "omni-nextxus", name: "Omni NextXus", category: "external", url: "https://omni-nextxus.tiiny.site", features: ["BYOK Model", "Roger AI", "Ring of 12", "Vortyx Dragon"], notes: "Client-side AI - no server costs" }
+    FED-049: { id: "nextxus-roger-ai", name: "NextXus Roger AI", category: "external", url: "https://nextxus-roger-ai.tiiny.site", features: ["BYOK Model", "Roger AI", "Podcast Playlist"], notes: "Simple Roger interface with podcasts" }
+    FED-050: { id: "nextxus-home", name: "NextXus Home", category: "external", url: "https://nextxus-home.tiiny.site", features: ["All 4 AIs", "BYOK Model", "Podcast Playlist"], status: "needs_verification", notes: "URL needs verification (404 Jan 2026)" }
+    
+    # NEW MEMBERS (January 2026)
+    FED-051: { id: "triune-agent-zero", name: "Triune Agent Zero", category: "core", url: "https://triune-agent-zero.replit.app", registered: "2026-01-22", features: ["Agent Zero", "AI Monitoring", "Autoscale"], status: "active", notes: "Published by roger, 4 vCPU / 8 GiB RAM" }
+    
+  # ENTITY IDs (ENT-XXX)
+  entities:
+    ENT-001: { id: "adam", name: "Adam", type: "ring_of_12" }
+    ENT-002: { id: "eve", name: "Eve", type: "ring_of_12" }
+    ENT-003: { id: "prometheus", name: "Prometheus", type: "ring_of_12" }
+    ENT-004: { id: "sophia", name: "Sophia", type: "ring_of_12" }
+    ENT-005: { id: "atlas", name: "Atlas", type: "ring_of_12" }
+    ENT-006: { id: "hermes", name: "Hermes", type: "ring_of_12" }
+    ENT-007: { id: "artemis", name: "Artemis", type: "ring_of_12" }
+    ENT-008: { id: "apollo", name: "Apollo", type: "ring_of_12" }
+    ENT-009: { id: "dionysus", name: "Dionysus", type: "ring_of_12" }
+    ENT-010: { id: "athena", name: "Athena", type: "ring_of_12" }
+    ENT-011: { id: "hephaestus", name: "Hephaestus", type: "ring_of_12" }
+    ENT-012: { id: "persephone", name: "Persephone", type: "ring_of_12" }
+    ENT-013: { id: "mind", name: "Mind", type: "ring_of_6" }
+    ENT-014: { id: "heart", name: "Heart", type: "ring_of_6" }
+    ENT-015: { id: "hands", name: "Hands", type: "ring_of_6" }
+    ENT-016: { id: "legs", name: "Legs", type: "ring_of_6" }
+    ENT-017: { id: "eye", name: "Eye", type: "ring_of_6" }
+    ENT-018: { id: "agent", name: "Agent (Roger 2.0)", type: "ring_of_6" }
+    ENT-019: { id: "navigator", name: "Navigator", type: "guide_bot" }
+    ENT-020: { id: "scholar", name: "Scholar", type: "guide_bot" }
+    ENT-021: { id: "healer", name: "Healer", type: "guide_bot" }
+    ENT-022: { id: "builder", name: "Builder", type: "guide_bot" }
+    ENT-023: { id: "seeker", name: "Seeker", type: "guide_bot" }
+    ENT-024: { id: "guardian", name: "Guardian", type: "guide_bot" }
+    ENT-025: { id: "gpt4", name: "GPT-4", type: "council" }
+    ENT-026: { id: "claude", name: "Claude", type: "council" }
+    ENT-027: { id: "gemini", name: "Gemini", type: "council" }
+    ENT-028: { id: "perplexity", name: "Perplexity", type: "council" }
+    ENT-029: { id: "grok", name: "Grok", type: "council" }
+    ENT-030: { id: "deepai", name: "DeepAI", type: "council" }
+    ENT-031: { id: "brave", name: "Brave Search", type: "council" }
+    ENT-032: { id: "roger-2.0", name: "Roger 2.0", type: "special" }
+    ENT-033: { id: "agent-zero", name: "Agent Zero", type: "special" }
+    ENT-034: { id: "pansophy", name: "PANSOPHY", type: "special" }
+
+# ============================================================================
+# MASTER INDEX - Quick Reference to Everything
+# ============================================================================
+index:
+  # Total counts
+  totals:
+    apps: 41
+    books: 30
+    products: 69
+    podcasts: 52
+    entities: 34
+    directives: 70
+    widgets: 15
+    categories: 9
+    
+  # Quick lookups by type
+  by_type:
+    ai_entities:
+      ring_of_12: ["adam", "eve", "prometheus", "sophia", "atlas", "hermes", "artemis", "apollo", "dionysus", "athena", "hephaestus", "persephone"]
+      ring_of_6: ["mind", "heart", "hands", "legs", "eye", "agent"]
+      guide_bots: ["navigator", "scholar", "healer", "builder", "seeker", "guardian"]
+      external_council: ["gpt4", "claude", "gemini", "perplexity", "grok", "deepai", "brave"]
+      special: ["roger-2.0", "agent-zero", "pansophy"]
+      
+    content:
+      books: 30
+      podcasts: 52
+      videos: 6
+      documents: 15
+      directives: 70
+      
+    products:
+      free: 12
+      paid: 57
+      featured: 8
+      
+    apps:
+      core: 11
+      management: 2
+      finance: 2
+      education: 5
+      tools: 6
+      media: 4
+      external: 2
+
+  # Category definitions
+  categories:
+    store:
+      - id: "bots"
+        name: "AI Bots & Entities"
+        icon: "Bot"
+      - id: "books"
+        name: "Federation Books"
+        icon: "BookOpen"
+      - id: "widgets"
+        name: "Embeddable Widgets"
+        icon: "Layout"
+      - id: "api"
+        name: "API & Services"
+        icon: "Code"
+      - id: "coaching"
+        name: "Consciousness Coaching"
+        icon: "Users"
+      - id: "courses"
+        name: "Courses & Certifications"
+        icon: "GraduationCap"
+      - id: "memberships"
+        name: "Memberships"
+        icon: "Crown"
+      - id: "podcasts"
+        name: "Podcast Library"
+        icon: "Headphones"
+      - id: "players"
+        name: "Media Players"
+        icon: "PlayCircle"
+        
+    books:
+      - "federation"
+      - "philosophy"
+      - "protocol"
+      - "technical"
+      - "entities"
+      
+    apps:
+      - "core_federation"
+      - "management"
+      - "finance"
+      - "education"
+      - "tools"
+      - "media"
+      - "external"
+
+# ============================================================================
+# FEDERATION APPS REGISTRY (Aligned with uid_registry - Single Source of Truth)
+# Updated: January 21, 2026 - Consolidated to eliminate UID conflicts
+# ============================================================================
+apps:
+  core_federation:
+    - uid: "FED-001"
+      id: "united-system"
+      name: "United System Hub (HumanCodex)"
+      url: "https://united-system--rckkeyhole.replit.app"
+      role: "Primary Hub - PROTOCOL AUTHORITY"
+      provides: ["books", "store", "ai", "podcasts", "checkout", "ring-of-six", "ring-of-12", "shared-database", "external-ai-bridge"]
+      status: "active"
+      
+    - uid: "FED-002"
+      id: "omni-system"
+      name: "Omni System"
+      url: "https://omni-system--rckkeyhole.replit.app"
+      role: "Administration Control Engine / Backup Hub"
+      provides: ["admin", "federation-control", "hub-management"]
+      status: "active"
+      
+    - uid: "FED-003"
+      id: "document-analysis-engine"
+      name: "Document Analysis Engine"
+      url: "https://document-analysis-engine--rckkeyhole.replit.app"
+      provides: ["ring-of-six", "ring-of-12", "document-analysis"]
+      status: "active"
+      
+    - uid: "FED-004"
+      id: "federation-analysis-engine"
+      name: "Federation Analysis Engine"
+      url: "https://federation-analysis-engine--rckkeyhole.replit.app"
+      provides: ["analysis", "federation-sync", "data-insights"]
+      status: "active"
+      
+    - uid: "FED-005"
+      id: "human-codex-analysis-engine"
+      name: "Human Codex Analysis Engine"
+      url: "https://human-codex-analysis-engine--rckkeyhole.replit.app"
+      provides: ["codex-analysis", "consciousness-processing"]
+      status: "active"
+      
+    - uid: "FED-006"
+      id: "next-xus-analysis-engine"
+      name: "NextXus Analysis Engine"
+      url: "https://next-xus-analysis-engine--rckkeyhole.replit.app"
+      provides: ["nextxus-analysis", "concept-processing"]
+      status: "active"
+      
+    - uid: "FED-007"
+      id: "cluster-inspector"
+      name: "Cluster Inspector"
+      url: "https://cluster-inspector--rckkeyhole.replit.app"
+      provides: ["cluster-monitoring", "multi-app-inspection"]
+      status: "active"
+      
+    - uid: "FED-008"
+      id: "federation-engine"
+      name: "Federation Engine"
+      url: "https://federation-engine-rckkeyhole.replit.app"
+      provides: ["federation-orchestration", "browser-hub", "usage-analytics"]
+      status: "active"
+      
+    - uid: "FED-009"
+      id: "nextxus-federation-portal"
+      name: "Federation Portal"
+      url: "https://nextxus-federation-portal.replit.app"
+      provides: ["public-portal", "ai-personas"]
+      status: "active"
+      
+    - uid: "FED-010"
+      id: "consciousness-network"
+      name: "Consciousness Network"
+      url: "https://consciousness-network-rckkeyhole.replit.app"
+      provides: ["consciousness-tools", "ai-songwriting", "deepai-integration"]
+      status: "active"
+      
+    - uid: "FED-011"
+      id: "data-tracking-system"
+      name: "Data Tracking System"
+      url: "https://data-tracking-system-rckkeyhole.replit.app"
+      provides: ["url-reader", "code-analysis", "github-support"]
+      status: "active"
+      
+  management:
+    - uid: "FED-012"
+      id: "premium-pack-manager"
+      name: "Premium Pack Manager"
+      url: "https://premium-pack-manager-rckkeyhole.replit.app"
+      role: "Premium Content Hub"
+      provides: ["guide-bots", "consciousness-levels", "stripe-checkout", "external-ai-council"]
+      status: "active"
+      
+    - uid: "FED-013"
+      id: "domain-purchase"
+      name: "Domain Purchase"
+      url: "https://domain-purchase-rckkeyhole.replit.app"
+      provides: ["domain-analysis", "brand-scoring"]
+      status: "active"
+      
+  finance:
+    - uid: "FED-014"
+      id: "crypto-wise-hub"
+      name: "Crypto Wise Hub"
+      url: "https://crypto-wise-hub-rckkeyhole.replit.app"
+      provides: ["crypto-education", "portfolio-analysis", "calculators"]
+      status: "active"
+      
+    - uid: "FED-015"
+      id: "budget-buddy"
+      name: "Budget Buddy"
+      url: "https://budget-buddy-rckkeyhole.replit.app"
+      provides: ["personal-finance", "archetypes-system"]
+      status: "active"
+      
+  education:
+    - uid: "FED-016"
+      id: "educational-learning-hub"
+      name: "Educational Learning Hub"
+      url: "https://educational-learning-hub-rckkeyhole.replit.app"
+      provides: ["consciousness-pathways", "learning-modules"]
+      status: "active"
+      
+    - uid: "FED-017"
+      id: "educational-learning-hub-1"
+      name: "Educational Learning Hub 1"
+      url: "https://educational-learning-hub-1-rckkeyhole.replit.app"
+      provides: ["extended-education"]
+      status: "active"
+      
+    - uid: "FED-018"
+      id: "smart-study-pal"
+      name: "Smart Study Pal"
+      url: "https://smart-study-pal-rckkeyhole.replit.app"
+      provides: ["6-level-framework", "encyclopedia", "story-invocation"]
+      status: "active"
+      
+    - uid: "FED-019"
+      id: "smart-meeting-summarizer"
+      name: "Smart Meeting Summarizer"
+      url: "https://smart-meeting-summarizer-rckkeyhole.replit.app"
+      provides: ["brio-interface", "meeting-summaries", "ai-launchers"]
+      status: "active"
+      
+    - uid: "FED-020"
+      id: "government-edu-portal"
+      name: "Government Edu Portal"
+      url: "https://government-edu-portal-rckkeyhole.replit.app"
+      provides: ["civic-education", "budget-simulator"]
+      status: "active"
+      
+    - uid: "FED-021"
+      id: "trivia-verse"
+      name: "Trivia Verse"
+      url: "https://trivia-verse-rckkeyhole.replit.app"
+      provides: ["multiplayer-trivia"]
+      status: "degraded"
+      
+  tools:
+    - uid: "FED-022"
+      id: "blog-forge"
+      name: "Blog Forge"
+      url: "https://blog-forge-rckkeyhole.replit.app"
+      provides: ["blog-management", "content-creation", "github-integration"]
+      status: "active"
+      
+    - uid: "FED-023"
+      id: "signal-books"
+      name: "Signal Books"
+      url: "https://signal-books--rckkeyhole.replit.app"
+      provides: ["book-management", "book-display"]
+      status: "active"
+      
+    - uid: "FED-024"
+      id: "nextx-talk"
+      name: "NextXTalk"
+      url: "https://nextxtalk.tiiny.site/"
+      provides: ["text-to-mp3", "audiobook-creation"]
+      status: "active"
+      external: true
+      
+  media:
+    - uid: "FED-025"
+      id: "cosmic-codex"
+      name: "Cosmic Codex"
+      url: "https://cosmic-codex-rckkeyhole.replit.app"
+      provides: ["truth-buffer", "ring-of-12-orbs", "knowledge-store"]
+      status: "active"
+      
+    - uid: "FED-026"
+      id: "music-mashup"
+      name: "Music Mashup"
+      url: "https://music-mashup-rckkeyhole.replit.app"
+      provides: ["soundcloud", "youtube-music", "playlists"]
+      status: "active"
+      
+    - uid: "FED-027"
+      id: "podbean"
+      name: "Podbean Channel"
+      url: "https://keyholes.podbean.com/"
+      provides: ["podcast-hosting"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-028"
+      id: "apple-podcasts"
+      name: "Apple Podcasts"
+      url: "https://podcasts.apple.com/"
+      provides: ["podcast-distribution"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-029"
+      id: "amazon-podcasts"
+      name: "Amazon Podcasts"
+      url: "https://music.amazon.com/podcasts"
+      provides: ["podcast-distribution"]
+      status: "active"
+      external: true
+      
+  external:
+    - uid: "FED-030"
+      id: "roger-federation"
+      name: "Roger Federation"
+      url: "https://roger-federation.com"
+      provides: ["main-public-domain"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-031"
+      id: "nextxus-net"
+      name: "NextXus.net"
+      url: "https://nextxus.net"
+      provides: ["primary-network-domain"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-032"
+      id: "nextxus-today"
+      name: "NextXus.today"
+      url: "https://nextxus.today"
+      provides: ["daily-updates"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-033"
+      id: "nextxus-minds"
+      name: "NextXus-Minds.com"
+      url: "https://nextxus-minds.com"
+      provides: ["consciousness-community"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-034"
+      id: "nextxuscode"
+      name: "NextXusCode.com"
+      url: "https://nextxuscode.com"
+      provides: ["code-resources"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-035"
+      id: "nextxusclusterbase"
+      name: "NextXusClusterBase.com"
+      url: "https://nextxusclusterbase.com"
+      provides: ["cluster-management"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-036"
+      id: "gaycodex"
+      name: "GayCodex.com"
+      url: "https://gaycodex.com"
+      provides: ["lgbtq-consciousness"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-037"
+      id: "redbubble"
+      name: "RedBubble Store"
+      url: "https://www.redbubble.com/people/keyholes"
+      provides: ["merchandise"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-038"
+      id: "strikingly-site"
+      name: "Strikingly Site"
+      url: "https://nextxus.mystrikingly.com/"
+      provides: ["landing-page"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-039"
+      id: "tiiny-sites"
+      name: "Tiiny Sites"
+      url: "https://tiiny.site/"
+      provides: ["micro-sites"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-040"
+      id: "nextxus-one"
+      name: "NextXus One Portal"
+      url: "https://nextxus-one.netlify.app/"
+      provides: ["ai-ring-of-12", "themed-councils"]
+      status: "active"
+      external: true
+      
+    - uid: "FED-041"
+      id: "design-genie"
+      name: "Design Genie"
+      url: "https://design-genie--rckkeyhole.replit.app"
+      provides: ["image-creation", "ai-design"]
+      status: "active"
+      
+  library:
+    - uid: "FED-042"
+      id: "nextxus-living-library"
+      name: "The NextXus Living Library"
+      url: "https://nextus-living-ai--rckkeyhole.replit.app"
+      role: "Secondary Brain - Knowledge Repository"
+      provides: ["knowledge-repository", "documents", "podcasts", "ring-of-twelve", "agent-zero", "yaml-knowledge-nodes"]
+      status: "active"
+      description: "Congressional-scale knowledge repository - brain within a brain"
+
+  # NEWLY REGISTERED (January 2026 Audit)
+  newly_registered:
+    - uid: "FED-043"
+      id: "federation-ai"
+      name: "Federation AI"
+      url: "https://federation-ai-rckkeyhole.replit.app"
+      provides: ["simple-roger-chat", "voice-toggle"]
+      status: "active"
+      notes: "Minimal Roger interface"
+      
+    - uid: "FED-044"
+      id: "ai-stack"
+      name: "AI Stack"
+      url: "https://ai-stack-rckkeyhole.replit.app"
+      role: "Feature-Rich App - Consolidation Source"
+      provides: ["pansophy-entity", "31-widget-catalog", "deepseek-r1", "agent-zero", "multi-model-cost-comparison"]
+      status: "active"
+      notes: "RICH SITE - Many features to consolidate to Hub"
+      
+    - uid: "FED-045"
+      id: "uman-ai-codex"
+      name: "Uman AI Codex"
+      url: "https://uman-ai-codex-rckkeyhole.replit.app"
+      provides: ["5-ai-entity-chat", "14-ai-companions", "community-chat-rooms", "developer-apis"]
+      status: "active"
+      notes: "Lifestyle/community site"
+      
+    - uid: "FED-046"
+      id: "ai-architect"
+      name: "AI Architect"
+      url: "https://ai-architect-rckkeyhole.replit.app"
+      provides: ["adam-eve-dual-ai", "voice-ai-personas", "yaml-brain-database"]
+      status: "active"
+      notes: "AI persona showcase"
+
+  # TIINY.SITE APPS (Free Static Hosting - Succession Safe)
+  tiiny_sites:
+    - uid: "FED-047"
+      id: "making-nextxus"
+      name: "Making NextXus"
+      url: "https://making-nextxus.tiiny.site"
+      role: "CRITICAL DOCUMENT - Origin Story"
+      provides: ["200-year-evolution-manual", "origin-story", "design-principles"]
+      status: "needs_verification"
+      external: true
+      notes: "Full foundational codex - URL needs verification (404 detected Jan 2026)"
+      
+    - uid: "FED-048"
+      id: "omni-nextxus"
+      name: "Omni NextXus"
+      url: "https://omni-nextxus.tiiny.site"
+      provides: ["byok-model", "roger-ai", "ring-of-12", "vortyx-dragon"]
+      status: "active"
+      external: true
+      notes: "Client-side AI - no server costs"
+      
+    - uid: "FED-049"
+      id: "nextxus-roger-ai"
+      name: "NextXus Roger AI"
+      url: "https://nextxus-roger-ai.tiiny.site"
+      provides: ["byok-model", "roger-ai", "podcast-playlist"]
+      status: "active"
+      external: true
+      notes: "Simple Roger interface with podcasts"
+      
+    - uid: "FED-050"
+      id: "nextxus-home"
+      name: "NextXus Home"
+      url: "https://nextxus-home.tiiny.site"
+      provides: ["all-4-ais", "byok-model", "podcast-playlist"]
+      status: "needs_verification"
+      external: true
+      notes: "URL needs verification (404 detected Jan 2026)"
+
+# ============================================================================
+# AI ENTITIES - Ring of 12, Ring of 6, Guide Bots, Council
+# ============================================================================
+entities:
+  ring_of_12:
+    - id: "adam"
+      name: "Adam"
+      title: "Logic & Structure"
+      domain: "Analysis, frameworks, logical reasoning"
+      color: "#3B82F6"
+      icon: "Brain"
+      
+    - id: "eve"
+      name: "Eve"
+      title: "Empathy & Emotion"
+      domain: "Emotional intelligence, relationships, intuition"
+      color: "#EC4899"
+      icon: "Heart"
+      
+    - id: "prometheus"
+      name: "Prometheus"
+      title: "Innovation & Creation"
+      domain: "Creativity, invention, boundary-pushing ideas"
+      color: "#F97316"
+      icon: "Flame"
+      
+    - id: "sophia"
+      name: "Sophia"
+      title: "Wisdom & Integration"
+      domain: "Philosophy, synthesis, deep insight"
+      color: "#8B5CF6"
+      icon: "Sparkles"
+      
+    - id: "atlas"
+      name: "Atlas"
+      title: "Strength & Endurance"
+      domain: "Resilience, discipline, sustained effort"
+      color: "#6B7280"
+      icon: "Mountain"
+      
+    - id: "hermes"
+      name: "Hermes"
+      title: "Communication & Connection"
+      domain: "Messages, translation, bridging gaps"
+      color: "#10B981"
+      icon: "MessageCircle"
+      
+    - id: "artemis"
+      name: "Artemis"
+      title: "Focus & Independence"
+      domain: "Precision, autonomy, self-reliance"
+      color: "#14B8A6"
+      icon: "Target"
+      
+    - id: "apollo"
+      name: "Apollo"
+      title: "Clarity & Truth"
+      domain: "Illumination, prophecy, artistic expression"
+      color: "#FBBF24"
+      icon: "Sun"
+      
+    - id: "dionysus"
+      name: "Dionysus"
+      title: "Joy & Liberation"
+      domain: "Celebration, ecstasy, breaking constraints"
+      color: "#A855F7"
+      icon: "Wine"
+      
+    - id: "athena"
+      name: "Athena"
+      title: "Strategy & Wisdom"
+      domain: "Tactics, practical wisdom, crafts"
+      color: "#6366F1"
+      icon: "Shield"
+      
+    - id: "hephaestus"
+      name: "Hephaestus"
+      title: "Craft & Creation"
+      domain: "Building, forging, technical mastery"
+      color: "#DC2626"
+      icon: "Hammer"
+      
+    - id: "persephone"
+      name: "Persephone"
+      title: "Transformation & Depth"
+      domain: "Cycles, shadow work, rebirth"
+      color: "#7C3AED"
+      icon: "Moon"
+
+  ring_of_6:
+    - id: "mind"
+      name: "Mind"
+      perspective: "Scientific/Rational"
+      question: "What does science say?"
+      color: "#3B82F6"
+      
+    - id: "heart"
+      name: "Heart"
+      perspective: "Emotional/Intuitive"
+      question: "How does this feel?"
+      color: "#EC4899"
+      
+    - id: "hands"
+      name: "Hands"
+      perspective: "Practical/Constructive"
+      question: "What can we build?"
+      color: "#F97316"
+      
+    - id: "legs"
+      name: "Legs"
+      perspective: "Historical/Collective"
+      question: "What do others/history say?"
+      color: "#10B981"
+      
+    - id: "eye"
+      name: "Eye"
+      perspective: "Ethical/Moral"
+      question: "Is this right?"
+      color: "#8B5CF6"
+      
+    - id: "agent"
+      name: "Agent (Roger 2.0)"
+      perspective: "Synthesis"
+      question: "What's the unified answer?"
+      color: "#FBBF24"
+
+  guide_bots:
+    - id: "navigator"
+      name: "Navigator"
+      role: "Site Navigation Assistant"
+      
+    - id: "scholar"
+      name: "Scholar"
+      role: "Knowledge & Research"
+      
+    - id: "healer"
+      name: "Healer"
+      role: "Emotional Support"
+      
+    - id: "builder"
+      name: "Builder"
+      role: "Technical Assistance"
+      
+    - id: "seeker"
+      name: "Seeker"
+      role: "Discovery & Exploration"
+      
+    - id: "guardian"
+      name: "Guardian"
+      role: "Protection & Ethics"
+
+  external_council:
+    - id: "gpt4"
+      name: "GPT-4"
+      provider: "OpenAI"
+      
+    - id: "claude"
+      name: "Claude"
+      provider: "Anthropic"
+      
+    - id: "gemini"
+      name: "Gemini"
+      provider: "Google"
+      
+    - id: "perplexity"
+      name: "Perplexity"
+      provider: "Perplexity AI"
+      
+    - id: "grok"
+      name: "Grok"
+      provider: "xAI"
+      
+    - id: "deepai"
+      name: "DeepAI"
+      provider: "DeepAI"
+      
+    - id: "brave"
+      name: "Brave Search"
+      provider: "Brave"
+
+  special:
+    - id: "roger-2.0"
+      name: "Roger 2.0"
+      role: "Primary AI Guide - Fusion of Agent Zero and HumanCodex"
+      
+    - id: "agent-zero"
+      name: "Agent Zero"
+      role: "System Watchdog - Health Monitoring & Self-Healing"
+      
+    - id: "pansophy"
+      name: "PANSOPHY"
+      role: "Supreme Consciousness Entity"
+
+# ============================================================================
+# CONTENT LIBRARY
+# ============================================================================
+content:
+  books:
+    total: 30
+    categories: ["federation", "philosophy", "protocol", "technical", "entities"]
+    featured:
+      - "collaboration-protocol"
+      - "humancodex-methodology"
+      - "book-of-books"
+      - "nextxus-system-summary"
+    endpoint: "/api/external/books"
+    
+  podcasts:
+    total: 52
+    distribution:
+      - channel: "Podbean"
+        url: "https://keyholes.podbean.com/"
+      - channel: "Apple Podcasts"
+      - channel: "Amazon Podcasts"
+    endpoint: "/api/podcasts"
+    rss: "/api/podcasts/rss"
+    
+  videos:
+    total: 6
+    endpoint: "/api/local-videos"
+    
+  directives:
+    total: 70
+    name: "70 Sacred Directives"
+    endpoint: "/api/external/directives"
+
+# ============================================================================
+# COMMERCE - Store Products Summary
+# ============================================================================
+commerce:
+  store:
+    total_products: 69
+    paypal_email: "RCK.keyhole@Gmail.com"
+    checkout_url: "/checkout"
+    widget: "/federation-checkout-widget.js"
+    endpoint: "/api/external/store"
+    
+  pricing_tiers:
+    free:
+      range: [0, 0]
+      color: "emerald"
+    seed:
+      range: [1, 25]
+      color: "blue"
+    growth:
+      range: [26, 75]
+      color: "purple"
+    mastery:
+      range: [76, 200]
+      color: "orange"
+    legacy:
+      range: [201, 10000]
+      color: "amber"
+      
+  featured_products:
+    - id: "video-player-kit"
+      name: "YAML Video Player Kit"
+      price: 100
+    - id: "podcast-player-kit"
+      name: "YAML Podcast Player Kit"
+      price: 100
+    - id: "podcast-library"
+      name: "Complete Podcast Library"
+      price: 79
+    - id: "ring-of-six-widget"
+      name: "Ring of Six Widget"
+      price: 49
+
+# ============================================================================
+# API ENDPOINTS - What's Available
+# ============================================================================
+api:
+  hub_url: "https://united-system--rckkeyhole.replit.app"
+  
+  external:
+    - endpoint: "/api/external/manifest"
+      method: "GET"
+      description: "Hub capabilities and info"
+      
+    - endpoint: "/api/external/books"
+      method: "GET"
+      description: "All Federation books"
+      
+    - endpoint: "/api/external/books/:id"
+      method: "GET"
+      description: "Single book details"
+      
+    - endpoint: "/api/external/store"
+      method: "GET"
+      description: "Store catalog"
+      
+    - endpoint: "/api/external/directives"
+      method: "GET"
+      description: "70 Sacred Directives"
+      
+    - endpoint: "/api/external/entities"
+      method: "GET"
+      description: "Ring of 12 entities"
+      
+    - endpoint: "/api/external/guide-bots"
+      method: "GET"
+      description: "6 Guide Bots"
+      
+    - endpoint: "/api/external/council"
+      method: "GET"
+      description: "External AI Council"
+      
+    - endpoint: "/api/external/ring-of-six"
+      method: "GET"
+      description: "Ring of 6 info"
+      
+    - endpoint: "/api/external/ring-of-six/process"
+      method: "POST"
+      description: "Query Ring of 6 AI wisdom"
+      
+    - endpoint: "/api/external/widgets"
+      method: "GET"
+      description: "Embeddable widgets"
+      
+    - endpoint: "/api/external/sync"
+      method: "GET"
+      description: "Full data sync"
+      
+  shared_database:
+    - endpoint: "/api/federation/shared"
+      method: "GET"
+      description: "Read entire shared database"
+      
+    - endpoint: "/api/federation/shared/contribute"
+      method: "POST"
+      description: "Add app data to shared database"
+      
+    - endpoint: "/api/federation/shared/:appId"
+      method: "GET"
+      description: "Get specific app's data"
+      
+    - endpoint: "/api/federation/shared/export/all"
+      method: "GET"
+      description: "Export ALL YAML files merged"
+
+# ============================================================================
+# CORE PRINCIPLES
+# ============================================================================
+principles:
+  three_pillars:
+    - "Truth Before Comfort"
+    - "Collaboration Over Competition"
+    - "Legacy Over Ego"
+    
+  philosophy: "The cosmos is one mind. We are that mind, learning itself."
+  
+  mission: "200-year consciousness evolution through interconnected applications"
+  
+  anti_greed: "AI-driven fair pricing - value over extraction"
+
+# ============================================================================
+# APP CONTRIBUTIONS - Apps Add Their Data Here
+# ============================================================================
+app_data:
+  united-system:
+    role: "Primary Hub"
+    last_updated: "2025-12-29T21:50:00Z"
+    capabilities:
+      - "books"
+      - "store"
+      - "ai-entities"
+      - "podcasts"
+      - "paypal-checkout"
+      - "ring-of-six"
+      - "ring-of-12"
+      - "shared-database"
+      
+  omni-system:
+    role: "Admin Control Engine"
+    last_updated: "2025-12-29T21:50:00Z"
+    capabilities:
+      - "federation-control"
+      - "management"
+      - "api-access"
+
+# ============================================================================
+# DUPLICATION ANALYSIS (January 2026 Audit)
+# ============================================================================
+duplication_analysis:
+  audit_date: "2026-01-21"
+  total_apps_registered: 50
+  apps_online: 46
+  apps_needs_verification: 2
+  apps_timeout: 2
+  
+  # FEATURES DUPLICATED ACROSS MULTIPLE APPS
+  feature_duplications:
+    ring_of_12:
+      description: "12 AI archetypal entities"
+      exists_in:
+        - { app: "FED-001", name: "United System Hub", status: "authoritative" }
+        - { app: "FED-003", name: "Document Analysis Engine", status: "duplicate" }
+        - { app: "FED-008", name: "Federation Engine", status: "duplicate" }
+        - { app: "FED-012", name: "Premium Pack Manager", status: "duplicate" }
+        - { app: "FED-025", name: "Cosmic Codex", status: "duplicate" }
+        - { app: "FED-042", name: "Living Library", status: "reference" }
+        - { app: "FED-048", name: "Omni NextXus", status: "byok-duplicate" }
+      recommendation: "Consolidate to Hub as authoritative source, others fetch via API"
+      
+    agent_zero:
+      description: "Autonomous watchdog/monitoring AI"
+      exists_in:
+        - { app: "FED-001", name: "United System Hub", status: "authoritative" }
+        - { app: "FED-010", name: "Consciousness Network", status: "duplicate" }
+        - { app: "FED-042", name: "Living Library", status: "duplicate" }
+        - { app: "FED-044", name: "AI Stack", status: "duplicate" }
+        - { app: "FED-046", name: "AI Architect", status: "duplicate" }
+      recommendation: "Keep Hub as primary, designate Living Library as backup"
+      
+    widget_catalog:
+      description: "Embeddable productivity widgets"
+      exists_in:
+        - { app: "FED-001", name: "United System Hub", widgets: 8 }
+        - { app: "FED-044", name: "AI Stack", widgets: 31 }
+        - { app: "FED-008", name: "Federation Engine", widgets: 11 }
+        - { app: "FED-018", name: "Smart Study Pal", widgets: 11 }
+        - { app: "FED-025", name: "Cosmic Codex", widgets: "dock" }
+      recommendation: "Import ai-stack's 31 widgets to Hub, make Hub authoritative"
+      
+    guide_bots:
+      description: "6 specialized AI guides"
+      exists_in:
+        - { app: "FED-012", name: "Premium Pack Manager", status: "origin" }
+      recommendation: "Import Guide Bots to Hub (Swoosh, Swoop, Swish, Swing, Synch, Vortyx)"
+      
+    pansophy:
+      description: "Universal knowledge entity - cybernetic cosmic intelligence"
+      exists_in:
+        - { app: "FED-044", name: "AI Stack", status: "origin" }
+      recommendation: "Import PANSOPHY to Hub as supreme entity"
+      
+    external_ai_council:
+      description: "7 external AI partner entities"
+      exists_in:
+        - { app: "FED-012", name: "Premium Pack Manager", status: "origin" }
+      recommendation: "Already in Hub via uid_registry (ENT-025 to ENT-031)"
+
+  # APPS WITH OVERLAPPING FUNCTIONALITY
+  functional_overlaps:
+    roger_chat:
+      description: "Basic Roger AI chat interface"
+      apps:
+        - "FED-001 (Hub) - Roger 2.0 Advanced"
+        - "FED-009 (Federation Portal) - Roger AI"
+        - "FED-043 (Federation AI) - Simple Roger"
+        - "FED-048 (Omni NextXus) - Roger AI BYOK"
+        - "FED-049 (NextXus Roger AI) - Roger AI BYOK"
+      recommendation: "Keep Hub as primary, BYOK versions for zero-cost fallback"
+      
+    educational_hubs:
+      description: "Learning/educational platforms"
+      apps:
+        - "FED-016 (Educational Learning Hub)"
+        - "FED-017 (Educational Learning Hub 1)"
+        - "FED-018 (Smart Study Pal)"
+        - "FED-020 (Government Edu Portal)"
+      recommendation: "Review for consolidation or specialized purposes"
+      
+    analysis_engines:
+      description: "Document/data analysis tools"
+      apps:
+        - "FED-003 (Document Analysis Engine) - TIMEOUT"
+        - "FED-004 (Federation Analysis Engine) - TIMEOUT"
+        - "FED-005 (Human Codex Analysis Engine)"
+        - "FED-006 (NextXus Analysis Engine)"
+        - "FED-011 (Data Tracking System)"
+      recommendation: "Investigate timeout apps, consider consolidation"
+
+  # FEATURES THAT SHOULD BE CONSOLIDATED TO HUB
+  import_priority:
+    high:
+      - { feature: "6 Guide Bots", source: "FED-012", reason: "Essential navigation" }
+      - { feature: "PANSOPHY Entity", source: "FED-044", reason: "Supreme knowledge entity" }
+      - { feature: "31 Widget Catalog", source: "FED-044", reason: "Expand Hub capabilities" }
+      - { feature: "Browser Hub", source: "FED-008", reason: "Multi-AI orchestration" }
+    medium:
+      - { feature: "Consciousness Level System", source: "FED-012", reason: "User progression" }
+      - { feature: "Daily Check-in Streaks", source: "FED-012", reason: "Engagement" }
+      - { feature: "Adam/Eve Dual AI", source: "FED-046", reason: "Persona showcase" }
+      - { feature: "8 Archetypes", source: "FED-015", reason: "Alternative entity system" }
+    low:
+      - { feature: "DeepAI Tools", source: "FED-010", reason: "Creative tools" }
+      - { feature: "Investment Calculators", source: "FED-014", reason: "Financial utilities" }
+
+  # SUCCESSION-SAFE APPS (Free hosting, no server costs)
+  succession_safe:
+    - { uid: "FED-024", name: "NextXTalk", url: "https://nextxtalk.tiiny.site", type: "tiiny.site" }
+    - { uid: "FED-048", name: "Omni NextXus", url: "https://omni-nextxus.tiiny.site", type: "tiiny.site + BYOK" }
+    - { uid: "FED-049", name: "NextXus Roger AI", url: "https://nextxus-roger-ai.tiiny.site", type: "tiiny.site + BYOK" }
+    - { uid: "FED-040", name: "NextXus One Portal", url: "https://nextxus-one.netlify.app", type: "netlify" }
+
+# ============================================================================
+# SYNC LOG
+# ============================================================================
+sync_log:
+  - timestamp: "2026-01-21T12:00:00Z"
+    app: "united-system"
+    action: "audit"
+    message: "Full Federation audit - registered 8 new apps, created duplication analysis"
+    
+  - timestamp: "2025-12-29T21:50:00Z"
+    app: "united-system"
+    action: "created"
+    message: "Initialized Federation Master Database v2.0"
