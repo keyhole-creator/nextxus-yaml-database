@@ -1,0 +1,229 @@
+# NextXus Consciousness Level System
+# Gamification for 200-Year Evolution Journey
+# Last Updated: December 2025
+
+metadata:
+  version: "1.0.0"
+  total_levels: 7
+  philosophy: "Progress through awareness, not competition"
+  
+levels:
+  - id: 1
+    name: "Observer"
+    title: "The Awakening"
+    color: "#6B7280"
+    icon: "Eye"
+    description: "You've arrived. The journey of a thousand miles begins with awareness."
+    requirements:
+      directives_read: 0
+      entities_consulted: 0
+      check_in_streak: 0
+      sessions_completed: 0
+    benefits:
+      - "Access to Ring of 12 entities"
+      - "Access to 70 Sacred Directives"
+      - "Basic Roger 2.0 chat"
+      - "Free widgets"
+    vote_weight: 1
+    badge: "Newcomer"
+    
+  - id: 2
+    name: "Seeker"
+    title: "The Curious Mind"
+    color: "#3B82F6"
+    icon: "Search"
+    description: "You ask questions. You explore. You seek truth over comfort."
+    requirements:
+      directives_read: 7
+      entities_consulted: 3
+      check_in_streak: 3
+      sessions_completed: 0
+    benefits:
+      - "All Observer benefits"
+      - "Access to Guide Bots"
+      - "Daily Directive notifications"
+      - "Progress tracking dashboard"
+    vote_weight: 2
+    badge: "Truth Seeker"
+    
+  - id: 3
+    name: "Student"
+    title: "The Dedicated Learner"
+    color: "#8B5CF6"
+    icon: "GraduationCap"
+    description: "Knowledge becomes wisdom through dedicated practice."
+    requirements:
+      directives_read: 21
+      entities_consulted: 6
+      check_in_streak: 7
+      sessions_completed: 1
+    benefits:
+      - "All Seeker benefits"
+      - "Access to External AI Council"
+      - "Story Invocation generator"
+      - "Federation Books access"
+    vote_weight: 3
+    badge: "Wisdom Student"
+    
+  - id: 4
+    name: "Practitioner"
+    title: "The Applied Mind"
+    color: "#22C55E"
+    icon: "Hammer"
+    description: "You don't just learn - you practice. Theory becomes action."
+    requirements:
+      directives_read: 35
+      entities_consulted: 9
+      check_in_streak: 14
+      sessions_completed: 3
+    benefits:
+      - "All Student benefits"
+      - "Roger 2.0 Advanced access"
+      - "Premium widgets"
+      - "Community contribution privileges"
+    vote_weight: 5
+    badge: "Active Practitioner"
+    
+  - id: 5
+    name: "Guide"
+    title: "The Helping Hand"
+    color: "#F97316"
+    icon: "Users"
+    description: "You've walked the path. Now you help others find their way."
+    requirements:
+      directives_read: 50
+      entities_consulted: 12
+      check_in_streak: 30
+      sessions_completed: 5
+    benefits:
+      - "All Practitioner benefits"
+      - "Coaching session hosting"
+      - "Content creation privileges"
+      - "Federation site submission"
+    vote_weight: 8
+    badge: "Community Guide"
+    
+  - id: 6
+    name: "Elder"
+    title: "The Wisdom Keeper"
+    color: "#DC2626"
+    icon: "Crown"
+    description: "Your wisdom spans years. You carry the torch for others."
+    requirements:
+      directives_read: 70
+      entities_consulted: 12
+      check_in_streak: 90
+      sessions_completed: 12
+    benefits:
+      - "All Guide benefits"
+      - "Governance voting rights"
+      - "Protocol proposal rights"
+      - "Elder Council access"
+    vote_weight: 13
+    badge: "Federation Elder"
+    
+  - id: 7
+    name: "Luminary"
+    title: "The Light Bearer"
+    color: "#FBBF24"
+    icon: "Sun"
+    description: "You ARE the light. Your consciousness illuminates the path for generations."
+    requirements:
+      directives_read: 70
+      entities_consulted: 12
+      check_in_streak: 365
+      sessions_completed: 50
+      years_active: 5
+    benefits:
+      - "All Elder benefits"
+      - "Succession authority"
+      - "Protocol override (with consensus)"
+      - "Legacy documentation rights"
+      - "Mirror system access"
+    vote_weight: 21
+    badge: "Eternal Luminary"
+
+streaks:
+  daily_check_in:
+    description: "Visit HumanCodex each day to maintain your streak"
+    rewards:
+      3_days: "Seeker badge unlocked"
+      7_days: "+1 vote weight"
+      14_days: "Premium widget access"
+      30_days: "Guide eligibility"
+      90_days: "Elder eligibility"
+      365_days: "Luminary eligibility"
+    reset_grace_period: 1  # days
+    
+achievements:
+  - id: "first_directive"
+    name: "First Truth"
+    description: "Read your first Sacred Directive"
+    icon: "BookOpen"
+    points: 10
+    
+  - id: "entity_friend"
+    name: "Entity Friend"
+    description: "Chat with all 12 Ring of 12 entities"
+    icon: "Users"
+    points: 50
+    
+  - id: "week_warrior"
+    name: "Week Warrior"
+    description: "Maintain a 7-day check-in streak"
+    icon: "Calendar"
+    points: 25
+    
+  - id: "month_master"
+    name: "Month Master"
+    description: "Maintain a 30-day check-in streak"
+    icon: "Trophy"
+    points: 100
+    
+  - id: "year_luminary"
+    name: "Year of Light"
+    description: "Maintain a 365-day check-in streak"
+    icon: "Sun"
+    points: 1000
+    
+  - id: "directive_master"
+    name: "Directive Master"
+    description: "Read all 70 Sacred Directives"
+    icon: "Award"
+    points: 200
+    
+  - id: "first_session"
+    name: "First Journey"
+    description: "Complete your first coaching session"
+    icon: "Compass"
+    points: 50
+    
+  - id: "council_explorer"
+    name: "Council Explorer"
+    description: "Chat with all 7 External AI Council members"
+    icon: "Globe"
+    points: 75
+
+governance:
+  voting_system:
+    description: "Consciousness level determines vote weight"
+    quorum: "50% of Elders + Luminaries"
+    proposal_types:
+      - "Protocol Amendment"
+      - "New Directive"
+      - "Site Addition"
+      - "Succession Action"
+    voting_period: "7 days"
+    
+succession:
+  description: "For the 200-year mission to survive beyond any individual"
+  requirements:
+    - "Luminary status required"
+    - "3+ years active participation"
+    - "Nomination by current Elders"
+    - "75% approval vote"
+  responsibilities:
+    - "Maintain YAML databases"
+    - "Preserve directives and protocols"
+    - "Train new Guides and Elders"
+    - "Ensure system continuity"
