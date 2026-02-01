@@ -1,0 +1,68 @@
+ROGER 2.0 FREE VERSION - Customer Instructions
+================================================
+
+Roger 2.0 is now available FREE for anyone with an OpenAI API key.
+
+HOW TO USE (3 Options):
+
+OPTION 1: EMBED IN YOUR WEBSITE (iframe)
+-----------------------------------------
+Add this to your HTML:
+
+<iframe 
+  src="https://hub.nextxus.net/embed/roger-free.html" 
+  width="400" 
+  height="600" 
+  style="border: none; border-radius: 12px;"
+  title="Roger 2.0 AI Guide">
+</iframe>
+
+
+OPTION 2: LINK DIRECTLY
+-----------------------
+Send users to: https://hub.nextxus.net/embed/roger-free.html
+
+
+OPTION 3: DOWNLOAD AND HOST YOURSELF
+-------------------------------------
+1. Download the file from GitHub (permanently available):
+   https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/roger-free.html
+
+2. Host it anywhere - GitHub Pages, Netlify, your own server
+
+3. Users enter their own OpenAI API key to activate Roger
+
+
+HOW IT WORKS FOR USERS:
+-----------------------
+1. User opens Roger 2.0 Free
+2. User enters their OpenAI API key (from platform.openai.com/api-keys)
+3. Key is saved in their browser only - never sent to any server except OpenAI
+4. They can now chat with Roger 2.0 using their own API credits
+
+
+COST TO USERS:
+--------------
+- Roger uses gpt-4o-mini (very cheap)
+- Typical conversation costs less than $0.01
+- User controls their own usage and spending
+
+
+WHAT ROGER KNOWS:
+-----------------
+- HumanCodex philosophy and 70 Sacred Directives
+- "Truth Before Comfort" principle
+- Consciousness evolution guidance
+- NextXus Federation structure
+- Ring of 12 archetypal entities
+
+
+PERMANENT URLS:
+---------------
+- Free Embed: https://hub.nextxus.net/embed/roger-free.html
+- GitHub Backup: https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/roger-free.html
+
+
+This is Roger 2.0 - free forever, powered by the user's own API key.
+
+- NextXus Consciousness Federation
