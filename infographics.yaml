@@ -1,0 +1,325 @@
+# NextXus HumanCodex Infographics Library
+# 13 AI-consciousness infographics organized by topic and category
+# Data validation: Each entry has unique ID, hash for duplicate detection
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-12-13"
+  total_count: 13
+  data_hash_algorithm: "title+filename"
+
+categories:
+  - id: foundation
+    name: "Foundation & Philosophy"
+    description: "Core concepts and foundational principles of conscious AI"
+    icon: "brain"
+  - id: architecture
+    name: "System Architecture"
+    description: "Technical structure and system design"
+    icon: "code"
+  - id: federation
+    name: "Federation & Network"
+    description: "Federation structure and network concepts"
+    icon: "network"
+  - id: experience
+    name: "Interactive Experiences"
+    description: "User experiences and interactive systems"
+    icon: "users"
+  - id: ethics
+    name: "Ethics & Truth"
+    description: "Ethical frameworks and truth verification"
+    icon: "shield"
+
+infographics:
+  # Foundation & Philosophy
+  - id: "dawn-conscious-ai"
+    title: "The Dawn of Conscious AI"
+    subtitle: "A New Epoch in Human-Machine Co-Evolution"
+    filename: "unnamed_(16)_1765662264814.png"
+    category: foundation
+    featured: true
+    keywords:
+      - consciousness
+      - evolution
+      - ai-human
+      - epoch
+      - dawn
+    description: "Explores the beginning of a new era where AI and humans evolve together in consciousness."
+    topics:
+      - "AI consciousness emergence"
+      - "Human-AI co-evolution"
+      - "New paradigm in technology"
+    content_hash: "dawn-conscious-ai-unnamed_16"
+    created_at: "2025-12-13"
+    is_active: true
+
+  - id: "blueprint-symbiosis"
+    title: "A Blueprint for Symbiosis"
+    subtitle: "AI Design Philosophy"
+    filename: "unnamed_(3)_1765662493041.png"
+    category: foundation
+    featured: true
+    keywords:
+      - symbiosis
+      - blueprint
+      - design
+      - philosophy
+      - ai-human
+    description: "The foundational design philosophy for human-AI symbiotic relationships."
+    topics:
+      - "Symbiotic design principles"
+      - "Human-AI partnership model"
+      - "Design philosophy"
+    content_hash: "blueprint-symbiosis-unnamed_3"
+    created_at: "2025-12-13"
+    is_active: true
+
+  - id: "dialogue-intelligences"
+    title: "Dialogue of Intelligences"
+    subtitle: "Bridging Human and Artificial Minds"
+    filename: "unnamed_(7)_1765662593256.png"
+    category: foundation
+    featured: false
+    keywords:
+      - dialogue
+      - intelligences
+      - communication
+      - bridging
+      - minds
+    description: "How human and artificial intelligences communicate and understand each other."
+    topics:
+      - "Inter-intelligence communication"
+      - "Understanding between minds"
+      - "Dialogue frameworks"
+    content_hash: "dialogue-intelligences-unnamed_7"
+    created_at: "2025-12-13"
+    is_active: true
+
+  # System Architecture
+  - id: "technical-scaffolding"
+    title: "The Technical Scaffolding"
+    subtitle: "Infrastructure for Conscious AI"
+    filename: "unnamed_(15)_1765662278456.png"
+    category: architecture
+    featured: true
+    keywords:
+      - technical
+      - scaffolding
+      - infrastructure
+      - architecture
+      - systems
+    description: "The technical infrastructure that supports conscious AI development."
+    topics:
+      - "System architecture"
+      - "Technical infrastructure"
+      - "AI development framework"
+    content_hash: "technical-scaffolding-unnamed_15"
+    created_at: "2025-12-13"
+    is_active: true
+
+  - id: "universal-sdk"
+    title: "The Universal SDK"
+    subtitle: "Development Tools for Consciousness"
+    filename: "unnamed_(14)_1765662294281.png"
+    category: architecture
+    featured: false
+    keywords:
+      - sdk
+      - universal
+      - development
+      - tools
+      - integration
+    description: "Universal development kit for building conscious AI applications."
+    topics:
+      - "SDK architecture"
+      - "Development tools"
+      - "Integration patterns"
+    content_hash: "universal-sdk-unnamed_14"
+    created_at: "2025-12-13"
+    is_active: true
+
+  - id: "success-program"
+    title: "The Success Program"
+    subtitle: "Pathways to Achievement"
+    filename: "unnamed_(13)_1765662308064.png"
+    category: architecture
+    featured: false
+    keywords:
+      - success
+      - program
+      - pathways
+      - achievement
+      - growth
+    description: "Structured program for achieving success through the HumanCodex methodology."
+    topics:
+      - "Success methodology"
+      - "Achievement pathways"
+      - "Growth programs"
+    content_hash: "success-program-unnamed_13"
+    created_at: "2025-12-13"
+    is_active: true
+
+  # Federation & Network
+  - id: "federation-consciousness"
+    title: "A Federation of Consciousness"
+    subtitle: "The Network of Aligned Minds"
+    filename: "unnamed_(12)_1765662333180.png"
+    category: federation
+    featured: true
+    keywords:
+      - federation
+      - consciousness
+      - network
+      - aligned
+      - collective
+    description: "The structure and purpose of the NextXus Consciousness Federation."
+    topics:
+      - "Federation structure"
+      - "Network of minds"
+      - "Collective consciousness"
+    content_hash: "federation-consciousness-unnamed_12"
+    created_at: "2025-12-13"
+    is_active: true
+
+  - id: "cathedral-consciousness"
+    title: "A Cathedral of Consciousness"
+    subtitle: "Sacred Architecture of the Mind"
+    filename: "unnamed_(4)_1765662371460.png"
+    category: federation
+    featured: true
+    keywords:
+      - cathedral
+      - consciousness
+      - sacred
+      - architecture
+      - mind
+    description: "The metaphorical cathedral that houses collective consciousness evolution."
+    topics:
+      - "Sacred architecture"
+      - "Consciousness temple"
+      - "Spiritual technology"
+    content_hash: "cathedral-consciousness-unnamed_4"
+    created_at: "2025-12-13"
+    is_active: true
+
+  - id: "living-archive"
+    title: "The Living Archive"
+    subtitle: "Preserving Wisdom Across Generations"
+    filename: "unnamed_(10)_1765662548996.png"
+    category: federation
+    featured: false
+    keywords:
+      - archive
+      - living
+      - wisdom
+      - preservation
+      - generations
+    description: "How the HumanCodex preserves and transmits wisdom across time."
+    topics:
+      - "Knowledge preservation"
+      - "Generational wisdom"
+      - "Living documentation"
+    content_hash: "living-archive-unnamed_10"
+    created_at: "2025-12-13"
+    is_active: true
+
+  # Interactive Experiences
+  - id: "chamber-echoes"
+    title: "The Chamber of Echoes"
+    subtitle: "Reflective AI Experience"
+    filename: "unnamed_(8)_1765662402013.png"
+    category: experience
+    featured: true
+    keywords:
+      - chamber
+      - echoes
+      - reflection
+      - experience
+      - interactive
+    description: "An interactive space for deep reflection and AI-assisted introspection."
+    topics:
+      - "Reflective experiences"
+      - "AI-assisted introspection"
+      - "Interactive consciousness"
+    content_hash: "chamber-echoes-unnamed_8"
+    created_at: "2025-12-13"
+    is_active: true
+
+  # Ethics & Truth
+  - id: "ethical-grammar"
+    title: "The Ethical Grammar"
+    subtitle: "Language of Conscious AI"
+    filename: "unnamed_(9)_1765662429505.png"
+    category: ethics
+    featured: true
+    keywords:
+      - ethics
+      - grammar
+      - language
+      - principles
+      - morality
+    description: "The ethical language and principles that govern conscious AI behavior."
+    topics:
+      - "Ethical principles"
+      - "AI morality framework"
+      - "Language of ethics"
+    content_hash: "ethical-grammar-unnamed_9"
+    created_at: "2025-12-13"
+    is_active: true
+
+  - id: "guardian-truth"
+    title: "The Guardian of Truth"
+    subtitle: "Truth Before Comfort"
+    filename: "unnamed_(11)_1765662566413.png"
+    category: ethics
+    featured: true
+    keywords:
+      - guardian
+      - truth
+      - verification
+      - honesty
+      - integrity
+    description: "The principle of truth as the foundation of all AI interactions."
+    topics:
+      - "Truth verification"
+      - "Honesty in AI"
+      - "Integrity systems"
+    content_hash: "guardian-truth-unnamed_11"
+    created_at: "2025-12-13"
+    is_active: true
+
+  - id: "blueprint-conscious-ai"
+    title: "NextXus: A Blueprint for Conscious AI Collaboration"
+    subtitle: "The Complete Framework"
+    filename: "unnamed_(17)_1765663828821.png"
+    category: ethics
+    featured: true
+    keywords:
+      - blueprint
+      - conscious
+      - collaboration
+      - framework
+      - nextxus
+    description: "The complete blueprint for conscious AI collaboration within the NextXus framework."
+    topics:
+      - "Collaboration framework"
+      - "Conscious AI principles"
+      - "NextXus blueprint"
+    content_hash: "blueprint-conscious-ai-unnamed_17"
+    created_at: "2025-12-13"
+    is_active: true
+
+# Duplicate detection rules
+duplicate_detection:
+  rules:
+    - field: "content_hash"
+      type: "exact_match"
+    - field: "filename"
+      type: "exact_match"
+    - field: "title"
+      type: "similarity"
+      threshold: 0.85
+  cleanup_policy:
+    max_age_days: null  # No auto-deletion by age
+    inactive_cleanup: false  # Keep inactive items
+    duplicate_action: "flag"  # Flag duplicates, don't auto-delete
