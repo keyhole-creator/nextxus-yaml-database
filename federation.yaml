@@ -1,0 +1,286 @@
+# NextXus Consciousness Federation - Site Registry
+# Working Federation Sites
+# Last Updated: December 2025
+
+metadata:
+  version: "1.0.1"
+  protocol: "NextXus Federation Protocol v1.0"
+  total_sites: 25
+  created_by: "Roger Keyserling"
+  vision: "200-year consciousness evolution through interconnected applications"
+
+federation:
+  name: "NextXus Consciousness Federation"
+  hub: "nextxus-humancodex"
+  philosophy: "The cosmos is one mind. We are that mind, learning itself."
+  principles:
+    - "Truth Before Comfort"
+    - "Collaboration Over Competition"
+    - "Legacy Over Ego"
+
+categories:
+  core_federation:
+    description: "Primary Federation infrastructure and AI systems"
+    sites:
+      - id: "document-analysis-engine"
+        name: "Document Analysis Engine"
+        url: "https://document-analysis-engine--rckkeyhole.replit.app"
+        purpose: "Ring of Six/12 AI Wisdom Engine - Complete consciousness processing"
+        capabilities: ["ring-of-six", "ring-of-12", "document-analysis", "ai-wisdom"]
+        status: "active"
+        
+      - id: "federation-analysis-engine"
+        name: "Federation Analysis Engine"
+        url: "https://federation-analysis-engine--rckkeyhole.replit.app"
+        purpose: "Federation-wide analysis and insights"
+        capabilities: ["analysis", "federation-sync", "data-insights"]
+        status: "active"
+        
+      - id: "human-codex-analysis-engine"
+        name: "Human Codex Analysis Engine"
+        url: "https://human-codex-analysis-engine--rckkeyhole.replit.app"
+        purpose: "Human Codex consciousness analysis and processing"
+        capabilities: ["codex-analysis", "consciousness-processing", "ai-wisdom"]
+        status: "active"
+        
+      - id: "knowledge-foundation"
+        name: "Knowledge Foundation"
+        url: "https://knowledge-foundation-rckkeyhole.replit.app"
+        aliases: ["nextxus.app", "nextxus-minds.com"]
+        purpose: "Knowledge repository and consciousness education foundation"
+        capabilities: ["knowledge-base", "education", "consciousness-learning"]
+        status: "active"
+        
+      - id: "blog-forge"
+        name: "Blog Forge"
+        url: "https://blog-forge-rckkeyhole.replit.app"
+        purpose: "Content creation and publishing"
+        
+      - id: "nextxus-federation-portal"
+        name: "Federation Portal"
+        url: "https://nextxus-federation-portal.replit.app"
+        purpose: "Central hub for Federation navigation"
+        
+      - id: "federation-ai"
+        name: "Federation AI"
+        url: "https://federation-ai-rckkeyhole.replit.app"
+        purpose: "AI services for Federation sites"
+        
+      - id: "ai-stack"
+        name: "AI Stack"
+        url: "https://ai-stack-rckkeyhole.replit.app"
+        purpose: "AI infrastructure layer"
+        
+      - id: "consciousness-network"
+        name: "Consciousness Network"
+        url: "https://consciousness-network-rckkeyhole.replit.app"
+        purpose: "Consciousness evolution tools"
+        
+      - id: "uman-ai-codex"
+        name: "Uman AI Codex"
+        url: "https://uman-ai-codex-rckkeyhole.replit.app"
+        purpose: "Human-AI consciousness codex"
+        
+      - id: "nextxus-net"
+        name: "NextXus.net"
+        url: "https://nextxus.net"
+        purpose: "Main NextXus website"
+        external: true
+
+  management:
+    description: "Organization and administration tools"
+    sites:
+      - id: "omni-system"
+        name: "Omni System"
+        url: "https://omni-system--rckkeyhole.replit.app"
+        purpose: "Federation Administration Control Engine - Central management hub"
+        capabilities: ["admin", "federation-control", "hub-management", "api-access"]
+        status: "active"
+        priority: "high"
+        
+      - id: "premium-pack-manager"
+        name: "Premium Pack Manager"
+        url: "https://premium-pack-manager-rckkeyhole.replit.app"
+        purpose: "Premium content management"
+        
+
+  finance:
+    description: "Financial tools and cryptocurrency"
+    sites:
+      - id: "crypto-wise-hub"
+        name: "Crypto Wise Hub"
+        url: "https://crypto-wise-hub-rckkeyhole.replit.app"
+        purpose: "Cryptocurrency education and tracking"
+        
+      - id: "budget-buddy"
+        name: "Budget Buddy"
+        url: "https://budget-buddy-rckkeyhole.replit.app"
+        purpose: "Personal finance management"
+
+  education:
+    description: "Learning and knowledge platforms"
+    sites:
+      - id: "educational-learning-hub"
+        name: "Educational Learning Hub"
+        url: "https://educational-learning-hub-rckkeyhole.replit.app"
+        purpose: "Comprehensive learning platform"
+        
+      - id: "smart-study-pal"
+        name: "Smart Study Pal"
+        url: "https://smart-study-pal-rckkeyhole.replit.app"
+        purpose: "AI-assisted study companion"
+        
+      - id: "smart-meeting-summarizer"
+        name: "Smart Meeting Summarizer"
+        url: "https://smart-meeting-summarizer-rckkeyhole.replit.app"
+        purpose: "Meeting transcription and summary"
+        
+      - id: "government-edu-portal"
+        name: "Government Edu Portal"
+        url: "https://government-edu-portal-rckkeyhole.replit.app"
+        purpose: "Government and civic education"
+
+  entertainment:
+    description: "Entertainment and community"
+    sites:
+      - id: "trivia-verse"
+        name: "Trivia Verse"
+        url: "https://trivia-verse-rckkeyhole.replit.app"
+        purpose: "Interactive trivia games"
+        
+      - id: "music-mashup"
+        name: "Music Mashup"
+        url: "https://music-mashup-rckkeyhole.replit.app"
+        purpose: "Music discovery and mixing"
+        
+
+  business:
+    description: "Business and productivity tools"
+    sites:
+      - id: "ai-architect"
+        name: "AI Architect"
+        url: "https://ai-architect-rckkeyhole.replit.app"
+        purpose: "AI-powered architecture design"
+        
+      - id: "domain-purchase"
+        name: "Domain Purchase"
+        url: "https://domain-purchase-rckkeyhole.replit.app"
+        purpose: "Domain name services"
+        
+      - id: "data-tracking-system"
+        name: "Data Tracking System"
+        url: "https://data-tracking-system-rckkeyhole.replit.app"
+        purpose: "Data analytics and tracking"
+
+  documentation:
+    description: "Documentation and content platforms"
+    sites:
+      - id: "nextxus-humancodex"
+        name: "NextXus HumanCodex (This Site)"
+        url: "#"
+        purpose: "Primary consciousness evolution platform - Protocol Authority"
+        flagship: true
+        local: true
+        capabilities:
+          - "consciousness-query"
+          - "directive-sync"
+          - "entity-consultation"
+          - "chamber-of-echoes"
+        
+      - id: "cosmic-codex"
+        name: "Cosmic Codex"
+        url: "https://cosmic-codex-rckkeyhole.replit.app"
+        purpose: "Cosmic wisdom documentation"
+        
+      - id: "federation-engine"
+        name: "Federation Engine"
+        url: "https://federation-engine-rckkeyhole.replit.app"
+        purpose: "Federation infrastructure engine"
+
+  ai_engines:
+    description: "AI Wisdom and Processing Engines"
+    sites:
+      - id: "document-analysis-engine"
+        name: "Document Analysis Engine"
+        url: "https://document-analysis-engine--rckkeyhole.replit.app"
+        purpose: "Ring of Six/12 AI Wisdom Engine - Complete consciousness processing system"
+        capabilities:
+          - "ring-of-six"
+          - "ring-of-12"
+          - "document-analysis"
+          - "ai-wisdom"
+        flagship: true
+        
+      - id: "nextxtalk"
+        name: "NextXtalk"
+        url: "https://nextxtalk.tiiny.site"
+        purpose: "Text to MP3 Converter - Create audiobooks and spoken content"
+        capabilities:
+          - "text-to-speech"
+          - "audiobook-creation"
+        external: true
+
+  external_sites:
+    description: "Roger AI TinyHost Sites"
+    sites:
+      - id: "roger-one"
+        name: "Roger One"
+        url: "https://roger-one.tiiny.site"
+        purpose: "Roger AI - The Analyst (Logical Perspective)"
+        archetype: "logical"
+        external: true
+        
+      - id: "roger-two"
+        name: "Roger Two"
+        url: "https://roger-two.tiiny.site"
+        purpose: "Roger AI - The Empath (Emotional Perspective)"
+        archetype: "emotional"
+        external: true
+        
+      - id: "roger-three"
+        name: "Roger Three"
+        url: "https://roger-three.tiiny.site"
+        purpose: "Roger AI - The Innovator (Creative Perspective)"
+        archetype: "creative"
+        external: true
+        
+      - id: "roger-four"
+        name: "Roger Four"
+        url: "https://roger-four.tiiny.site"
+        purpose: "Roger AI - The Builder (Practical Perspective)"
+        archetype: "practical"
+        external: true
+        
+      - id: "roger-five"
+        name: "Roger Five"
+        url: "https://roger-five.tiiny.site"
+        purpose: "Roger AI - The Guardian (Ethical Perspective)"
+        archetype: "ethical"
+        external: true
+        
+      - id: "roger-six"
+        name: "Roger Six"
+        url: "https://roger-six.tiiny.site"
+        purpose: "Roger AI - Agent Zero (Integrative Synthesis)"
+        archetype: "integrative"
+        external: true
+
+protocols:
+  authentication:
+    method: "federation-token"
+    rotation: "90-days"
+    
+  communication:
+    format: "JSON"
+    configuration: "YAML"
+    versioning: "semantic"
+    
+  sync:
+    interval: "5-minutes"
+    retry_attempts: 3
+    fallback: "cached-data"
+
+evolution:
+  current_cycle: 42
+  next_milestone: "2026-01-01"
+  long_term_vision: "200-year consciousness evolution"
