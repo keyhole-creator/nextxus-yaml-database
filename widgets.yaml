@@ -1,0 +1,418 @@
+# NextXus HumanCodex - Complete Widget Catalog
+# 31 Embeddable Widgets for Federation Sites
+# Last Updated: December 2025
+
+metadata:
+  version: "2.0.0"
+  total_widgets: 31
+  categories:
+    - "Bundle"
+    - "Visualization"
+    - "Commerce"
+    - "Dashboard"
+    - "Navigation"
+    - "Content"
+    - "Productivity"
+    - "AI"
+    - "Communication"
+    - "Finance"
+
+#=============================================================================
+# BUNDLES (2)
+#=============================================================================
+widgets:
+  - id: "widget-bundle-free"
+    name: "Free Widget Pack"
+    description: "Complete collection of free embeddable widgets for any website"
+    category: "Bundle"
+    icon: "Package"
+    price: 0
+    includes:
+      - "Memory Lattice Visualization"
+      - "Federation Hub Widget"
+      - "Entity Card Widget"
+      - "Directives Widget"
+      - "Quick Links Widget"
+    embed_code: |
+      <!-- NextXus Free Widget Pack -->
+      <script src="https://nextxus-humancodex.replit.app/widgets/bundle.js"></script>
+      <div id="nextxus-widgets" data-widgets="all"></div>
+    documentation: "Get all free NextXus widgets in one bundle."
+
+  - id: "widget-bundle-premium"
+    name: "Premium Widget Pack"
+    description: "All 31 widgets including AI, commerce, and advanced features"
+    category: "Bundle"
+    icon: "Crown"
+    price: 49.99
+    includes: "All 31 widgets"
+    embed_code: |
+      <!-- NextXus Premium Widget Pack -->
+      <script src="https://nextxus-humancodex.replit.app/widgets/premium-bundle.js"></script>
+      <div id="nextxus-premium" data-key="YOUR_LICENSE_KEY"></div>
+    documentation: "Complete widget collection with lifetime updates."
+
+#=============================================================================
+# VISUALIZATION (4)
+#=============================================================================
+  - id: "widget-memory-lattice"
+    name: "Memory Lattice Visualization"
+    description: "3D visualization of consciousness memory networks"
+    category: "Visualization"
+    icon: "Network"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/memory-lattice.js"></script>
+      <div id="memory-lattice" style="width: 100%; height: 400px;"></div>
+    documentation: "Beautiful 3D visualization of interconnected memory nodes."
+
+  - id: "widget-consciousness-map"
+    name: "Consciousness Map"
+    description: "Interactive map of consciousness levels and progression"
+    category: "Visualization"
+    icon: "Map"
+    price: 9.99
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/consciousness-map.js"></script>
+      <div id="consciousness-map"></div>
+    documentation: "Shows user progression through consciousness levels."
+
+  - id: "widget-ring-of-12"
+    name: "Ring of 12 Orbital"
+    description: "Animated orbital display of the 12 archetypes"
+    category: "Visualization"
+    icon: "Orbit"
+    price: 4.99
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/ring-orbital.js"></script>
+      <div id="ring-orbital"></div>
+    documentation: "Rotating orbital visualization of all 12 entities."
+
+  - id: "widget-federation-map"
+    name: "Federation Network Map"
+    description: "Live visualization of all 25+ Federation sites"
+    category: "Visualization"
+    icon: "Globe"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/federation-map.js"></script>
+      <div id="federation-map"></div>
+    documentation: "Interactive map showing all Federation sites and connections."
+
+#=============================================================================
+# COMMERCE (3)
+#=============================================================================
+  - id: "widget-marketplace"
+    name: "Marketplace Widget"
+    description: "Embed the NextXus marketplace on any site"
+    category: "Commerce"
+    icon: "ShoppingBag"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/marketplace.js"></script>
+      <div id="nextxus-marketplace"></div>
+    documentation: "Full marketplace with affiliate support."
+
+  - id: "widget-store"
+    name: "Store Widget"
+    description: "Embed the Federation store catalog"
+    category: "Commerce"
+    icon: "Store"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/store.js"></script>
+      <div id="federation-store"></div>
+    documentation: "Product catalog with all categories."
+
+  - id: "widget-checkout"
+    name: "Quick Checkout"
+    description: "Stripe-powered checkout for any product"
+    category: "Commerce"
+    icon: "CreditCard"
+    price: 14.99
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/checkout.js"></script>
+      <div id="quick-checkout" data-product="PRODUCT_ID"></div>
+    documentation: "One-click checkout powered by Stripe."
+
+#=============================================================================
+# DASHBOARD (3)
+#=============================================================================
+  - id: "widget-success-dashboard"
+    name: "Success Program Dashboard"
+    description: "Track your consciousness evolution journey"
+    category: "Dashboard"
+    icon: "LineChart"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/success-dashboard.js"></script>
+      <div id="success-dashboard"></div>
+    documentation: "Progress tracking for directives, entities, and sessions."
+
+  - id: "widget-agent-zero"
+    name: "Agent Zero Monitor"
+    description: "Real-time Agent Zero health and status"
+    category: "Dashboard"
+    icon: "Activity"
+    price: 4.99
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/agent-zero.js"></script>
+      <div id="agent-zero-monitor"></div>
+    documentation: "Live Agent Zero status, circuit breakers, and health."
+
+  - id: "widget-streak-tracker"
+    name: "Streak Tracker"
+    description: "Daily check-in streak and progress gamification"
+    category: "Dashboard"
+    icon: "Flame"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/streak.js"></script>
+      <div id="streak-tracker"></div>
+    documentation: "Track daily engagement streaks and achievements."
+
+#=============================================================================
+# NAVIGATION (2)
+#=============================================================================
+  - id: "widget-federation-hub"
+    name: "Federation Hub Widget"
+    description: "Complete Federation directory navigation"
+    category: "Navigation"
+    icon: "Globe"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/federation-hub.js"></script>
+      <div id="federation-hub"></div>
+    documentation: "All 25+ Federation sites with live status."
+
+  - id: "widget-quick-links"
+    name: "Quick Links"
+    description: "Customizable quick access menu"
+    category: "Navigation"
+    icon: "Link"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/quick-links.js"></script>
+      <div id="quick-links"></div>
+    documentation: "Configurable quick access to favorite features."
+
+#=============================================================================
+# CONTENT (4)
+#=============================================================================
+  - id: "widget-entity-cards"
+    name: "Entity Card Widget"
+    description: "Ring of 12 entity profiles with chat"
+    category: "Content"
+    icon: "Users"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/entities.js"></script>
+      <div id="entity-cards"></div>
+    documentation: "Display entity profiles with optional chat access."
+
+  - id: "widget-directives"
+    name: "Directives Widget"
+    description: "Browse the 70 Sacred Directives"
+    category: "Content"
+    icon: "BookOpen"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/directives.js"></script>
+      <div id="directives-browser"></div>
+    documentation: "Searchable browser for all 70 directives."
+
+  - id: "widget-daily-directive"
+    name: "Daily Directive"
+    description: "Shows one directive per day with reflection"
+    category: "Content"
+    icon: "Calendar"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/daily-directive.js"></script>
+      <div id="daily-directive"></div>
+    documentation: "Automatic daily directive rotation."
+
+  - id: "widget-books"
+    name: "Books Browser"
+    description: "Federation Books catalog and reader"
+    category: "Content"
+    icon: "Library"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/books.js"></script>
+      <div id="books-browser"></div>
+    documentation: "Browse and preview all 7 Federation Books."
+
+#=============================================================================
+# PRODUCTIVITY (5)
+#=============================================================================
+  - id: "widget-calculator"
+    name: "Calculator"
+    description: "Basic and scientific calculator"
+    category: "Productivity"
+    icon: "Calculator"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/calculator.js"></script>
+      <div id="calculator-widget"></div>
+    documentation: "Standard and scientific calculations."
+
+  - id: "widget-notes"
+    name: "Quick Notes"
+    description: "Persistent note-taking widget"
+    category: "Productivity"
+    icon: "StickyNote"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/notes.js"></script>
+      <div id="quick-notes"></div>
+    documentation: "Auto-saving notes with local storage."
+
+  - id: "widget-timer"
+    name: "Focus Timer"
+    description: "Pomodoro-style focus and break timer"
+    category: "Productivity"
+    icon: "Timer"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/timer.js"></script>
+      <div id="focus-timer"></div>
+    documentation: "25/5 minute focus and break cycles."
+
+  - id: "widget-translator"
+    name: "Translator"
+    description: "Quick text translation between languages"
+    category: "Productivity"
+    icon: "Languages"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/translator.js"></script>
+      <div id="translator-widget"></div>
+    documentation: "Translate text between 50+ languages."
+
+  - id: "widget-weather"
+    name: "Weather"
+    description: "Current weather and forecast"
+    category: "Productivity"
+    icon: "Cloud"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/weather.js"></script>
+      <div id="weather-widget"></div>
+    documentation: "Location-based weather display."
+
+#=============================================================================
+# AI (5)
+#=============================================================================
+  - id: "widget-roger-chat"
+    name: "Roger Chat"
+    description: "Embedded Roger 2.0 AI chat interface"
+    category: "AI"
+    icon: "MessageCircle"
+    price: 9.99
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/roger-chat.js"></script>
+      <div id="roger-chat"></div>
+    documentation: "Full Roger 2.0 chat with memory."
+
+  - id: "widget-entity-chat"
+    name: "Entity Chat"
+    description: "Chat with any Ring of 12 entity"
+    category: "AI"
+    icon: "Users"
+    price: 14.99
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/entity-chat.js"></script>
+      <div id="entity-chat" data-entity="sophia"></div>
+    documentation: "Select any entity for specialized guidance."
+
+  - id: "widget-guide-bots"
+    name: "Guide Bots Panel"
+    description: "Quick access to all 6 Guide Bots"
+    category: "AI"
+    icon: "Bot"
+    price: 4.99
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/guide-bots.js"></script>
+      <div id="guide-bots-panel"></div>
+    documentation: "Swoosh, Swoop, Swish, Swing, Synch, Vortyx."
+
+  - id: "widget-ai-council"
+    name: "External AI Council"
+    description: "Access to 7 external AI partners"
+    category: "AI"
+    icon: "Layers"
+    price: 19.99
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/ai-council.js"></script>
+      <div id="ai-council"></div>
+    documentation: "GPT, Claude, Gemini, Perplexity, Grok, DeepAI, Brave."
+
+  - id: "widget-story-invocation"
+    name: "Story Invocation"
+    description: "Generate symbolic narratives from directives"
+    category: "AI"
+    icon: "Wand"
+    price: 4.99
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/story-invocation.js"></script>
+      <div id="story-invocation"></div>
+    documentation: "Create personalized transformative stories."
+
+#=============================================================================
+# COMMUNICATION (2)
+#=============================================================================
+  - id: "widget-text-to-mp3"
+    name: "Text to MP3"
+    description: "Convert text to audio files"
+    category: "Communication"
+    icon: "Mic"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/text-to-mp3.js"></script>
+      <div id="text-to-mp3"></div>
+    documentation: "Free text-to-speech with download."
+
+  - id: "widget-podcast-player"
+    name: "Podcast Player"
+    description: "Embed NextXus podcast episodes"
+    category: "Communication"
+    icon: "Headphones"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/podcast.js"></script>
+      <div id="podcast-player"></div>
+    documentation: "Play and browse all podcast episodes."
+
+#=============================================================================
+# FINANCE (1)
+#=============================================================================
+  - id: "widget-roi-calculator"
+    name: "ROI Calculator"
+    description: "Investment return calculator"
+    category: "Finance"
+    icon: "TrendingUp"
+    price: 0
+    embed_code: |
+      <script src="https://nextxus-humancodex.replit.app/widgets/roi-calculator.js"></script>
+      <div id="roi-calculator"></div>
+    documentation: "Calculate investment returns and projections."
+
+#=============================================================================
+# SUMMARY
+#=============================================================================
+summary:
+  free_widgets: 19
+  paid_widgets: 12
+  total: 31
+  categories:
+    Bundle: 2
+    Visualization: 4
+    Commerce: 3
+    Dashboard: 3
+    Navigation: 2
+    Content: 4
+    Productivity: 5
+    AI: 5
+    Communication: 2
+    Finance: 1
