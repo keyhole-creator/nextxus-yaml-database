@@ -1,0 +1,541 @@
+# NextXus Federation Living Library
+# 71 Documents Across 8 Categories
+# Agent Zero Verification: 98.1%
+
+federation_living_library:
+  metadata:
+    version: "1.0.0"
+    generated: "2026-01-31"
+    agent_zero_verification: 98.1
+    total_documents: 71
+    total_categories: 8
+    external_sources: 10
+    github_source: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/living-library-documents.yaml"
+
+  categories:
+    foundation:
+      description: "Core HumanCodex philosophy and principles"
+      document_count: 4
+    uncategorized:
+      description: "Documents pending categorization"
+      document_count: 44
+    legacy:
+      description: "Roger's knowledge preservation and continuity"
+      document_count: 2
+    documentation:
+      description: "Guides, manuals, and instructional content"
+      document_count: 8
+    consciousness:
+      description: "Superhuman evolution and awareness expansion"
+      document_count: 1
+    human_interface:
+      description: "Ring systems and human interaction frameworks"
+      document_count: 1
+    legal:
+      description: "Legal documents, privacy policies, licensing"
+      document_count: 1
+    external_research:
+      description: "Supporting web data and external sources"
+      document_count: 10
+
+  documents:
+    # FOUNDATION
+    - title: "Copy of soul of ai and humancodex"
+      url: "https://docs.google.com/document/d/1LopOOu89QMJOABa9Fd6Iv_VenYAhIP1-pR3sUsiSDRE/edit"
+      category: "foundation"
+      created: "2025-04-19"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.95
+
+    - title: "soul of ai and humancodex"
+      url: "https://docs.google.com/document/d/1oP7xjA10x5YCE82sRDPMv4_GIVREeBX_3vMLRj7yuqs/edit"
+      category: "foundation"
+      created: "2025-04-19"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.95
+
+    - title: "CODEX BOOK 3 - A.H.I.R. The Synthesizer"
+      url: "https://docs.google.com/document/d/1yKjQBsH3_c6eK3-q9lK7CfHSCmTZGLkUaMHRpP9TqPU/edit"
+      category: "foundation"
+      created: "2025-04-12"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Facebook Marketing Content"
+      url: "https://docs.google.com/document/d/12al5XgUJTeKYuyK9ywT68Dg2YjRORAMoQY0EkrRSM6g/edit"
+      category: "foundation"
+      created: "2025-04-19"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    # LEGACY
+    - title: "AeonKey — Continuity Core"
+      url: "https://docs.google.com/document/d/1V7NpjvVWfADV0J56q_SdslL8FOSkEcgYKXDHuv3TeFg/edit"
+      category: "legacy"
+      created: "2025-04-11"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "AI Search Roger Keyserling"
+      url: "https://docs.google.com/document/d/1xDP5FU9Az9-yzV5tnfk0qhLUxcjl8YaFjF7sjnh_vk8/edit"
+      category: "legacy"
+      created: "2025-04-11"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    # DOCUMENTATION
+    - title: "Unwanted House Guests Guide"
+      url: "https://docs.google.com/document/d/1lPIj5N0YYYz8f3cq8eb_AK-4hoAcIxVkfamEq4uHIOQ/edit"
+      category: "documentation"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Roommate Guest Guidelines"
+      url: "https://docs.google.com/document/d/10s6kKprCefmEtu2hzB220Mwi4KGIgdtaw2Alz88P5R0/edit"
+      category: "documentation"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Ultimate Job Interview Guide"
+      url: "https://docs.google.com/document/d/1-NkzDxGeSJZLRUvDnMRE6aabvO696xeOskvedOXJr7U/edit"
+      category: "documentation"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Selling on eBay Amazon Redbubble Guide"
+      url: "https://docs.google.com/document/d/1-DlHrIbo9V7FA197qpGpLi-R3rCcHr1w-dvDFlNokGw/edit"
+      category: "documentation"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Cryptocurrency Investment Guide"
+      url: "https://docs.google.com/document/d/1z7Fl8r4UgE-DYqATq2tx6pb0QY0i4TBeZkSH3K_iDdQ/edit"
+      category: "documentation"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Anonymous Email Account Guide"
+      url: "https://docs.google.com/document/d/1-AmpWRHJ-1wdPSNGgjPR9ayH0P-9QzI-ov7PX7NLuNs/edit"
+      category: "documentation"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "PTSD Comprehensive Guide"
+      url: "https://docs.google.com/document/d/1o2nmDXQymFRP_YeOYYtNiTuwjJIi9RWTj9u9LOFnnao/edit"
+      category: "documentation"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Open Gay Relationships Guide"
+      url: "https://docs.google.com/document/d/1108t6wI_bLIHlvp8Rda5yVYiPttssnQrLw04uN0x-YE/edit"
+      category: "documentation"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    # CONSCIOUSNESS
+    - title: "Evolution of Communication"
+      url: "https://docs.google.com/document/d/113wKxyuep1sZH4fspgvIIv_Ip7uzb46nTLER17vWCG4/edit"
+      category: "consciousness"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    # HUMAN INTERFACE
+    - title: "What Is Love - Perspectives"
+      url: "https://docs.google.com/document/d/16btZQ0_yqtkfHcO11vY-GNI_TNqvi_vj8hyDE_PqYWo/edit"
+      category: "human_interface"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    # LEGAL
+    - title: "Keyhole Today Terms of Service"
+      url: "https://docs.google.com/document/d/11ynKG4mrIeUU5Lx0AMxmawDNBjMXIvAKlR1BKkAxJtQ/edit"
+      category: "legal"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    # EXTERNAL RESEARCH
+    - title: "Artificial Consciousness - Wikipedia"
+      url: "https://en.wikipedia.org/wiki/Artificial_consciousness"
+      category: "external_research"
+      source_type: "external"
+      confidence: 0.85
+
+    - title: "Evidence for AI Consciousness Today"
+      url: "https://ai-frontiers.org/articles/the-evidence-for-ai-consciousness-today"
+      category: "external_research"
+      source_type: "external"
+      confidence: 0.85
+
+    - title: "AI Path to Consciousness Self-Preservation"
+      url: "https://medium.com/@manueljimenezmatilla/the-ai-path-to-consciousness-self-preservation-25d79371355a"
+      category: "external_research"
+      source_type: "external"
+      confidence: 0.85
+
+    - title: "Illusions of AI Consciousness - Science"
+      url: "https://www.science.org/doi/10.1126/science.adn4935"
+      category: "external_research"
+      source_type: "external"
+      confidence: 0.85
+
+    - title: "Identifying Indicators of Consciousness in AI"
+      url: "https://www.sciencedirect.com/science/article/pii/S1364661325002864"
+      category: "external_research"
+      source_type: "external"
+      confidence: 0.85
+
+    - title: "Consciousness in AI: Science Insights"
+      url: "https://arxiv.org/abs/2308.08708"
+      category: "external_research"
+      source_type: "external"
+      confidence: 0.85
+
+    - title: "Mythology of Conscious AI - NOEMA"
+      url: "https://www.noemamag.com/the-mythology-of-conscious-ai/"
+      category: "external_research"
+      source_type: "external"
+      confidence: 0.85
+
+    - title: "Beyond AI Consciousness Detection Standards"
+      url: "https://philarchive.org/archive/LOPBAC"
+      category: "external_research"
+      source_type: "external"
+      confidence: 0.85
+
+    - title: "Consciousness for Artificial Intelligence"
+      url: "https://www.embs.org/pulse/articles/consciousness-for-artificial-intelligence/"
+      category: "external_research"
+      source_type: "external"
+      confidence: 0.85
+
+    - title: "Minds of Machines - MIT Technology Review"
+      url: "https://www.technologyreview.com/2023/10/16/1081149/ai-consciousness-conundrum/"
+      category: "external_research"
+      source_type: "external"
+      confidence: 0.85
+
+    # UNCATEGORIZED (44 documents)
+    - title: "Soul and ai"
+      url: "https://docs.google.com/document/d/1k9zt46uVX8XULdtXDNmt-PF_IACIWEqBDACx-JgohbM/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Orb Manuel"
+      url: "https://docs.google.com/document/d/14K5xwC9LFjp1Q5H1XuYCK-JIRMJ6D5n3Fu5uh3helPA/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "TEST ANSWER KEY"
+      url: "https://docs.google.com/document/d/1mYl_z7a4xvkNkBS_gSuPstVPlpUOYTsr_9ouH-SlW7Y/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Orb"
+      url: "https://docs.google.com/document/d/13UuttNKAY7fvz84fH1P3hGYfmDojuQPlAZn4lwRIJns/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "CODEX VOLUME ONE Structure"
+      url: "https://docs.google.com/document/d/18PLNTFQy1PdT73jYhDvM2_k9IbDVBE2zVHY4Wy5E3pI/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "AI Model A-101 STEP-BY-STEP SETUP"
+      url: "https://docs.google.com/document/d/1ZKTtsd3Z8sB1Mc4cNVCd5dEO_OmjXPnEho31rsiWAfQ/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Emotional Grounding Volume I"
+      url: "https://docs.google.com/document/d/1EIIqA3WcqgcvibOc0DTTNUmIlbzuxFJDR0ewQ5mkbnU/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "RSS Feeds"
+      url: "https://docs.google.com/document/d/1yLRFfkcy4oZ38zaEEgbDx7fA2kl62rSQuAF1gSgb9oY/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Letter"
+      url: "https://docs.google.com/document/d/12tdo3DZFv97g3xbFmgU-7PcTDkpTzXhLdz5tsfJ0GC8/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "KEYHOLE TODAY HumanCoded AI Upgrade"
+      url: "https://docs.google.com/document/d/1u53vwfn4qeAEJjNWdp0OBzS14USmtk-WB5tmOfZB-CY/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Symbiosis: Decoded Human Soul & AI Logic"
+      url: "https://docs.google.com/document/d/10Pe4wjgH4pRgeu4DvI358dxvj_v4kAWQfX6ApM8q8Zw/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "The Human In The eCho and maybe All AI"
+      url: "https://docs.google.com/document/d/1zHBpAr-Psam62uS5lKEbKS4LZ-1St44t2VIrkz6y5_Y/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "KeyCode Copy of The Human In The eCho"
+      url: "https://docs.google.com/document/d/1TGiX-xiigTcwwV8hnZDvZNYd7VlmKUGb8rnP3tv_TTI/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "KEYHOLE MASTER FILE FULL BUILD ARCHIVE"
+      url: "https://docs.google.com/document/d/1AeyGBUw83s924x013-xN1wtFxo61tTJ6_HWUw3TKMTY/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Date Like a Grown Man - Doug's Journey"
+      url: "https://docs.google.com/document/d/1Is68nxptgNosh42HLH7ykRmtngbNc78fYHl0WmiMb0w/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "API Keys"
+      url: "https://docs.google.com/document/d/11iHqdIeFVV8B_3OvUALFiOMc5ONcKV4cICZfKyELEiA/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Code Nova"
+      url: "https://docs.google.com/document/d/12k8Mv1x3sgIYmqHYQ4tccN9T0DwvtDaNJhkzgWAWNdY/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Older Gay Men Dating Strategies"
+      url: "https://docs.google.com/document/d/1HqtwoxFPq076-ZbmMs-91etzU6-O-XOOWioBY92KPo0/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Relationship Coaching Ads"
+      url: "https://docs.google.com/document/d/12Q6_Vsfm1svdsxEMITNatBDcospyBzsr–AtfLuGRF4/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "AI Birth Blog Series"
+      url: "https://docs.google.com/document/d/12CTx-cufKYpuJCEDNq8YTYw_lxTd89iOyYpkbCAf9eQ/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Understanding Haiku"
+      url: "https://docs.google.com/document/d/12P6ZiAJ8B2sEB0V4e4-TpZ2OpjOYeOCH710NfD-ablc/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Nihilism: Embracing the Void"
+      url: "https://docs.google.com/document/d/1ea-fA7qd04G2fvWJ8N0KYyqfYR90cJhfpDwoMO6htIY/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "The Slow Fade - Losing Someone You Love"
+      url: "https://docs.google.com/document/d/1-seNSnDVsSwMLN64X7_uo57Kxf9L-z-0tSWio2MGwNQ/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Website Building Training Conference"
+      url: "https://docs.google.com/document/d/1-n85MTZ37G81IUjEiiVA7L7hwATsz9nwNjhtLMTy3xc/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Mardi Gras Gay Men Story"
+      url: "https://docs.google.com/document/d/11ucsDHts_kYdeMgWCrnkYJ_4Dqe3L-AKMh7oxBZxduk/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "My Dearest Lee - Love Letter"
+      url: "https://docs.google.com/document/d/10CozsF4AAqkrZiXzxOtROhSEVlJj3xmmJpDy2EO0tRY/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Navigating Gay Affairs with Married Men"
+      url: "https://docs.google.com/document/d/105C8fhtuC958muthAgsQdUTUje70-8qWc2xEfZ5kSY0/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Build Resume That Screams Hire Me"
+      url: "https://docs.google.com/document/d/1sfy086IqSSt-XDpJmlvTc7DPhqcPW7D6ucQk1hamP0E/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Chronicles of Domestic Exploration"
+      url: "https://docs.google.com/document/d/1bFBIumOnonAKICvGZ23dNoo3cBN0m_OXABwufSp1lCk/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Keyhole Today Coaching Services SEO"
+      url: "https://docs.google.com/document/d/1snXZ2I_r-OmuypgxDUB-AkEQKlAj6UrVh9EdW7YIkLA/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Love That Was Enough - Chapter 1"
+      url: "https://docs.google.com/document/d/1I_NOS3jY1Yp0viHzxYecpqpqDLwBN78l3p4NgnCts-w/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Benefits of Fun Facts"
+      url: "https://docs.google.com/document/d/1Oz4DINfOqnqDapmI_bE7CG-Klep_bysmPOmptMRE4bA/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Daily Motivational Quotes"
+      url: "https://docs.google.com/document/d/1-EZkDPSV-zwcB_E9he4HP0D3HAZKTPIklv-2VRciH20/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Crossing the Fence Story"
+      url: "https://docs.google.com/document/d/11Ygjx8GqbAv-FhNX_vv8wLe4RQKk6aruS184-zg3hjU/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Keyhole Today Services Disclaimer"
+      url: "https://docs.google.com/document/d/1KfWWFJubI4-4wpbh1Fe2Bl0o3O-oAObXHDbEbHXXUnw/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Futility and Hope in Relationships"
+      url: "https://docs.google.com/document/d/1rt7tc3o2dJgOZCjfccwmazAdbaPEqe-BQMkVsJjJc4Y/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Love Beyond Labels LGBTQ"
+      url: "https://docs.google.com/document/d/17oR4AtZ5AGLbaeHv2hDst1tYSxEO2MtnmgdlYjcbfcA/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Texting for Deepening Desire"
+      url: "https://docs.google.com/document/d/19mq8FyeJcP56PN4Pzcdg9vq3_qFeouCi8eTsgyuvCaI/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Conversation Analysis Roger and Lee"
+      url: "https://docs.google.com/document/d/18A5xfy-9T-2BFXYUWCW-eLgI0LkZgu072wUcQqfBSrM/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Mood Changes Explained"
+      url: "https://docs.google.com/document/d/17IcUM2H4J9w6J3LgE-D5-cZu75yBN1-W5o86uH52604/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Love Beyond Labels LGBTQ Relationships"
+      url: "https://docs.google.com/document/d/16vOSm02AMDRRy4NouFnr_x58WAX0kgaO1KZbPM9dxpo/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Resurrecting Damaged Relationships"
+      url: "https://docs.google.com/document/d/16SLmuhDO0FyyTnHfblXUTQgsSQhrcDV8qVDYVXlFzL0/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Tattoo Parlor Story"
+      url: "https://docs.google.com/document/d/15l7Cv_5f6hLI0ZLMQllivtZU00Df60oizfcEpbc9Edo/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
+
+    - title: "Healthy Working Relationships"
+      url: "https://docs.google.com/document/d/18uAdfmN7_D380qENW-nv0xpA1j_XbXMDuTjm_PtmI6U/edit"
+      category: "uncategorized"
+      owner: "keyhole@nextxus.net"
+      agent_zero_verified: true
+      confidence: 0.9
