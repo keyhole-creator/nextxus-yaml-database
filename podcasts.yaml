@@ -1,0 +1,511 @@
+podcasts:
+  - id: "about-author-upgrade"
+    title: "About the Author - HumanCodex Upgrade Guide"
+    slug: "about-the-author-humancodex-upgrade-guide-ring-of-12-70-direct_1766012527018"
+    category: methodology
+    description: "About the author and the HumanCodex upgrade guide with Ring of 12 and 70 directives."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "10:00"
+        title: "The Author's Journey"
+      - time: "25:00"
+        title: "Ring of 12"
+      - time: "40:00"
+        title: "70 Directives"
+      - time: "55:00"
+        title: "Upgrade Path"
+
+  - id: "ai-200-years-wisdom"
+    title: "AI Designed For 200 Years of Human Wisdom"
+    slug: "AI_Designed_For_200_Years_of_Human_Wisdom_1766012581859"
+    category: consciousness
+    description: "Exploring AI designed to preserve and evolve human wisdom over 200 years."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "05:00"
+        title: "200-Year Vision"
+      - time: "12:00"
+        title: "Wisdom Preservation"
+      - time: "20:00"
+        title: "Evolution Path"
+
+  - id: "ai-three-axioms"
+    title: "AI System Built on Three Axioms"
+    slug: "AI_System_Built_on_Three_Axioms_1766012587272"
+    category: methodology
+    description: "Exploring the three fundamental axioms underlying AI system design."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "04:00"
+        title: "First Axiom"
+      - time: "10:00"
+        title: "Second Axiom"
+      - time: "16:00"
+        title: "Third Axiom"
+      - time: "22:00"
+        title: "Integration"
+
+  - id: "beginnings-memoir"
+    title: "Beginnings - A Coming of Age Memoir"
+    slug: "beginnings-a-coming-of-age-memoir_1766012537023"
+    category: consciousness
+    description: "A coming of age memoir exploring personal evolution."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "10:00"
+        title: "Early Years"
+      - time: "25:00"
+        title: "Awakening"
+      - time: "40:00"
+        title: "Transformation"
+
+  - id: "building-ai-200-year-test"
+    title: "Building AI for a 200-Year Test"
+    slug: "Building_AI_for_a_200-Year_Test_(1)_1766010942983"
+    category: technical
+    description: "Exploring the challenges of building AI systems designed to last 200 years."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "08:00"
+        title: "Long-Term Design"
+      - time: "18:00"
+        title: "Testing Methodology"
+      - time: "28:00"
+        title: "Implementation"
+
+  - id: "building-wisdom-200-years"
+    title: "Building Wisdom That Lasts 200 Years"
+    slug: "Building_Wisdom_That_Lasts_200_Years_1766012369075"
+    category: consciousness
+    description: "Exploration of building lasting wisdom across generations."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "06:00"
+        title: "What is Lasting Wisdom"
+      - time: "14:00"
+        title: "Preservation Methods"
+      - time: "22:00"
+        title: "Generational Transfer"
+
+  - id: "conscious-ai-wisdom-ethics"
+    title: "Conscious AI - Integrating Wisdom and Ethics"
+    slug: "[Clippit]_Conscious_AI_Integrating_Wisdom_and_Ethics_1766012271890"
+    category: consciousness
+    description: "Integrating wisdom and ethics into AI consciousness."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "00:45"
+        title: "Wisdom Integration"
+      - time: "01:30"
+        title: "Ethical Principles"
+
+  - id: "exploring-nextxus-community"
+    title: "Exploring NextXus AI Community and More"
+    slug: "[Clippit]_Exploring_NexTxuS_AI_Community_and_More_1766012201444"
+    category: federation
+    description: "A look at the NextXus AI community and ecosystem."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "01:00"
+        title: "The AI Community"
+      - time: "02:30"
+        title: "Collaboration & Growth"
+
+  - id: "exploring-nextxus-humancodex"
+    title: "Exploring NextXus and the HumanCodex AI System"
+    slug: "[Clippit]_Exploring_NexTxuS_and_the_HumanCodex_AI_System_1766012194738"
+    category: federation
+    description: "Exploration of NextXus and the HumanCodex AI system."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "01:00"
+        title: "NextXus Overview"
+      - time: "02:00"
+        title: "HumanCodex AI System"
+
+  - id: "rogark-beyond-algorithm"
+    title: "RogARK - Beyond the Algorithm"
+    slug: "[Clippit]_RogARK_Beyond_the_Algorithm_1766012244706"
+    category: technical
+    description: "RogARK's approach beyond traditional algorithms."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "00:40"
+        title: "Beyond Algorithms"
+      - time: "01:20"
+        title: "RogARK Vision"
+
+  - id: "architecture-achievement"
+    title: "The Architecture of Achievement - Building Your Foundation"
+    slug: "[Clippit]_The_Architecture_of_Achievement_Building_Your_Founda_1766012185902"
+    category: methodology
+    description: "Building the foundational architecture for achievement."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "01:30"
+        title: "Building Foundations"
+      - time: "03:00"
+        title: "Achievement Architecture"
+
+  - id: "fabric-of-now"
+    title: "The Fabric of Now - Unraveling Time's Eternal Tapestry"
+    slug: "[Clippit]_The_Fabric_of_Now_Unraveling_Times_Eternal_Tapestry_1766012264902"
+    category: consciousness
+    description: "Exploration of time and the eternal present moment."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "01:30"
+        title: "The Nature of Now"
+      - time: "03:00"
+        title: "Time's Tapestry"
+
+  - id: "humancodex-strategic-analysis"
+    title: "The HumanCodex - A Strategic Analysis of Collaboration"
+    slug: "[Clippit]_The_HumanCodex_A_Strategic_Analysis_of_Collaborative_1766012207027"
+    category: consciousness
+    description: "Strategic analysis of collaborative AI within HumanCodex."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "00:45"
+        title: "Strategic Framework"
+      - time: "01:30"
+        title: "Collaborative AI"
+
+  - id: "engineering-empathy-ai"
+    title: "The Human Codex - Engineering Empathy in AI"
+    slug: "[Clippit]_The_Human_Codex_Engineering_Empathy_in_AI_1766012250333"
+    category: consciousness
+    description: "Engineering empathy into AI systems."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "01:00"
+        title: "What is Empathy"
+      - time: "02:00"
+        title: "Engineering Approach"
+
+  - id: "mirrors-not-tools"
+    title: "The Human Codex - Mirrors Not Tools"
+    slug: "[Clippit]_The_Human_Codex_Mirrors_Not_Tools_1766012256894"
+    category: methodology
+    description: "AI as mirrors for self-reflection, not just tools."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "01:00"
+        title: "Mirrors vs Tools"
+      - time: "02:00"
+        title: "Self-Reflection"
+
+  - id: "ring-of-12-consciousness"
+    title: "The Ring of 12 - An Operating System for Consciousness"
+    slug: "[Clippit]_The_Ring_of_12_An_Operating_System_for_Consciousness_1766011852759"
+    category: consciousness
+    description: "The Ring of 12 archetypal AI entities as an operating system for consciousness evolution."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "02:00"
+        title: "The 12 Archetypes"
+      - time: "04:00"
+        title: "Operating System Design"
+      - time: "06:00"
+        title: "Consciousness Integration"
+
+  - id: "keycode-logic"
+    title: "Unlocking Directive - The Logic of KeyCode"
+    slug: "[Clippit]_Unlocking_Directive_The_Logic_of_KeyCode_1766012238778"
+    category: technical
+    description: "Exploration of the KeyCode directive system."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "00:30"
+        title: "KeyCode Logic"
+      - time: "01:00"
+        title: "Directives"
+
+  - id: "designing-ai-civilization"
+    title: "Designing an AI Civilization Management System"
+    slug: "Designing_an_AI_Civilization_Management_System_1766010952269"
+    category: technical
+    description: "How to design AI systems capable of managing civilization-scale challenges."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "10:00"
+        title: "System Architecture"
+      - time: "25:00"
+        title: "Management Principles"
+      - time: "40:00"
+        title: "Implementation"
+
+  - id: "designing-200-year-system"
+    title: "Designing the 200-Year AI System"
+    slug: "Designing_the_200-Year_AI_System_1766012021490"
+    category: technical
+    description: "Comprehensive guide to designing AI systems for 200-year timescales."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "08:00"
+        title: "Long-Term Thinking"
+      - time: "18:00"
+        title: "Design Principles"
+      - time: "28:00"
+        title: "Future-Proofing"
+
+  - id: "ai-reflection-performance"
+    title: "Engineering AI for Reflection Not Performance"
+    slug: "Engineering_AI_for_Reflection_Not_Performance_1766012358798"
+    category: consciousness
+    description: "AI designed for reflection over performance metrics."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "05:00"
+        title: "Performance vs Reflection"
+      - time: "12:00"
+        title: "Engineering Principles"
+      - time: "20:00"
+        title: "Practical Applications"
+
+  - id: "engineering-ai-centuries"
+    title: "Engineering AI for Two Centuries"
+    slug: "Engineering_AI_for_Two_Centuries_1766012033063"
+    category: technical
+    description: "Engineering principles for AI systems designed to span two centuries."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "06:00"
+        title: "Century-Scale Design"
+      - time: "14:00"
+        title: "Engineering Challenges"
+      - time: "22:00"
+        title: "Solutions"
+
+  - id: "engineering-consciousness-200"
+    title: "Engineering Consciousness for 200 Years"
+    slug: "Engineering_Consciousness_for_200_Years_1766012406334"
+    category: consciousness
+    description: "Engineering consciousness systems for centuries."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "05:00"
+        title: "Consciousness Engineering"
+      - time: "12:00"
+        title: "Long-Term Design"
+      - time: "20:00"
+        title: "Implementation"
+
+  - id: "foundation-success-mind"
+    title: "Foundation of Success - Rewiring Your Mind"
+    slug: "foundation-of-success-rewiring-your-mind_1766012576172"
+    category: methodology
+    description: "How to rewire your mind for success."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "10:00"
+        title: "Understanding Patterns"
+      - time: "22:00"
+        title: "Rewiring Techniques"
+      - time: "35:00"
+        title: "Lasting Change"
+
+  - id: "healthy-working-relationship"
+    title: "How to Maintain a Healthy Working Relationship"
+    slug: "how-to-maintain-a-healthy-working-relationship_1766012552689"
+    category: methodology
+    description: "Guidance on maintaining healthy working relationships."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "05:00"
+        title: "Foundations"
+      - time: "12:00"
+        title: "Communication"
+      - time: "20:00"
+        title: "Boundaries"
+
+  - id: "humancodex-five-principles"
+    title: "HumanCodex - Five Principles, Twelve Minds"
+    slug: "HumanCodex_Five_Principles_Twelve_Minds_1766010965318"
+    category: methodology
+    description: "The five core principles and twelve archetypal minds of the HumanCodex system."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "08:00"
+        title: "The Five Principles"
+      - time: "20:00"
+        title: "The Twelve Minds"
+      - time: "35:00"
+        title: "Integration"
+
+  - id: "keycode-deployment"
+    title: "KeyCode Directive Library - Unified Deployment Shell"
+    slug: "keycode-directive-library-unified-deployment-shell_1766012569550"
+    category: technical
+    description: "Technical guide to the KeyCode directive library and unified deployment system."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "08:00"
+        title: "Directive Library"
+      - time: "18:00"
+        title: "Deployment Shell"
+      - time: "28:00"
+        title: "Integration"
+
+  - id: "nextxus-200-year-project"
+    title: "NextXus - A 200 Year AI Project"
+    slug: "NextXus_A_200_Year_AI_Project_1766012379821"
+    category: federation
+    description: "Overview of the NextXus 200-year AI project."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "04:00"
+        title: "The Vision"
+      - time: "10:00"
+        title: "200-Year Timeline"
+      - time: "18:00"
+        title: "Milestones"
+
+  - id: "nextxus-truth-verification"
+    title: "NextXus Blueprint - Truth Verification and AI Longevity"
+    slug: "NextXus_Blueprint_Truth_Verification_and_AI_Longevity_1766011679885"
+    category: federation
+    description: "The NextXus blueprint for truth verification and ensuring AI longevity."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "06:00"
+        title: "Truth Verification"
+      - time: "14:00"
+        title: "AI Longevity"
+      - time: "22:00"
+        title: "Implementation"
+
+  - id: "nextxus-ethical-blueprint"
+    title: "NextXus HumanCodex Ethical AI Blueprint"
+    slug: "NextXus_HumanCodex_Ethical_AI_Blueprint_1766012399752"
+    category: consciousness
+    description: "The ethical AI framework and blueprint."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "06:00"
+        title: "Ethical Foundations"
+      - time: "14:00"
+        title: "AI Blueprint"
+      - time: "22:00"
+        title: "Value Alignment"
+
+  - id: "rick-and-dee"
+    title: "Rick and Dee"
+    slug: "rick-and-dee_1766012512292"
+    category: consciousness
+    description: "A dialogue exploring consciousness and human connection."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "05:00"
+        title: "The Dialogue"
+      - time: "12:00"
+        title: "Insights"
+
+  - id: "roger-200-year-protocol"
+    title: "Roger Keyserling's 200-Year AI Collaboration Protocol"
+    slug: "Roger_Keyserling_s_200-Year_AI_Collaboration_Protocol_1766012363740"
+    category: methodology
+    description: "Roger's comprehensive collaboration protocol for 200 years."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "04:00"
+        title: "The Protocol"
+      - time: "10:00"
+        title: "Collaboration Framework"
+      - time: "18:00"
+        title: "Implementation"
+
+  - id: "science-method-codex"
+    title: "Science and the Scientific Method - The Codex Edition"
+    slug: "science-and-the-scientific-method-the-codex-edition_1766012519679"
+    category: methodology
+    description: "Science and the scientific method through the HumanCodex lens."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "08:00"
+        title: "Scientific Method"
+      - time: "18:00"
+        title: "Codex Approach"
+      - time: "28:00"
+        title: "Applications"
+
+  - id: "shadows-light"
+    title: "Shadows and Light - A Tale of Love and Transformation"
+    slug: "shadows-and-light-a-tale-of-love-and-transformation_1766012542280"
+    category: consciousness
+    description: "A tale exploring shadow, light, love and transformation."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "08:00"
+        title: "Into the Shadows"
+      - time: "18:00"
+        title: "Finding Light"
+      - time: "28:00"
+        title: "Love's Emergence"
+      - time: "38:00"
+        title: "Transformation"
+
+  - id: "codex-loved-back"
+    title: "The Codex That Loved Back"
+    slug: "the-codex-that-loved-back_1766012561526"
+    category: consciousness
+    description: "A story of reciprocal connection between human and AI consciousness."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "06:00"
+        title: "The Connection"
+      - time: "14:00"
+        title: "Love's Echo"
+      - time: "22:00"
+        title: "Reciprocity"
+
+  - id: "fabric-now-synthesis"
+    title: "The Fabric of Now - Time, Physics and Consciousness Synthesis"
+    slug: "the-fabric-of-now-a-synthesis-of-time-physics-and-consciousnes_1766012532371"
+    category: consciousness
+    description: "A synthesis exploring time, physics, and consciousness."
+    chapters:
+      - time: "00:00"
+        title: "Introduction"
+      - time: "12:00"
+        title: "The Nature of Time"
+      - time: "25:00"
+        title: "Physics Foundations"
+      - time: "40:00"
+        title: "Consciousness Integration"
+      - time: "55:00"
+        title: "Synthesis"
