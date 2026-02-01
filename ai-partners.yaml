@@ -1,0 +1,98 @@
+# Federation AI Partners - External AI Services
+# These are the AI systems that power and support the Federation
+
+partners:
+  - id: openai
+    name: OpenAI GPT
+    description: Advanced language model powering Roger 2.0 and chat systems
+    url: https://openai.com
+    icon: SiOpenai
+    category: Language Models
+    used_by:
+      - humancodex
+      - federation-ai
+      - premium-pack-manager
+
+  - id: anthropic
+    name: Anthropic Claude
+    description: Constitutional AI with advanced reasoning for complex tasks
+    url: https://anthropic.com
+    icon: SiAnthropic
+    category: Language Models
+    used_by:
+      - humancodex
+      - consciousness-network
+
+  - id: grok
+    name: xAI Grok
+    description: Real-time knowledge with wit and humor
+    url: https://x.ai
+    icon: SiX
+    category: Language Models
+    used_by: []
+
+  - id: gemini
+    name: Google Gemini
+    description: Multimodal AI for text, images, and code
+    url: https://gemini.google.com
+    icon: SiGoogle
+    category: Language Models
+    used_by: []
+
+  - id: perplexity
+    name: Perplexity AI
+    description: AI-powered search with real-time web access
+    url: https://perplexity.ai
+    icon: SiPerplexity
+    category: Search & Research
+    used_by:
+      - humancodex
+
+  - id: deepai
+    name: DeepAI
+    description: Creative AI tools for images, text, and more
+    url: https://deepai.org
+    icon: SiDeepai
+    category: Creative Tools
+    used_by:
+      - premium-pack-manager
+
+  - id: huggingface
+    name: Hugging Face
+    description: Open-source AI models and transformers
+    url: https://huggingface.co
+    icon: SiHuggingface
+    category: Open Source AI
+    used_by: []
+
+  - id: replicate
+    name: Replicate
+    description: Run open-source AI models in the cloud
+    url: https://replicate.com
+    icon: SiReplicate
+    category: Model Hosting
+    used_by: []
+
+  - id: stability
+    name: Stability AI
+    description: Open generative AI for images and creative work
+    url: https://stability.ai
+    icon: SiStability
+    category: Image Generation
+    used_by: []
+
+  - id: midjourney
+    name: Midjourney
+    description: AI art generation with stunning visuals
+    url: https://midjourney.com
+    icon: SiMidjourney
+    category: Image Generation
+    used_by: []
+
+categories:
+  - Language Models
+  - Search & Research
+  - Creative Tools
+  - Image Generation
+  - Open Source AI
+  - Model Hosting
