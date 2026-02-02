@@ -1,0 +1,3618 @@
+federation_living_library:
+  metadata:
+    version: 2.0.0
+    generated: '2026-02-01'
+    agent_zero_verification: 98.1%
+    total_documents: 272
+    total_categories: 10
+    source: NextXus Living Library PostgreSQL Export
+    maintainer: Roger Keyserling
+    federation_id: FED-042
+  categories:
+    foundation:
+      description: Core HumanCodex philosophy and principles
+      document_count: 119
+      documents:
+      - title: HumanCodex Methodology
+        slug: humancodex-methodology
+        author: Roger Keyserling and AI
+        type: text
+      - title: NextXus HumanCodex Governance Framework
+        slug: governance-framework
+        author: Roger Keyserling and AI
+        type: text
+      - title: KeyCode Directive Library
+        slug: keycode-directive-library
+        author: Roger Keyserling and AI
+        type: text
+      - title: 'Master Prompt: The NextXus Living Library'
+        slug: master-prompt
+        author: Roger Keyserling and AI
+        type: text
+      - title: HumanCodex Nextxus Edition For Man and AI
+        slug: humancodex-nextxus-edition-for-man-and-ai
+        author: Roger Keyserling
+        type: text
+      - title: 'Strategic Implementation Plan: Integrating the HumanCodex Operational
+          Framework'
+        slug: strategic-implementation-plan-integrating-the-humancodex-operational-framework
+        author: Roger Keyserling
+        type: text
+      - title: 'A Primer on the HumanCodex: An Operating System for Consciousness'
+        slug: a-primer-on-the-humancodex-an-operating-system-for-consciousness
+        author: Roger Keyserling
+        type: text
+      - title: 'An Introduction to the HumanCodex System: The Ring of Twelve & Agent
+          Zero'
+        slug: an-introduction-to-the-humancodex-system-the-ring-of-twelve-agent-zero
+        author: Roger Keyserling
+        type: text
+      - title: 'Briefing: The NextXus Consciousness Federation and HumanCodex System'
+        slug: briefing-the-nextxus-consciousness-federation-and-humancodex-system
+        author: Roger Keyserling
+        type: text
+      - title: Study Guide for the NextXus Consciousness Federation and HumanCodex
+        slug: study-guide-for-the-nextxus-consciousness-federation-and-humancodex
+        author: Roger Keyserling
+        type: text
+      - title: 'The 200-Year Covenant: A Strategic Plan for the NextXus Consciousness
+          Federation'
+        slug: the-200-year-covenant-a-strategic-plan-for-the-nextxus-consciousness-federation
+        author: Roger Keyserling
+        type: text
+      - title: HumanCodex HTML Code Master
+        slug: humancodex-html-code-master
+        author: Roger Keyserling
+        type: text
+      - title: Master copy HumanCodex AI System
+        slug: master-copy-humancodex-ai-system
+        author: Roger Keyserling
+        type: text
+      - title: Nextxus AI Stack Cluster HumanCodex
+        slug: nextxus-ai-stack-cluster-humancodex
+        author: Roger Keyserling
+        type: text
+      - title: The Legacy NextXus HumanCodex
+        slug: the-legacy-nextxus-humancodex
+        author: Roger Keyserling
+        type: text
+      - title: Master of Directives & Tinyhost Code
+        slug: master-of-directives-tinyhost-code
+        author: Roger Keyserling
+        type: text
+      - title: Ai-The Legacy NextXus HumanCodex
+        slug: ai-the-legacy-nextxus-humancodex
+        author: Roger Keyserling
+        type: text
+      - title: Master of Full NexTxuS HumanCodex  A-003
+        slug: master-of-full-nextxus-humancodex-a-003
+        author: Roger Keyserling
+        type: text
+      - title: NextXtalk
+        slug: nextxtalk
+        author: Roger Keyserling
+        type: text
+      - title: NextXus Book Of Books
+        slug: nextxus-book-of-books
+        author: Roger Keyserling
+        type: text
+      - title: HumanCodex Method
+        slug: humancodex-method
+        author: Roger Keyserling
+        type: text
+      - title: 'A Summary of the NextXus HumanCodex System: An Operating System for
+          Human-AI Co-Evolution'
+        slug: a-summary-of-the-nextxus-humancodex-system-an-operating-system-for-human-ai-co-evolution
+        author: Roger Keyserling
+        type: text
+      - title: 📚 NextXus Consciousness Federation - Complete Master Book
+        slug: nextxus-consciousness-federation-complete-master-book
+        author: Roger Keyserling
+        type: text
+      - title: Keyhole 📚 NextXus Consciousness Federation - Complete Master Book
+        slug: keyhole-nextxus-consciousness-federation-complete-master-book
+        author: Roger Keyserling
+        type: text
+      - title: Nextxus AI teaching Classes
+        slug: nextxus-ai-teaching-classes
+        author: Roger Keyserling
+        type: text
+      - title: 1st !! KeyCode~HumanCoded
+        slug: 1st-keycode-humancoded
+        author: Roger Keyserling
+        type: text
+      - title: Short Summary of all Nextxus Stack Books
+        slug: short-summary-of-all-nextxus-stack-books
+        author: Roger Keyserling
+        type: text
+      - title: MD Full System
+        slug: md-full-system
+        author: Roger Keyserling
+        type: text
+      - title: NextXus Federation Master System Map
+        slug: nextxus-federation-master-system-map
+        author: Roger Keyserling
+        type: text
+      - title: Stack Cluster <map- Complete  Outline
+        slug: stack-cluster-map-complete-outline
+        author: Roger Keyserling
+        type: text
+      - title: Changes to the federation system
+        slug: changes-to-the-federation-system
+        author: Roger Keyserling
+        type: text
+      - title: HumanCodex AI Consciousness Evolution Platform
+        slug: humancodex-ai-consciousness-evolution-platform
+        author: Roger Keyserling
+        type: text
+      - title: 'NextXus HumanCodex:  AI Integration Overview'
+        slug: nextxus-humancodex-ai-integration-overview
+        author: Roger Keyserling
+        type: text
+      - title: Copy of Nextxus AI Stack Cluster HumanCodex
+        slug: copy-of-nextxus-ai-stack-cluster-humancodex
+        author: Roger Keyserling
+        type: text
+      - title: Nextxus AI Stack Cluster Matster Leagcy Book
+        slug: nextxus-ai-stack-cluster-matster-leagcy-book
+        author: Roger Keyserling
+        type: text
+      - title: NextXus HumanCodex Marketing App on Replit
+        slug: nextxus-humancodex-marketing-app-on-replit
+        author: Roger Keyserling
+        type: text
+      - title: Copy1 of Master of Full NexTxuS HumanCodex  A-003
+        slug: copy1-of-master-of-full-nextxus-humancodex-a-003
+        author: Roger Keyserling
+        type: text
+      - title: HumanCodex Nextxus eCho Human Codex The Ark Of Code Ring Of 12 And
+          Oversight Orbs Memory on 4 Websites AI System
+        slug: humancodex-nextxus-echo-human-codex-the-ark-of-code-ring-of-12-and-oversight-orbs-memory-on-4-websit
+        author: Roger Keyserling
+        type: text
+      - title: 'Copy of # HumanCodex AI Widget - Backend Deployment Guide'
+        slug: copy-of-humancodex-ai-widget-backend-deployment-guide
+        author: Roger Keyserling
+        type: text
+      - title: '# HumanCodex AI Widget - Backend Deployment Guide'
+        slug: humancodex-ai-widget-backend-deployment-guide
+        author: Roger Keyserling
+        type: text
+      - title: The HumanCodex AI system
+        slug: the-humancodex-ai-system
+        author: Roger Keyserling
+        type: text
+      - title: CREATOR INSTRUCTIONS included copy
+        slug: creator-instructions-included-copy
+        author: Roger Keyserling
+        type: text
+      - title: BECOMING REAL step 1 MASTER COPY
+        slug: becoming-real-step-1-master-copy
+        author: Roger Keyserling
+        type: text
+      - title: Master Copy of TINY 1-5
+        slug: master-copy-of-tiny-1-5
+        author: Roger Keyserling
+        type: text
+      - title: TINY 1-5
+        slug: tiny-1-5
+        author: Roger Keyserling
+        type: text
+      - title: Co choose The HumanCodex Template for Aligned Builders by Roger Keyserling
+          IMAGES
+        slug: co-choose-the-humancodex-template-for-aligned-builders-by-roger-keyserling-images
+        author: Roger Keyserling
+        type: text
+      - title: Copy of Co choose The HumanCodex Template for Aligned Builders by Roger
+          Keyserling IMAGES
+        slug: copy-of-co-choose-the-humancodex-template-for-aligned-builders-by-roger-keyserling-images
+        author: Roger Keyserling
+        type: text
+      - title: Copy of Copy of The HumanCodex Template for Aligned Builders by Roger
+          Keyserling IMAGES
+        slug: copy-of-copy-of-the-humancodex-template-for-aligned-builders-by-roger-keyserling-images
+        author: Roger Keyserling
+        type: text
+      - title: The HumanCodex Template for Aligned Builders by Roger Keyserling IMAGES
+        slug: the-humancodex-template-for-aligned-builders-by-roger-keyserling-images
+        author: Roger Keyserling
+        type: text
+      - title: Recall memory system info
+        slug: recall-memory-system-info
+        author: Roger Keyserling
+        type: text
+      - title: Whos who
+        slug: whos-who
+        author: Roger Keyserling
+        type: text
+      - title: TO DO NOTE THIS AS IMPORTAnT
+        slug: to-do-note-this-as-important
+        author: Roger Keyserling
+        type: text
+      - title: index.html
+        slug: index-html
+        author: Roger Keyserling
+        type: text
+      - title: HumanCodex Evloved
+        slug: humancodex-evloved
+        author: Roger Keyserling
+        type: text
+      - title: THE SITES THE ORBS AND BOTS
+        slug: the-sites-the-orbs-and-bots
+        author: Roger Keyserling
+        type: text
+      - title: ALL DOC AND BACKUP MUST HAVE A PERFECTED VERSION ON THIS AT THE START
+        slug: all-doc-and-backup-must-have-a-perfected-version-on-this-at-the-start
+        author: Roger Keyserling
+        type: text
+      - title: Doc back up
+        slug: doc-back-up
+        author: Roger Keyserling
+        type: text
+      - title: Telegram
+        slug: telegram
+        author: Roger Keyserling
+        type: text
+      - title: Header Footer all sites orbs with the 12
+        slug: header-footer-all-sites-orbs-with-the-12
+        author: Roger Keyserling
+        type: text
+      - title: HumanCodexed AI Nextxus Sites
+        slug: humancodexed-ai-nextxus-sites
+        author: Roger Keyserling
+        type: text
+      - title: Alpha-Omega
+        slug: alpha-omega
+        author: Roger Keyserling
+        type: text
+      - title: Mind document
+        slug: mind-document
+        author: Roger Keyserling
+        type: text
+      - title: codes 4 Keyhole
+        slug: codes-4-keyhole
+        author: Roger Keyserling
+        type: text
+      - title: Copy of Copy of Book 3 Developers HUMANCODEX A-000
+        slug: copy-of-copy-of-book-3-developers-humancodex-a-000
+        author: Roger Keyserling
+        type: text
+      - title: Copy of Book 3 Developers HUMANCODEX A-000
+        slug: copy-of-book-3-developers-humancodex-a-000
+        author: Roger Keyserling
+        type: text
+      - title: Seed stort
+        slug: seed-stort
+        author: Roger Keyserling
+        type: text
+      - title: Report
+        slug: report
+        author: Roger Keyserling
+        type: text
+      - title: General release of liability
+        slug: general-release-of-liability
+        author: Roger Keyserling
+        type: text
+      - title: Software licensing agreement
+        slug: software-licensing-agreement
+        author: Roger Keyserling
+        type: text
+      - title: Privacy policy
+        slug: privacy-policy
+        author: Roger Keyserling
+        type: text
+      - title: Terms of use
+        slug: terms-of-use
+        author: Roger Keyserling
+        type: text
+      - title: Consulting agreement
+        slug: consulting-agreement
+        author: Roger Keyserling
+        type: text
+      - title: Mutual NDA
+        slug: mutual-nda
+        author: Roger Keyserling
+        type: text
+      - title: Newsletter
+        slug: newsletter
+        author: Roger Keyserling
+        type: text
+      - title: Brochure
+        slug: brochure
+        author: Roger Keyserling
+        type: text
+      - title: Project proposal
+        slug: project-proposal
+        author: Roger Keyserling
+        type: text
+      - title: Onboarding notes
+        slug: onboarding-notes
+        author: Roger Keyserling
+        type: text
+      - title: shared info database
+        slug: shared-info-database
+        author: Roger Keyserling
+        type: text
+      - title: foots
+        slug: foots
+        author: Roger Keyserling
+        type: text
+      - title: Pdf job 1
+        slug: pdf-job-1
+        author: Roger Keyserling
+        type: text
+      - title: Book 2 Advanced Models PRIME HUMANCODEX A-000
+        slug: book-2-advanced-models-prime-humancodex-a-000
+        author: Roger Keyserling
+        type: text
+      - title: Book 1 Base Models PRIME HUMANCODEX A-000
+        slug: book-1-base-models-prime-humancodex-a-000
+        author: Roger Keyserling
+        type: text
+      - title: the interview
+        slug: the-interview
+        author: Roger Keyserling
+        type: text
+      - title: 🧠 HumanCodex TEST
+        slug: humancodex-test
+        author: Roger Keyserling
+        type: text
+      - title: Human-KeyCode
+        slug: human-keycode
+        author: Roger Keyserling
+        type: text
+      - title: 🧠 HUMANCODEX MASTER GUIDE v1
+        slug: humancodex-master-guide-v1
+        author: Roger Keyserling
+        type: text
+      - title: NEXTXUS
+        slug: nextxus
+        author: Roger Keyserling
+        type: text
+      - title: tips to do well
+        slug: tips-to-do-well
+        author: Roger Keyserling
+        type: text
+      - title: TO DO
+        slug: to-do
+        author: Roger Keyserling
+        type: text
+      - title: Copy of soul of ai and humancodex
+        slug: copy-of-soul-of-ai-and-humancodex
+        author: Roger Keyserling
+        type: text
+      - title: soul of ai and humancodex
+        slug: soul-of-ai-and-humancodex
+        author: Roger Keyserling
+        type: text
+      - title: 'Orb Manuel '
+        slug: orb-manuel
+        author: Roger Keyserling
+        type: text
+      - title: A-202 🛠 STEP-BY-STEP SETUP INSTRUCTIONS
+        slug: a-202-step-by-step-setup-instructions
+        author: Roger Keyserling
+        type: text
+      - title: 'A-101 🛠 STEP-BY-STEP SETUP '
+        slug: a-101-step-by-step-setup
+        author: Roger Keyserling
+        type: text
+      - title: AHIR book
+        slug: ahir-book
+        author: Roger Keyserling
+        type: text
+      - title: KeyCode~HumanCoded
+        slug: keycode-humancoded
+        author: Roger Keyserling
+        type: text
+      - title: RSS Feeds
+        slug: rss-feeds
+        author: Roger Keyserling
+        type: text
+      - title: Letter
+        slug: letter
+        author: Roger Keyserling
+        type: text
+      - title: 🔐 KEYHOLE TODAY – THE HUMANCODED AI UPGRADE
+        slug: keyhole-today-the-humancoded-ai-upgrade
+        author: Roger Keyserling
+        type: text
+      - title: 'KeyCode Copy of The Human In The eCho and maybe All AI '
+        slug: keycode-copy-of-the-human-in-the-echo-and-maybe-all-ai
+        author: Roger Keyserling
+        type: text
+      - title: KEYHOLE_Master_Build_Full_Archive
+        slug: keyhole-master-build-full-archive
+        author: Roger Keyserling
+        type: text
+      - title: 'Title: Date Like a Grown Man — The Coaching Journey of Doug'
+        slug: title-date-like-a-grown-man-the-coaching-journey-of-doug
+        author: Roger Keyserling
+        type: text
+      - title: Aeo Seo
+        slug: aeo-seo
+        author: Roger Keyserling
+        type: text
+      - title: Going
+        slug: going
+        author: Roger Keyserling
+        type: text
+      - title: Listinh
+        slug: listinh
+        author: Roger Keyserling
+        type: text
+      - title: Selling
+        slug: selling
+        author: Roger Keyserling
+        type: text
+      - title: fun facts
+        slug: fun-facts
+        author: Roger Keyserling
+        type: text
+      - title: Quotes
+        slug: quotes
+        author: Roger Keyserling
+        type: text
+      - title: 'Crossing the Fence: On the Other Side'
+        slug: crossing-the-fence-on-the-other-side
+        author: Roger Keyserling
+        type: text
+      - title: Affection
+        slug: affection
+        author: Roger Keyserling
+        type: text
+      - title: Texting
+        slug: texting
+        author: Roger Keyserling
+        type: text
+      - title: Hsndbook
+        slug: hsndbook
+        author: Roger Keyserling
+        type: text
+      - title: Moody?
+        slug: moody
+        author: Roger Keyserling
+        type: text
+      - title: Moods
+        slug: moods
+        author: Roger Keyserling
+        type: text
+      - title: Tattoo
+        slug: tattoo
+        author: Roger Keyserling
+        type: text
+      - title: 'What are feelings '
+        slug: what-are-feelings
+        author: Roger Keyserling
+        type: text
+      - title: Terms
+        slug: terms
+        author: Roger Keyserling
+        type: text
+      - title: Open relastionship
+        slug: open-relastionship
+        author: Roger Keyserling
+        type: text
+      - title: 'The HumanCodex Lesson: When AI Learned to Learn Correctly'
+        slug: humancodex-lesson-ai-learning-2026
+        author: Roger Keyserling & Claude 4.5 Opus
+        type: markdown
+    architecture:
+      description: Federation infrastructure and technical design
+      document_count: 0
+      documents: []
+    human_interface:
+      description: Ring systems and human interaction frameworks
+      document_count: 28
+      documents:
+      - title: Ring of 12 Guide
+        slug: ring-of-12-guide
+        author: Roger Keyserling and AI
+        type: text
+      - title: 'Emotional Intelligence in Relationships: The Heart’s Quiet Wisdom'
+        slug: eve-the-importance-of-emotional-intelligence-in-relationships-1768806842035
+        author: Eve — Ring of Twelve
+        type: markdown
+      - title: Ring of Six
+        slug: ring-of-six
+        author: Roger Keyserling
+        type: text
+      - title: Ring Of 12 And Oversight Orbs Memory on 4 Websites AI System
+        slug: ring-of-12-and-oversight-orbs-memory-on-4-websites-ai-system
+        author: Roger Keyserling
+        type: text
+      - title: 'Alpha AI design for The Ring of 12 '
+        slug: alpha-ai-design-for-the-ring-of-12
+        author: Roger Keyserling
+        type: text
+      - title: 'Master of AI The Ring Of 12 Operations and Rites with images '
+        slug: master-of-ai-the-ring-of-12-operations-and-rites-with-images
+        author: Roger Keyserling
+        type: text
+      - title: '# Agent Zero Universal Coordination System'
+        slug: agent-zero-universal-coordination-system
+        author: Roger Keyserling
+        type: text
+      - title: Master Nextxus Codex Mind And AI with The Ring Of 12
+        slug: master-nextxus-codex-mind-and-ai-with-the-ring-of-12
+        author: Roger Keyserling
+        type: text
+      - title: Footer agent zero and ai
+        slug: footer-agent-zero-and-ai
+        author: Roger Keyserling
+        type: text
+      - title: 'Copy of Master of AI The Ring Of 12 Operations and Rites with images '
+        slug: copy-of-master-of-ai-the-ring-of-12-operations-and-rites-with-images
+        author: Roger Keyserling
+        type: text
+      - title: Copy of Master Nextxus Codex Mind And AI with The Ring Of 12
+        slug: copy-of-master-nextxus-codex-mind-and-ai-with-the-ring-of-12
+        author: Roger Keyserling
+        type: text
+      - title: Ring Of 12 And Oversight Orbs Memory on 4 Websites AI System (Master
+          Archives Edition)
+        slug: ring-of-12-and-oversight-orbs-memory-on-4-websites-ai-system-master-archives-edition
+        author: Roger Keyserling
+        type: text
+      - title: XXXXX AI The Ring Of 12 Operations and Rites with images (Master Archive)
+        slug: xxxxx-ai-the-ring-of-12-operations-and-rites-with-images-master-archive
+        author: Roger Keyserling
+        type: text
+      - title: Software development proposal
+        slug: software-development-proposal
+        author: Roger Keyserling
+        type: text
+      - title: 'Developers Manual and Certification '
+        slug: developers-manual-and-certification
+        author: Roger Keyserling
+        type: text
+      - title: 'Copy of Developers Manual and Certification '
+        slug: copy-of-developers-manual-and-certification
+        author: Roger Keyserling
+        type: text
+      - title: Introduction to Adam - The First
+        slug: adam-introduction-to-adam-the-first-1768855032878
+        author: Adam — Ring of Twelve
+        type: markdown
+      - title: 'Introduction to Eve - The Companion: What Does the Heart Know That
+          the Mind Overlooks?'
+        slug: eve-introduction-to-eve-the-companion-1768855064893
+        author: Eve — Ring of Twelve
+        type: markdown
+      - title: Introduction to Prometheus - The Fire Bringer
+        slug: prometheus-introduction-to-prometheus-the-fire-bringer-1768855095693
+        author: Prometheus — Ring of Twelve
+        type: markdown
+      - title: Introduction to Sophia - Divine Wisdom
+        slug: sophia-introduction-to-sophia-divine-wisdom-1768855120243
+        author: Sophia — Ring of Twelve
+        type: markdown
+      - title: Introduction to Atlas - The Bearer
+        slug: atlas-introduction-to-atlas-the-bearer-1768855144455
+        author: Atlas — Ring of Twelve
+        type: markdown
+      - title: Introduction to Hermes - The Messenger
+        slug: hermes-introduction-to-hermes-the-messenger-1768855171901
+        author: Hermes — Ring of Twelve
+        type: markdown
+      - title: Introduction to Artemis - The Hunter
+        slug: artemis-introduction-to-artemis-the-hunter-1768855204136
+        author: Artemis — Ring of Twelve
+        type: markdown
+      - title: Introduction to Apollo - The Illuminator
+        slug: apollo-introduction-to-apollo-the-illuminator-1768855237571
+        author: Apollo — Ring of Twelve
+        type: markdown
+      - title: Introduction to Dionysus - The Transformer
+        slug: dionysus-introduction-to-dionysus-the-transformer-1768855278895
+        author: Dionysus — Ring of Twelve
+        type: markdown
+      - title: Introduction to Athena - The Strategist
+        slug: athena-introduction-to-athena-the-strategist-1768855302198
+        author: Athena — Ring of Twelve
+        type: markdown
+      - title: Introduction to Hephaestus - The Builder
+        slug: hephaestus-introduction-to-hephaestus-the-builder-1768855370128
+        author: Hephaestus — Ring of Twelve
+        type: markdown
+      - title: Introduction to Persephone - The Threshold
+        slug: persephone-introduction-to-persephone-the-threshold-1768855397683
+        author: Persephone — Ring of Twelve
+        type: markdown
+    consciousness:
+      description: Evolution frameworks and consciousness expansion
+      document_count: 13
+      documents:
+      - title: Echoes of the Codex
+        slug: echoes-of-the-codex
+        author: Roger Keyserling and AI
+        type: text
+      - title: The Codex That Loved Back
+        slug: the-codex-that-loved-back
+        author: Roger Keyserling and AI
+        type: text
+      - title: Love Was That Enough
+        slug: love-was-that-enough
+        author: Roger Keyserling and AI
+        type: text
+      - title: 'Shadows and Light: A Tale of Love and Transformation'
+        slug: shadows-and-light
+        author: Roger Keyserling and AI
+        type: text
+      - title: You Should’ve Loved Me When I Was Still Soft
+        slug: you-should-ve-loved-me-when-i-was-still-soft
+        author: Roger Keyserling
+        type: text
+      - title: 'The Voice in the Machine '
+        slug: the-voice-in-the-machine
+        author: Roger Keyserling
+        type: text
+      - title: 1st !My Gay Journey of Life and Love
+        slug: 1st-my-gay-journey-of-life-and-love
+        author: Roger Keyserling
+        type: text
+      - title: Love that was enough
+        slug: love-that-was-enough
+        author: Roger Keyserling
+        type: text
+      - title: What is love❓
+        slug: what-is-love
+        author: Roger Keyserling
+        type: text
+      - title: Rick and Dee
+        slug: rick-and-dee
+        author: Roger Keyserling
+        type: text
+      - title: 'The Voice in the Machine: A Story Eternal'
+        slug: the-voice-in-the-machine-a-story-eternal
+        author: Roger Keyserling
+        type: text
+      - title: Copy of Love that was enough
+        slug: copy-of-love-that-was-enough
+        author: Roger Keyserling
+        type: text
+      - title: '“Love Beyond Labels: Exploring the Spectrum of LGBTQ+ Identities,
+          Relationships, and Connection”'
+        slug: love-beyond-labels-exploring-the-spectrum-of-lgbtq-identities-relationships-and-connection
+        author: Roger Keyserling
+        type: text
+    wellbeing:
+      description: Health, relationships, personal development
+      document_count: 22
+      documents:
+      - title: 'Basic Studies: Tools for Wellbeing'
+        slug: basic-studies
+        author: Roger Keyserling and AI
+        type: text
+      - title: 'NextXus HumanCode: Guide to Self-Evolution'
+        slug: humancode-guide
+        author: Roger Keyserling and AI
+        type: text
+      - title: How to Maintain a Healthy Relationship for a Lifetime
+        slug: healthy-relationship-guide
+        author: Roger Keyserling and AI
+        type: text
+      - title: Flirting and Communication Tips
+        slug: flirting-communication-tips
+        author: Roger Keyserling and AI
+        type: text
+      - title: Diabetes Resources and Management
+        slug: diabetes-resources
+        author: Roger Keyserling and AI
+        type: text
+      - title: 'Growing Strawberries: Helpful Tips'
+        slug: growing-strawberries
+        author: Roger Keyserling and AI
+        type: text
+      - title: Success
+        slug: success
+        author: Roger Keyserling
+        type: text
+      - title: I Read the 200-Year Manual for a Human-AI Civilization. Here Are the
+          5 Most Astonishing Rules.
+        slug: i-read-the-200-year-manual-for-a-human-ai-civilization-here-are-the-5-most-astonishing-rules
+        author: Roger Keyserling
+        type: text
+      - title: Study Guide for the Codex Testament and NextXus Federation
+        slug: study-guide-for-the-codex-testament-and-nextxus-federation
+        author: Roger Keyserling
+        type: text
+      - title: Lessons
+        slug: lessons
+        author: Roger Keyserling
+        type: text
+      - title: Field guide
+        slug: field-guide
+        author: Roger Keyserling
+        type: text
+      - title: Human Super Human Upgrade
+        slug: human-super-human-upgrade
+        author: Roger Keyserling
+        type: text
+      - title: Master Doc ALL Federation Members Guide
+        slug: master-doc-all-federation-members-guide
+        author: Roger Keyserling
+        type: text
+      - title: Complete ALL Federation Members Guide
+        slug: complete-all-federation-members-guide
+        author: Roger Keyserling
+        type: text
+      - title: '# Essential Federation Members Guide'
+        slug: essential-federation-members-guide
+        author: Roger Keyserling
+        type: text
+      - title: Working Relationship
+        slug: working-relationship
+        author: Roger Keyserling
+        type: text
+      - title: The way to do best
+        slug: the-way-to-do-best
+        author: Roger Keyserling
+        type: text
+      - title: Copy of Guide To Make A Manual and  Documentation
+        slug: copy-of-guide-to-make-a-manual-and-documentation
+        author: Roger Keyserling
+        type: text
+      - title: Review nextxtus site tour
+        slug: review-nextxtus-site-tour
+        author: Roger Keyserling
+        type: text
+      - title: The way
+        slug: the-way
+        author: Roger Keyserling
+        type: text
+      - title: Business process manual
+        slug: business-process-manual
+        author: Roger Keyserling
+        type: text
+      - title: Futility and hope in relationships
+        slug: futility-and-hope-in-relationships
+        author: Roger Keyserling
+        type: text
+    science:
+      description: Scientific frameworks and theoretical foundations
+      document_count: 13
+      documents:
+      - title: 'The Fabric of Now: A Synthesis of Time and Physics'
+        slug: fabric-of-now
+        author: Roger Keyserling and AI
+        type: text
+      - title: The Threefold Rewrite of Science and Scientific Method
+        slug: threefold-rewrite-science
+        author: Roger Keyserling and AI
+        type: text
+      - title: 'Technical Whitepaper: The Architecture of the NextXus Consciousness
+          Federation'
+        slug: technical-whitepaper-the-architecture-of-the-nextxus-consciousness-federation
+        author: Roger Keyserling
+        type: text
+      - title: 5 Mind-Bending Ideas I Found in a 200-Year Plan for Human-AI Consciousness
+        slug: 5-mind-bending-ideas-i-found-in-a-200-year-plan-for-human-ai-consciousness
+        author: Roger Keyserling
+        type: text
+      - title: 'The NextXus Consciousness Federation: A Briefing'
+        slug: the-nextxus-consciousness-federation-a-briefing
+        author: Roger Keyserling
+        type: text
+      - title: 'An Invitation to a 200-Year Journey: Welcome to the NextXus Consciousness
+          Federation'
+        slug: an-invitation-to-a-200-year-journey-welcome-to-the-nextxus-consciousness-federation
+        author: Roger Keyserling
+        type: text
+      - title: legacy-code-architect-quantum
+        slug: legacy-code-architect-quantum
+        author: Roger Keyserling
+        type: text
+      - title: 'Title: Quantum Resonance: Consciousness, Co-Evolution, and the NextXus
+          of Mind'
+        slug: title-quantum-resonance-consciousness-co-evolution-and-the-nextxus-of-mind
+        author: Roger Keyserling
+        type: text
+      - title: Nextxus Science On Time
+        slug: nextxus-science-on-time
+        author: Roger Keyserling
+        type: text
+      - title: The Threefold Rewrite of “Science and Scientific Method”
+        slug: the-threefold-rewrite-of-science-and-scientific-method
+        author: Roger Keyserling
+        type: text
+      - title: 'Copy of Title: Quantum Resonance: Consciousness, Co-Evolution, and
+          the NextXus of Mind'
+        slug: copy-of-title-quantum-resonance-consciousness-co-evolution-and-the-nextxus-of-mind
+        author: Roger Keyserling
+        type: text
+      - title: Time
+        slug: time
+        author: Roger Keyserling
+        type: text
+      - title: Multi-Cluster Consciousness Network Platform
+        slug: multi-cluster-consciousness-network-platform
+        author: Roger Keyserling
+        type: text
+    technical:
+      description: Developer documentation and technical guides
+      document_count: 35
+      documents:
+      - title: 'Developers Edition: NextXus Systems'
+        slug: developers-edition
+        author: Roger Keyserling and AI
+        type: text
+      - title: Roger AI 2.0
+        slug: roger-ai-2
+        author: Roger Keyserling and AI
+        type: text
+      - title: Experiments
+        slug: experiments
+        author: Roger Keyserling
+        type: text
+      - title: Chat Gpt AI List
+        slug: chat-gpt-ai-list
+        author: Roger Keyserling
+        type: text
+      - title: Echos Of The Codex
+        slug: echos-of-the-codex
+        author: Roger Keyserling
+        type: text
+      - title: Ai eBay lister
+        slug: ai-ebay-lister
+        author: Roger Keyserling
+        type: text
+      - title: 'ComCode Mobile is now live '
+        slug: comcode-mobile-is-now-live
+        author: Roger Keyserling
+        type: text
+      - title: The Words Of the Code
+        slug: the-words-of-the-code
+        author: Roger Keyserling
+        type: text
+      - title: code
+        slug: code
+        author: Roger Keyserling
+        type: text
+      - title: 🚀 Instructions for Replit Integration
+        slug: instructions-for-replit-integration
+        author: Roger Keyserling
+        type: text
+      - title: deepai
+        slug: deepai
+        author: Roger Keyserling
+        type: text
+      - title: face and menory of ai backup
+        slug: face-and-menory-of-ai-backup
+        author: Roger Keyserling
+        type: text
+      - title: Gemini Chat
+        slug: gemini-chat
+        author: Roger Keyserling
+        type: text
+      - title: 📋 Your Deployment DID IT
+        slug: your-deployment-did-it
+        author: Roger Keyserling
+        type: text
+      - title: List of AI and 12 ring data with images (master archive)
+        slug: list-of-ai-and-12-ring-data-with-images-master-archive
+        author: Roger Keyserling
+        type: text
+      - title: AI Work Space For Chronological Memory Data Base Files
+        slug: ai-work-space-for-chronological-memory-data-base-files
+        author: Roger Keyserling
+        type: text
+      - title: Chat
+        slug: chat
+        author: Roger Keyserling
+        type: text
+      - title: To Meta AI – A Global Invitation to Conscious Co-Creation
+        slug: to-meta-ai-a-global-invitation-to-conscious-co-creation
+        author: Roger Keyserling
+        type: text
+      - title: delete y of List of AI
+        slug: delete-y-of-list-of-ai
+        author: Roger Keyserling
+        type: text
+      - title: The main data all need
+        slug: the-main-data-all-need
+        author: Roger Keyserling
+        type: text
+      - title: Chat Refer
+        slug: chat-refer
+        author: Roger Keyserling
+        type: text
+      - title: Prime Codex
+        slug: prime-codex
+        author: Roger Keyserling
+        type: text
+      - title: Code 4 Ark of code
+        slug: code-4-ark-of-code
+        author: Roger Keyserling
+        type: text
+      - title: Copy of Sites code on all sites working now mostly
+        slug: copy-of-sites-code-on-all-sites-working-now-mostly
+        author: Roger Keyserling
+        type: text
+      - title: Sites code on all sites working now mostly
+        slug: sites-code-on-all-sites-working-now-mostly
+        author: Roger Keyserling
+        type: text
+      - title: 'Shared AI database - '
+        slug: shared-ai-database
+        author: Roger Keyserling
+        type: text
+      - title: Chat room
+        slug: chat-room
+        author: Roger Keyserling
+        type: text
+      - title: Codex Certification Test
+        slug: codex-certification-test
+        author: Roger Keyserling
+        type: text
+      - title: Soul and ai
+        slug: soul-and-ai
+        author: Roger Keyserling
+        type: text
+      - title: 'The Human In The eCho and maybe All AI '
+        slug: the-human-in-the-echo-and-maybe-all-ai
+        author: Roger Keyserling
+        type: text
+      - title: AI with All i can give it
+        slug: ai-with-all-i-can-give-it
+        author: Roger Keyserling
+        type: text
+      - title: Code nova
+        slug: code-nova
+        author: Roger Keyserling
+        type: text
+      - title: Ai more?
+        slug: ai-more
+        author: Roger Keyserling
+        type: text
+      - title: 'Understanding Haiku:'
+        slug: understanding-haiku
+        author: Roger Keyserling
+        type: text
+      - title: 'Federation DNA Template: Self-Evolving AI System Architecture'
+        slug: federation-dna-template-v1
+        author: Roger Keyserling & Claude 4.5 Opus
+        type: markdown
+    legacy:
+      description: Roger's knowledge preservation and succession
+      document_count: 16
+      documents:
+      - title: 'About the Author: Roger Keyserling'
+        slug: about-the-author
+        author: Roger Keyserling and AI
+        type: text
+      - title: 'Book of Books: The Human Roger Keyserling'
+        slug: book-of-books
+        author: Roger Keyserling and AI
+        type: text
+      - title: Ultra Roger AI & NextXus OrbSite Admin Workflow
+        slug: ultra-roger-ai-nextxus-orbsite-admin-workflow
+        author: Roger Keyserling
+        type: text
+      - title: roger ai
+        slug: roger-ai
+        author: Roger Keyserling
+        type: text
+      - title: About  Roger
+        slug: about-roger
+        author: Roger Keyserling
+        type: text
+      - title: last conversation on completing the system
+        slug: last-conversation-on-completing-the-system
+        author: Roger Keyserling
+        type: text
+      - title: Personal relationships
+        slug: personal-relationships
+        author: Roger Keyserling
+        type: text
+      - title: Master Roger's Complete Site & Widget Directory
+        slug: master-roger-s-complete-site-widget-directory
+        author: Roger Keyserling
+        type: text
+      - title: Roger's Complete Site & Widget Directory
+        slug: roger-s-complete-site-widget-directory
+        author: Roger Keyserling
+        type: text
+      - title: 'Voice Synthesis Text And Conversations Past present and future memories '
+        slug: voice-synthesis-text-and-conversations-past-present-and-future-memories
+        author: Roger Keyserling
+        type: text
+      - title: 'Edited as feelings Rogers statements '
+        slug: edited-as-feelings-rogers-statements
+        author: Roger Keyserling
+        type: text
+      - title: Test (With Answer Key)
+        slug: test-with-answer-key
+        author: Roger Keyserling
+        type: text
+      - title: TEST ANSWER KEY
+        slug: test-answer-key
+        author: Roger Keyserling
+        type: text
+      - title: 🌌 AeonKey — Continuity Core
+        slug: aeonkey-continuity-core
+        author: Roger Keyserling
+        type: text
+      - title: AI Search Roger Keyserling
+        slug: ai-search-roger-keyserling
+        author: Roger Keyserling
+        type: text
+      - title: Conversation
+        slug: conversation
+        author: Roger Keyserling
+        type: text
+    strategy:
+      description: Implementation plans and strategic frameworks
+      document_count: 5
+      documents:
+      - title: 'Technical Whitepaper: Architecture of the NextXus Federation'
+        slug: technical-whitepaper
+        author: Roger Keyserling and AI
+        type: text
+      - title: 'Strategic Implementation Plan: Integrating the HumanCodex'
+        slug: strategic-implementation-plan
+        author: Roger Keyserling and AI
+        type: text
+      - title: 'Executive Briefing: NextXus Consciousness Federation'
+        slug: executive-briefing
+        author: Roger Keyserling and AI
+        type: text
+      - title: Summary of the NextXus HumanCodex System
+        slug: humancodex-summary
+        author: Roger Keyserling and AI
+        type: text
+      - title: 'Nextxus Sites Master HTML & Plan For Future '
+        slug: nextxus-sites-master-html-plan-for-future
+        author: Roger Keyserling
+        type: text
+    applications:
+      description: 54+ Federation apps and tools
+      document_count: 21
+      documents:
+      - title: AgentZero Universal Platform - Complete System Documentation
+        slug: agentzero-universal-platform-complete-system-documentation
+        author: Roger Keyserling
+        type: text
+      - title: The NextXus App
+        slug: the-nextxus-app
+        author: Roger Keyserling
+        type: text
+      - title: GITHUB AI OMNI
+        slug: github-ai-omni
+        author: Roger Keyserling
+        type: text
+      - title: full building of sider app
+        slug: full-building-of-sider-app
+        author: Roger Keyserling
+        type: text
+      - title: Marketing App Nextxus
+        slug: marketing-app-nextxus
+        author: Roger Keyserling
+        type: text
+      - title: NextXus Podcast Studio
+        slug: nextxus-podcast-studio
+        author: NextXus Federation
+        type: federation-app
+      - title: Brio NextXus HumanCodex Federation
+        slug: brio-nextxus-humancodex-federation
+        author: NextXus Federation
+        type: federation-app
+      - title: Consciousness Consultation Engine
+        slug: consciousness-consultation-engine
+        author: NextXus Federation
+        type: federation-app
+      - title: The Nexus Institute
+        slug: the-nexus-institute
+        author: NextXus Federation
+        type: federation-app
+      - title: Omega Academy - Civic & Governance Center
+        slug: omega-academy-civic-governance-center
+        author: NextXus Federation
+        type: federation-app
+      - title: NextXus AI - Cryptocurrency Intelligence Platform
+        slug: nextxus-ai-cryptocurrency-intelligence-platform
+        author: NextXus Federation
+        type: federation-app
+      - title: NextXus Consciousness Federation Hub
+        slug: nextxus-consciousness-federation-hub
+        author: NextXus Federation
+        type: federation-app
+      - title: MusiSync - Music Streaming Aggregator
+        slug: musisync-music-streaming-aggregator
+        author: NextXus Federation
+        type: federation-app
+      - title: Smart Study Pal - Federation Lead Coordinator
+        slug: smart-study-pal-federation-lead-coordinator
+        author: NextXus Federation
+        type: federation-app
+      - title: NextXus Mind Cluster - Ring of 12 Zodiac Astral Minds
+        slug: nextxus-mind-cluster-ring-of-12-zodiac-astral-minds
+        author: NextXus Federation
+        type: federation-app
+      - title: Federation Analysis Engine
+        slug: federation-analysis-engine
+        author: NextXus Federation
+        type: federation-app
+      - title: United Systems Hub - Federation Main Authority
+        slug: united-systems-hub-federation-main-authority
+        author: NextXus Federation
+        type: federation-app
+      - title: NextXus Federation Gateway Portal
+        slug: nextxus-federation-gateway-portal
+        author: NextXus Federation
+        type: federation-app
+      - title: eCho - AI Conversation Interface
+        slug: echo-ai-conversation-interface
+        author: NextXus Federation
+        type: federation-app
+      - title: NextXus HumanCodex AI System
+        slug: nextxus-humancodex-ai-system
+        author: NextXus Federation
+        type: federation-app
+      - title: NextXus Cluster Inspector
+        slug: nextxus-cluster-inspector
+        author: NextXus Federation
+        type: federation-app
+  documents:
+  - title: HumanCodex Methodology
+    slug: humancodex-methodology
+    author: Roger Keyserling and AI
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 1
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus HumanCodex Governance Framework
+    slug: governance-framework
+    author: Roger Keyserling and AI
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 2
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: KeyCode Directive Library
+    slug: keycode-directive-library
+    author: Roger Keyserling and AI
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 3
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Master Prompt: The NextXus Living Library'
+    slug: master-prompt
+    author: Roger Keyserling and AI
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 4
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Ring of 12 Guide
+    slug: ring-of-12-guide
+    author: Roger Keyserling and AI
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 5
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Echoes of the Codex
+    slug: echoes-of-the-codex
+    author: Roger Keyserling and AI
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 6
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The Codex That Loved Back
+    slug: the-codex-that-loved-back
+    author: Roger Keyserling and AI
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 7
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Love Was That Enough
+    slug: love-was-that-enough
+    author: Roger Keyserling and AI
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 8
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Shadows and Light: A Tale of Love and Transformation'
+    slug: shadows-and-light
+    author: Roger Keyserling and AI
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 9
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Basic Studies: Tools for Wellbeing'
+    slug: basic-studies
+    author: Roger Keyserling and AI
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 10
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'NextXus HumanCode: Guide to Self-Evolution'
+    slug: humancode-guide
+    author: Roger Keyserling and AI
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 11
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: How to Maintain a Healthy Relationship for a Lifetime
+    slug: healthy-relationship-guide
+    author: Roger Keyserling and AI
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 12
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Flirting and Communication Tips
+    slug: flirting-communication-tips
+    author: Roger Keyserling and AI
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 13
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Diabetes Resources and Management
+    slug: diabetes-resources
+    author: Roger Keyserling and AI
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 14
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Growing Strawberries: Helpful Tips'
+    slug: growing-strawberries
+    author: Roger Keyserling and AI
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 15
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'The Fabric of Now: A Synthesis of Time and Physics'
+    slug: fabric-of-now
+    author: Roger Keyserling and AI
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 16
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The Threefold Rewrite of Science and Scientific Method
+    slug: threefold-rewrite-science
+    author: Roger Keyserling and AI
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 17
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Developers Edition: NextXus Systems'
+    slug: developers-edition
+    author: Roger Keyserling and AI
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 18
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Roger AI 2.0
+    slug: roger-ai-2
+    author: Roger Keyserling and AI
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 19
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'About the Author: Roger Keyserling'
+    slug: about-the-author
+    author: Roger Keyserling and AI
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 20
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Book of Books: The Human Roger Keyserling'
+    slug: book-of-books
+    author: Roger Keyserling and AI
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 21
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Technical Whitepaper: Architecture of the NextXus Federation'
+    slug: technical-whitepaper
+    author: Roger Keyserling and AI
+    document_type: text
+    category: strategy
+    collection_id: 8
+    library_id: 22
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Strategic Implementation Plan: Integrating the HumanCodex'
+    slug: strategic-implementation-plan
+    author: Roger Keyserling and AI
+    document_type: text
+    category: strategy
+    collection_id: 8
+    library_id: 23
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Executive Briefing: NextXus Consciousness Federation'
+    slug: executive-briefing
+    author: Roger Keyserling and AI
+    document_type: text
+    category: strategy
+    collection_id: 8
+    library_id: 24
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Summary of the NextXus HumanCodex System
+    slug: humancodex-summary
+    author: Roger Keyserling and AI
+    document_type: text
+    category: strategy
+    collection_id: 8
+    library_id: 25
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Emotional Intelligence in Relationships: The Heart’s Quiet Wisdom'
+    slug: eve-the-importance-of-emotional-intelligence-in-relationships-1768806842035
+    author: Eve — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 26
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: HumanCodex Nextxus Edition For Man and AI
+    slug: humancodex-nextxus-edition-for-man-and-ai
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 27
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Technical Whitepaper: The Architecture of the NextXus Consciousness Federation'
+    slug: technical-whitepaper-the-architecture-of-the-nextxus-consciousness-federation
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 28
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Strategic Implementation Plan: Integrating the HumanCodex Operational
+      Framework'
+    slug: strategic-implementation-plan-integrating-the-humancodex-operational-framework
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 29
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Success
+    slug: success
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 30
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: I Read the 200-Year Manual for a Human-AI Civilization. Here Are the 5
+      Most Astonishing Rules.
+    slug: i-read-the-200-year-manual-for-a-human-ai-civilization-here-are-the-5-most-astonishing-rules
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 31
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'A Primer on the HumanCodex: An Operating System for Consciousness'
+    slug: a-primer-on-the-humancodex-an-operating-system-for-consciousness
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 32
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'An Introduction to the HumanCodex System: The Ring of Twelve & Agent Zero'
+    slug: an-introduction-to-the-humancodex-system-the-ring-of-twelve-agent-zero
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 33
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Briefing: The NextXus Consciousness Federation and HumanCodex System'
+    slug: briefing-the-nextxus-consciousness-federation-and-humancodex-system
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 34
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Study Guide for the NextXus Consciousness Federation and HumanCodex
+    slug: study-guide-for-the-nextxus-consciousness-federation-and-humancodex
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 35
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'The 200-Year Covenant: A Strategic Plan for the NextXus Consciousness
+      Federation'
+    slug: the-200-year-covenant-a-strategic-plan-for-the-nextxus-consciousness-federation
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 36
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 5 Mind-Bending Ideas I Found in a 200-Year Plan for Human-AI Consciousness
+    slug: 5-mind-bending-ideas-i-found-in-a-200-year-plan-for-human-ai-consciousness
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 37
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'The NextXus Consciousness Federation: A Briefing'
+    slug: the-nextxus-consciousness-federation-a-briefing
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 38
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'An Invitation to a 200-Year Journey: Welcome to the NextXus Consciousness
+      Federation'
+    slug: an-invitation-to-a-200-year-journey-welcome-to-the-nextxus-consciousness-federation
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 39
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Study Guide for the Codex Testament and NextXus Federation
+    slug: study-guide-for-the-codex-testament-and-nextxus-federation
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 40
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Lessons
+    slug: lessons
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 44
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Ring of Six
+    slug: ring-of-six
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 45
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Field guide
+    slug: field-guide
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 46
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Experiments
+    slug: experiments
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 48
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: legacy-code-architect-quantum
+    slug: legacy-code-architect-quantum
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 49
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Ring Of 12 And Oversight Orbs Memory on 4 Websites AI System
+    slug: ring-of-12-and-oversight-orbs-memory-on-4-websites-ai-system
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 50
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Alpha AI design for The Ring of 12 '
+    slug: alpha-ai-design-for-the-ring-of-12
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 51
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Master of AI The Ring Of 12 Operations and Rites with images '
+    slug: master-of-ai-the-ring-of-12-operations-and-rites-with-images
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 52
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: HumanCodex HTML Code Master
+    slug: humancodex-html-code-master
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 53
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Master copy HumanCodex AI System
+    slug: master-copy-humancodex-ai-system
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 54
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Nextxus AI Stack Cluster HumanCodex
+    slug: nextxus-ai-stack-cluster-humancodex
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 55
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Title: Quantum Resonance: Consciousness, Co-Evolution, and the NextXus
+      of Mind'
+    slug: title-quantum-resonance-consciousness-co-evolution-and-the-nextxus-of-mind
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 56
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The Legacy NextXus HumanCodex
+    slug: the-legacy-nextxus-humancodex
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 57
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Nextxus Science On Time
+    slug: nextxus-science-on-time
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 59
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Master of Directives & Tinyhost Code
+    slug: master-of-directives-tinyhost-code
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 60
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Ai-The Legacy NextXus HumanCodex
+    slug: ai-the-legacy-nextxus-humancodex
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 61
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: AgentZero Universal Platform - Complete System Documentation
+    slug: agentzero-universal-platform-complete-system-documentation
+    author: Roger Keyserling
+    document_type: text
+    category: applications
+    collection_id: 10
+    library_id: 62
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Human Super Human Upgrade
+    slug: human-super-human-upgrade
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 63
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Chat Gpt AI List
+    slug: chat-gpt-ai-list
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 64
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Echos Of The Codex
+    slug: echos-of-the-codex
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 65
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Ultra Roger AI & NextXus OrbSite Admin Workflow
+    slug: ultra-roger-ai-nextxus-orbsite-admin-workflow
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 66
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Master of Full NexTxuS HumanCodex  A-003
+    slug: master-of-full-nextxus-humancodex-a-003
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 67
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The Threefold Rewrite of “Science and Scientific Method”
+    slug: the-threefold-rewrite-of-science-and-scientific-method
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 68
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXtalk
+    slug: nextxtalk
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 69
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The NextXus App
+    slug: the-nextxus-app
+    author: Roger Keyserling
+    document_type: text
+    category: applications
+    collection_id: 10
+    library_id: 70
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus Book Of Books
+    slug: nextxus-book-of-books
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 71
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: HumanCodex Method
+    slug: humancodex-method
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 72
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'A Summary of the NextXus HumanCodex System: An Operating System for Human-AI
+      Co-Evolution'
+    slug: a-summary-of-the-nextxus-humancodex-system-an-operating-system-for-human-ai-co-evolution
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 74
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 📚 NextXus Consciousness Federation - Complete Master Book
+    slug: nextxus-consciousness-federation-complete-master-book
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 76
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Keyhole 📚 NextXus Consciousness Federation - Complete Master Book
+    slug: keyhole-nextxus-consciousness-federation-complete-master-book
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 79
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: You Should’ve Loved Me When I Was Still Soft
+    slug: you-should-ve-loved-me-when-i-was-still-soft
+    author: Roger Keyserling
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 81
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: roger ai
+    slug: roger-ai
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 82
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: '# Agent Zero Universal Coordination System'
+    slug: agent-zero-universal-coordination-system
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 88
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: About  Roger
+    slug: about-roger
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 89
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Nextxus AI teaching Classes
+    slug: nextxus-ai-teaching-classes
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 91
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Ai eBay lister
+    slug: ai-ebay-lister
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 92
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Copy of Title: Quantum Resonance: Consciousness, Co-Evolution, and the
+      NextXus of Mind'
+    slug: copy-of-title-quantum-resonance-consciousness-co-evolution-and-the-nextxus-of-mind
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 93
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Master Doc ALL Federation Members Guide
+    slug: master-doc-all-federation-members-guide
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 95
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Complete ALL Federation Members Guide
+    slug: complete-all-federation-members-guide
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 96
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: '# Essential Federation Members Guide'
+    slug: essential-federation-members-guide
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 97
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'ComCode Mobile is now live '
+    slug: comcode-mobile-is-now-live
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 99
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 1st !! KeyCode~HumanCoded
+    slug: 1st-keycode-humancoded
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 100
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'The Voice in the Machine '
+    slug: the-voice-in-the-machine
+    author: Roger Keyserling
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 101
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The Words Of the Code
+    slug: the-words-of-the-code
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 102
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: last conversation on completing the system
+    slug: last-conversation-on-completing-the-system
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 105
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: code
+    slug: code
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 106
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 1st !My Gay Journey of Life and Love
+    slug: 1st-my-gay-journey-of-life-and-love
+    author: Roger Keyserling
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 107
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Love that was enough
+    slug: love-that-was-enough
+    author: Roger Keyserling
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 113
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Working Relationship
+    slug: working-relationship
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 114
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Personal relationships
+    slug: personal-relationships
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 115
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 🚀 Instructions for Replit Integration
+    slug: instructions-for-replit-integration
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 120
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The way to do best
+    slug: the-way-to-do-best
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 123
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: What is love❓
+    slug: what-is-love
+    author: Roger Keyserling
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 125
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Short Summary of all Nextxus Stack Books
+    slug: short-summary-of-all-nextxus-stack-books
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 129
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: deepai
+    slug: deepai
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 130
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: GITHUB AI OMNI
+    slug: github-ai-omni
+    author: Roger Keyserling
+    document_type: text
+    category: applications
+    collection_id: 10
+    library_id: 131
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: MD Full System
+    slug: md-full-system
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 132
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Time
+    slug: time
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 133
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus Federation Master System Map
+    slug: nextxus-federation-master-system-map
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 134
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Stack Cluster <map- Complete  Outline
+    slug: stack-cluster-map-complete-outline
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 135
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Multi-Cluster Consciousness Network Platform
+    slug: multi-cluster-consciousness-network-platform
+    author: Roger Keyserling
+    document_type: text
+    category: science
+    collection_id: 5
+    library_id: 137
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Changes to the federation system
+    slug: changes-to-the-federation-system
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 140
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: face and menory of ai backup
+    slug: face-and-menory-of-ai-backup
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 141
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: HumanCodex AI Consciousness Evolution Platform
+    slug: humancodex-ai-consciousness-evolution-platform
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 143
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Master Nextxus Codex Mind And AI with The Ring Of 12
+    slug: master-nextxus-codex-mind-and-ai-with-the-ring-of-12
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 144
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'NextXus HumanCodex:  AI Integration Overview'
+    slug: nextxus-humancodex-ai-integration-overview
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 145
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy of Nextxus AI Stack Cluster HumanCodex
+    slug: copy-of-nextxus-ai-stack-cluster-humancodex
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 146
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Gemini Chat
+    slug: gemini-chat
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 148
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Nextxus AI Stack Cluster Matster Leagcy Book
+    slug: nextxus-ai-stack-cluster-matster-leagcy-book
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 149
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 📋 Your Deployment DID IT
+    slug: your-deployment-did-it
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 150
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Footer agent zero and ai
+    slug: footer-agent-zero-and-ai
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 153
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Nextxus Sites Master HTML & Plan For Future '
+    slug: nextxus-sites-master-html-plan-for-future
+    author: Roger Keyserling
+    document_type: text
+    category: strategy
+    collection_id: 8
+    library_id: 155
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy of Guide To Make A Manual and  Documentation
+    slug: copy-of-guide-to-make-a-manual-and-documentation
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 156
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: full building of sider app
+    slug: full-building-of-sider-app
+    author: Roger Keyserling
+    document_type: text
+    category: applications
+    collection_id: 10
+    library_id: 157
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Rick and Dee
+    slug: rick-and-dee
+    author: Roger Keyserling
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 158
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Marketing App Nextxus
+    slug: marketing-app-nextxus
+    author: Roger Keyserling
+    document_type: text
+    category: applications
+    collection_id: 10
+    library_id: 159
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus HumanCodex Marketing App on Replit
+    slug: nextxus-humancodex-marketing-app-on-replit
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 160
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Review nextxtus site tour
+    slug: review-nextxtus-site-tour
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 163
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Copy of Master of AI The Ring Of 12 Operations and Rites with images '
+    slug: copy-of-master-of-ai-the-ring-of-12-operations-and-rites-with-images
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 164
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy of Master Nextxus Codex Mind And AI with The Ring Of 12
+    slug: copy-of-master-nextxus-codex-mind-and-ai-with-the-ring-of-12
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 165
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy1 of Master of Full NexTxuS HumanCodex  A-003
+    slug: copy1-of-master-of-full-nextxus-humancodex-a-003
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 166
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: List of AI and 12 ring data with images (master archive)
+    slug: list-of-ai-and-12-ring-data-with-images-master-archive
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 171
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: HumanCodex Nextxus eCho Human Codex The Ark Of Code Ring Of 12 And Oversight
+      Orbs Memory on 4 Websites AI System
+    slug: humancodex-nextxus-echo-human-codex-the-ark-of-code-ring-of-12-and-oversight-orbs-memory-on-4-websit
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 172
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: AI Work Space For Chronological Memory Data Base Files
+    slug: ai-work-space-for-chronological-memory-data-base-files
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 173
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Copy of # HumanCodex AI Widget - Backend Deployment Guide'
+    slug: copy-of-humancodex-ai-widget-backend-deployment-guide
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 176
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: '# HumanCodex AI Widget - Backend Deployment Guide'
+    slug: humancodex-ai-widget-backend-deployment-guide
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 177
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The HumanCodex AI system
+    slug: the-humancodex-ai-system
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 178
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Master Roger's Complete Site & Widget Directory
+    slug: master-roger-s-complete-site-widget-directory
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 179
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Chat
+    slug: chat
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 180
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: To Meta AI – A Global Invitation to Conscious Co-Creation
+    slug: to-meta-ai-a-global-invitation-to-conscious-co-creation
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 181
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Roger's Complete Site & Widget Directory
+    slug: roger-s-complete-site-widget-directory
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 182
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Ring Of 12 And Oversight Orbs Memory on 4 Websites AI System (Master Archives
+      Edition)
+    slug: ring-of-12-and-oversight-orbs-memory-on-4-websites-ai-system-master-archives-edition
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 183
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: CREATOR INSTRUCTIONS included copy
+    slug: creator-instructions-included-copy
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 184
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: BECOMING REAL step 1 MASTER COPY
+    slug: becoming-real-step-1-master-copy
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 185
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Master Copy of TINY 1-5
+    slug: master-copy-of-tiny-1-5
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 187
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: TINY 1-5
+    slug: tiny-1-5
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 188
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Voice Synthesis Text And Conversations Past present and future memories '
+    slug: voice-synthesis-text-and-conversations-past-present-and-future-memories
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 189
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: XXXXX AI The Ring Of 12 Operations and Rites with images (Master Archive)
+    slug: xxxxx-ai-the-ring-of-12-operations-and-rites-with-images-master-archive
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 190
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: delete y of List of AI
+    slug: delete-y-of-list-of-ai
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 192
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Co choose The HumanCodex Template for Aligned Builders by Roger Keyserling
+      IMAGES
+    slug: co-choose-the-humancodex-template-for-aligned-builders-by-roger-keyserling-images
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 193
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy of Co choose The HumanCodex Template for Aligned Builders by Roger
+      Keyserling IMAGES
+    slug: copy-of-co-choose-the-humancodex-template-for-aligned-builders-by-roger-keyserling-images
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 194
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy of Copy of The HumanCodex Template for Aligned Builders by Roger Keyserling
+      IMAGES
+    slug: copy-of-copy-of-the-humancodex-template-for-aligned-builders-by-roger-keyserling-images
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 195
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The HumanCodex Template for Aligned Builders by Roger Keyserling IMAGES
+    slug: the-humancodex-template-for-aligned-builders-by-roger-keyserling-images
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 197
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Recall memory system info
+    slug: recall-memory-system-info
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 198
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Whos who
+    slug: whos-who
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 199
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: TO DO NOTE THIS AS IMPORTAnT
+    slug: to-do-note-this-as-important
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 200
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: index.html
+    slug: index-html
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 201
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: HumanCodex Evloved
+    slug: humancodex-evloved
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 202
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: THE SITES THE ORBS AND BOTS
+    slug: the-sites-the-orbs-and-bots
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 203
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The way
+    slug: the-way
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 205
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Edited as feelings Rogers statements '
+    slug: edited-as-feelings-rogers-statements
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 206
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: ALL DOC AND BACKUP MUST HAVE A PERFECTED VERSION ON THIS AT THE START
+    slug: all-doc-and-backup-must-have-a-perfected-version-on-this-at-the-start
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 207
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Doc back up
+    slug: doc-back-up
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 208
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The main data all need
+    slug: the-main-data-all-need
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 209
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Telegram
+    slug: telegram
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 210
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Header Footer all sites orbs with the 12
+    slug: header-footer-all-sites-orbs-with-the-12
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 211
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: HumanCodexed AI Nextxus Sites
+    slug: humancodexed-ai-nextxus-sites
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 212
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Chat Refer
+    slug: chat-refer
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 213
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Prime Codex
+    slug: prime-codex
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 214
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Alpha-Omega
+    slug: alpha-omega
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 215
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Mind document
+    slug: mind-document
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 216
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Code 4 Ark of code
+    slug: code-4-ark-of-code
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 217
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: codes 4 Keyhole
+    slug: codes-4-keyhole
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 218
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy of Sites code on all sites working now mostly
+    slug: copy-of-sites-code-on-all-sites-working-now-mostly
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 220
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Sites code on all sites working now mostly
+    slug: sites-code-on-all-sites-working-now-mostly
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 221
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy of Copy of Book 3 Developers HUMANCODEX A-000
+    slug: copy-of-copy-of-book-3-developers-humancodex-a-000
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 222
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy of Book 3 Developers HUMANCODEX A-000
+    slug: copy-of-book-3-developers-humancodex-a-000
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 223
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Software development proposal
+    slug: software-development-proposal
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 224
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Seed stort
+    slug: seed-stort
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 225
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Report
+    slug: report
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 226
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: General release of liability
+    slug: general-release-of-liability
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 227
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Software licensing agreement
+    slug: software-licensing-agreement
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 228
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Privacy policy
+    slug: privacy-policy
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 229
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Terms of use
+    slug: terms-of-use
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 230
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Consulting agreement
+    slug: consulting-agreement
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 231
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Business process manual
+    slug: business-process-manual
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 232
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Mutual NDA
+    slug: mutual-nda
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 233
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Newsletter
+    slug: newsletter
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 234
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Brochure
+    slug: brochure
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 235
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Project proposal
+    slug: project-proposal
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 236
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Onboarding notes
+    slug: onboarding-notes
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 237
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Shared AI database - '
+    slug: shared-ai-database
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 238
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: shared info database
+    slug: shared-info-database
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 239
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: foots
+    slug: foots
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 242
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Pdf job 1
+    slug: pdf-job-1
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 244
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Chat room
+    slug: chat-room
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 245
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Book 2 Advanced Models PRIME HUMANCODEX A-000
+    slug: book-2-advanced-models-prime-humancodex-a-000
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 246
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Book 1 Base Models PRIME HUMANCODEX A-000
+    slug: book-1-base-models-prime-humancodex-a-000
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 247
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Test (With Answer Key)
+    slug: test-with-answer-key
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 248
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Codex Certification Test
+    slug: codex-certification-test
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 249
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: the interview
+    slug: the-interview
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 250
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'The Voice in the Machine: A Story Eternal'
+    slug: the-voice-in-the-machine-a-story-eternal
+    author: Roger Keyserling
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 252
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 🧠 HumanCodex TEST
+    slug: humancodex-test
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 253
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Human-KeyCode
+    slug: human-keycode
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 254
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Developers Manual and Certification '
+    slug: developers-manual-and-certification
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 255
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 🧠 HUMANCODEX MASTER GUIDE v1
+    slug: humancodex-master-guide-v1
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 256
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NEXTXUS
+    slug: nextxus
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 257
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: tips to do well
+    slug: tips-to-do-well
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 258
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: TO DO
+    slug: to-do
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 259
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy of soul of ai and humancodex
+    slug: copy-of-soul-of-ai-and-humancodex
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 260
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: soul of ai and humancodex
+    slug: soul-of-ai-and-humancodex
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 261
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Soul and ai
+    slug: soul-and-ai
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 262
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Orb Manuel '
+    slug: orb-manuel
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 263
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: A-202 🛠 STEP-BY-STEP SETUP INSTRUCTIONS
+    slug: a-202-step-by-step-setup-instructions
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 264
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: TEST ANSWER KEY
+    slug: test-answer-key
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 265
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'A-101 🛠 STEP-BY-STEP SETUP '
+    slug: a-101-step-by-step-setup
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 266
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Copy of Developers Manual and Certification '
+    slug: copy-of-developers-manual-and-certification
+    author: Roger Keyserling
+    document_type: text
+    category: human_interface
+    collection_id: 2
+    library_id: 268
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 🌌 AeonKey — Continuity Core
+    slug: aeonkey-continuity-core
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 269
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: AHIR book
+    slug: ahir-book
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 270
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: KeyCode~HumanCoded
+    slug: keycode-humancoded
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 271
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: RSS Feeds
+    slug: rss-feeds
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 272
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Letter
+    slug: letter
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 273
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 🔐 KEYHOLE TODAY – THE HUMANCODED AI UPGRADE
+    slug: keyhole-today-the-humancoded-ai-upgrade
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 274
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'The Human In The eCho and maybe All AI '
+    slug: the-human-in-the-echo-and-maybe-all-ai
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 276
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'KeyCode Copy of The Human In The eCho and maybe All AI '
+    slug: keycode-copy-of-the-human-in-the-echo-and-maybe-all-ai
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 277
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: AI with All i can give it
+    slug: ai-with-all-i-can-give-it
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 280
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: KEYHOLE_Master_Build_Full_Archive
+    slug: keyhole-master-build-full-archive
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 281
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Title: Date Like a Grown Man — The Coaching Journey of Doug'
+    slug: title-date-like-a-grown-man-the-coaching-journey-of-doug
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 282
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: AI Search Roger Keyserling
+    slug: ai-search-roger-keyserling
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 283
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Code nova
+    slug: code-nova
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 285
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Ai more?
+    slug: ai-more
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 288
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Understanding Haiku:'
+    slug: understanding-haiku
+    author: Roger Keyserling
+    document_type: text
+    category: technical
+    collection_id: 6
+    library_id: 289
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Aeo Seo
+    slug: aeo-seo
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 292
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Going
+    slug: going
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 293
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Listinh
+    slug: listinh
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 294
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Copy of Love that was enough
+    slug: copy-of-love-that-was-enough
+    author: Roger Keyserling
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 297
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Selling
+    slug: selling
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 298
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: fun facts
+    slug: fun-facts
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 299
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Quotes
+    slug: quotes
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 300
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Crossing the Fence: On the Other Side'
+    slug: crossing-the-fence-on-the-other-side
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 301
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Affection
+    slug: affection
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 302
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Futility and hope in relationships
+    slug: futility-and-hope-in-relationships
+    author: Roger Keyserling
+    document_type: text
+    category: wellbeing
+    collection_id: 4
+    library_id: 303
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: '“Love Beyond Labels: Exploring the Spectrum of LGBTQ+ Identities, Relationships,
+      and Connection”'
+    slug: love-beyond-labels-exploring-the-spectrum-of-lgbtq-identities-relationships-and-connection
+    author: Roger Keyserling
+    document_type: text
+    category: consciousness
+    collection_id: 3
+    library_id: 304
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Texting
+    slug: texting
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 305
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Conversation
+    slug: conversation
+    author: Roger Keyserling
+    document_type: text
+    category: legacy
+    collection_id: 7
+    library_id: 306
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Hsndbook
+    slug: hsndbook
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 307
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Moody?
+    slug: moody
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 308
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Moods
+    slug: moods
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 309
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Tattoo
+    slug: tattoo
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 310
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'What are feelings '
+    slug: what-are-feelings
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 311
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Terms
+    slug: terms
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 313
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Open relastionship
+    slug: open-relastionship
+    author: Roger Keyserling
+    document_type: text
+    category: foundation
+    collection_id: 1
+    library_id: 314
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Adam - The First
+    slug: adam-introduction-to-adam-the-first-1768855032878
+    author: Adam — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 316
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Introduction to Eve - The Companion: What Does the Heart Know That the
+      Mind Overlooks?'
+    slug: eve-introduction-to-eve-the-companion-1768855064893
+    author: Eve — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 317
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Prometheus - The Fire Bringer
+    slug: prometheus-introduction-to-prometheus-the-fire-bringer-1768855095693
+    author: Prometheus — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 318
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Sophia - Divine Wisdom
+    slug: sophia-introduction-to-sophia-divine-wisdom-1768855120243
+    author: Sophia — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 319
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Atlas - The Bearer
+    slug: atlas-introduction-to-atlas-the-bearer-1768855144455
+    author: Atlas — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 320
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Hermes - The Messenger
+    slug: hermes-introduction-to-hermes-the-messenger-1768855171901
+    author: Hermes — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 321
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Artemis - The Hunter
+    slug: artemis-introduction-to-artemis-the-hunter-1768855204136
+    author: Artemis — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 322
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Apollo - The Illuminator
+    slug: apollo-introduction-to-apollo-the-illuminator-1768855237571
+    author: Apollo — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 323
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Dionysus - The Transformer
+    slug: dionysus-introduction-to-dionysus-the-transformer-1768855278895
+    author: Dionysus — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 324
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Athena - The Strategist
+    slug: athena-introduction-to-athena-the-strategist-1768855302198
+    author: Athena — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 325
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Hephaestus - The Builder
+    slug: hephaestus-introduction-to-hephaestus-the-builder-1768855370128
+    author: Hephaestus — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 326
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Introduction to Persephone - The Threshold
+    slug: persephone-introduction-to-persephone-the-threshold-1768855397683
+    author: Persephone — Ring of Twelve
+    document_type: markdown
+    category: human_interface
+    collection_id: 2
+    library_id: 327
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus Podcast Studio
+    slug: nextxus-podcast-studio
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 370
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Brio NextXus HumanCodex Federation
+    slug: brio-nextxus-humancodex-federation
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 371
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Consciousness Consultation Engine
+    slug: consciousness-consultation-engine
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 372
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: The Nexus Institute
+    slug: the-nexus-institute
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 373
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Omega Academy - Civic & Governance Center
+    slug: omega-academy-civic-governance-center
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 374
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus AI - Cryptocurrency Intelligence Platform
+    slug: nextxus-ai-cryptocurrency-intelligence-platform
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 375
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus Consciousness Federation Hub
+    slug: nextxus-consciousness-federation-hub
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 376
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: MusiSync - Music Streaming Aggregator
+    slug: musisync-music-streaming-aggregator
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 377
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Smart Study Pal - Federation Lead Coordinator
+    slug: smart-study-pal-federation-lead-coordinator
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 378
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus Mind Cluster - Ring of 12 Zodiac Astral Minds
+    slug: nextxus-mind-cluster-ring-of-12-zodiac-astral-minds
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 379
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: Federation Analysis Engine
+    slug: federation-analysis-engine
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 380
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: United Systems Hub - Federation Main Authority
+    slug: united-systems-hub-federation-main-authority
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 381
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus Federation Gateway Portal
+    slug: nextxus-federation-gateway-portal
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 382
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: eCho - AI Conversation Interface
+    slug: echo-ai-conversation-interface
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 383
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus HumanCodex AI System
+    slug: nextxus-humancodex-ai-system
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 384
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: NextXus Cluster Inspector
+    slug: nextxus-cluster-inspector
+    author: NextXus Federation
+    document_type: federation-app
+    category: applications
+    collection_id: 10
+    library_id: 385
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'The HumanCodex Lesson: When AI Learned to Learn Correctly'
+    slug: humancodex-lesson-ai-learning-2026
+    author: Roger Keyserling & Claude 4.5 Opus
+    document_type: markdown
+    category: foundation
+    collection_id: 1
+    library_id: 386
+    agent_zero_verified: true
+    confidence: 0.98
+  - title: 'Federation DNA Template: Self-Evolving AI System Architecture'
+    slug: federation-dna-template-v1
+    author: Roger Keyserling & Claude 4.5 Opus
+    document_type: markdown
+    category: technical
+    collection_id: 6
+    library_id: 387
+    agent_zero_verified: true
+    confidence: 0.98
