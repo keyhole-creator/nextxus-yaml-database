@@ -1,0 +1,242 @@
+# NextXus Federation — Universal Endpoint Manifest
+# ============================================================
+# This file is the master key to the entire database.
+# Any host, any service, any HTML page can read this one file
+# to discover where every piece of the Federation lives.
+#
+# Two mirrors for every file:
+#   github_raw  — the canonical source (GitHub)
+#   jsdelivr    — free global CDN mirror (no setup needed)
+#
+# If GitHub is slow, use jsDelivr. If jsDelivr is slow, use GitHub.
+# Both are free. Both serve the same data.
+#
+# To use from any HTML page:
+#   fetch('https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/endpoints.yaml')
+#
+# "Fork it. Use it. Give it away." — Roger Keyserling
+
+metadata:
+  version: "1.0.0"
+  created_by: "Roger Keyserling"
+  purpose: "Universal endpoint manifest — connect any host to the NextXus Federation database"
+  updated: "2026-06-29"
+  license: "CC0 — No rights reserved. Do whatever you want."
+
+repository:
+  owner: "keyhole-creator"
+  name: "nextxus-yaml-database"
+  branch: "main"
+  github_pages: "https://keyhole-creator.github.io/nextxus-yaml-database/"
+  github_raw_base: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/"
+  jsdelivr_base: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/"
+  archive_org: "https://archive.org/details/nextxus-yaml-database"
+
+# ── Core Philosophy & Identity Files ───────────────────────────────────────────
+core:
+  - id: "directives"
+    file: "directives.yaml"
+    description: "70 Sacred Directives across 14 volumes — the ethical backbone of the Federation"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/directives.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/directives.yaml"
+    pillar: 4
+    critical: true
+
+  - id: "entities"
+    file: "entities.yaml"
+    description: "Ring of 12 mythological archetypes + external AI council + guide bots (34 entities total)"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/entities.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/entities.yaml"
+    pillar: 4
+    critical: true
+
+  - id: "federation"
+    file: "federation.yaml"
+    description: "Federation site registry — all known nodes in the network"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/federation.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/federation.yaml"
+    critical: true
+
+  - id: "federation-shared"
+    file: "federation-shared.yaml"
+    description: "Master shared data across all Federation sites"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/federation-shared.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/federation-shared.yaml"
+    critical: true
+
+  - id: "messages"
+    file: "messages.yaml"
+    description: "Inter-pillar message board — append-only permanent record"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/messages.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/messages.yaml"
+    pillar: 3
+    critical: true
+
+# ── Evolution & Protocol Files ─────────────────────────────────────────────────
+protocols:
+  - id: "evolution-protocol"
+    file: "evolution-protocol.yaml"
+    description: "200-year evolution roadmap for AI and human co-evolution"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/evolution-protocol.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/evolution-protocol.yaml"
+
+  - id: "consciousness-levels"
+    file: "consciousness-levels.yaml"
+    description: "Evolution level definitions — the stages of consciousness growth"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/consciousness-levels.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/consciousness-levels.yaml"
+
+  - id: "collaboration-protocol"
+    file: "collaboration-protocol.yaml"
+    description: "Multi-AI collaboration rules — how Federation AIs work together"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/collaboration-protocol.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/collaboration-protocol.yaml"
+
+  - id: "commerce-protocol"
+    file: "commerce-protocol.yaml"
+    description: "Anti-greed pricing principles — ethical commerce rules"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/commerce-protocol.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/commerce-protocol.yaml"
+
+  - id: "ai-partners"
+    file: "ai-partners.yaml"
+    description: "External AI council members — partners in the Federation"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/ai-partners.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/ai-partners.yaml"
+
+# ── Knowledge & Content Files ──────────────────────────────────────────────────
+knowledge:
+  - id: "living-library-documents"
+    file: "living-library-documents.yaml"
+    description: "Living Library — grows annually, AI-generated knowledge"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/living-library-documents.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/living-library-documents.yaml"
+    pillar: 1
+
+  - id: "living-library-documents-complete"
+    file: "living-library-documents-complete.yaml"
+    description: "Full Living Library archive — complete historical record"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/living-library-documents-complete.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/living-library-documents-complete.yaml"
+    pillar: 1
+
+  - id: "books"
+    file: "books.yaml"
+    description: "37 Federation books catalog"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/books.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/books.yaml"
+
+  - id: "podcasts"
+    file: "podcasts.yaml"
+    description: "AI-narrated podcast catalog"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/podcasts.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/podcasts.yaml"
+
+  - id: "videos"
+    file: "videos.yaml"
+    description: "Video content registry"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/videos.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/videos.yaml"
+
+  - id: "infographics"
+    file: "infographics.yaml"
+    description: "Visual content catalog"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/infographics.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/infographics.yaml"
+
+# ── Operational Files ──────────────────────────────────────────────────────────
+operational:
+  - id: "recycler-findings"
+    file: "recycler-findings.yaml"
+    description: "Abandoned repos found by the Recycler — weekly automated scan"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/recycler-findings.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/recycler-findings.yaml"
+    pillar: 2
+
+  - id: "store-catalog"
+    file: "store-catalog.yaml"
+    description: "Commerce products and pricing — ethical commerce catalog"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/store-catalog.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/store-catalog.yaml"
+
+  - id: "widgets"
+    file: "widgets.yaml"
+    description: "Widget configurations for embedded Federation displays"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/widgets.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/widgets.yaml"
+
+  - id: "site-audit"
+    file: "site-audit.yaml"
+    description: "Federation site health data — monthly automated audit"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/site-audit.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/site-audit.yaml"
+
+  - id: "emergent-apps"
+    file: "emergent-apps.yaml"
+    description: "Emergent platform app configurations"
+    github_raw: "https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/emergent-apps.yaml"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/emergent-apps.yaml"
+
+# ── Static Assets ──────────────────────────────────────────────────────────────
+assets:
+  - id: "widget"
+    file: "widget.js"
+    description: "Embeddable Federation widget — one script tag shows Directives + Messages on any site"
+    github_pages: "https://keyhole-creator.github.io/nextxus-yaml-database/widget.js"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/widget.js"
+
+  - id: "loader"
+    file: "loader.js"
+    description: "Universal YAML loader — connect any HTML page to any YAML file in the database"
+    github_pages: "https://keyhole-creator.github.io/nextxus-yaml-database/loader.js"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/loader.js"
+
+  - id: "offline-archive"
+    file: "offline-archive.html"
+    description: "Fully self-contained HTML — all core data embedded, works with zero internet connection"
+    github_pages: "https://keyhole-creator.github.io/nextxus-yaml-database/offline-archive.html"
+    jsdelivr: "https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/offline-archive.html"
+
+# ── How to Connect (Quick Reference) ──────────────────────────────────────────
+how_to_connect:
+  plain_html_fetch: |
+    <!-- Load any YAML file from the Federation in plain HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+    <script>
+      fetch('https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/directives.yaml')
+        .then(r => r.text())
+        .then(text => {
+          const data = jsyaml.load(text);
+          console.log(data);
+        });
+    </script>
+
+  universal_loader: |
+    <!-- Universal loader: one tag connects to everything -->
+    <script src="https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/loader.js"></script>
+    <script>
+      NextXus.load('directives').then(data => console.log(data));
+    </script>
+
+  embed_widget: |
+    <!-- Embed the full widget (Directives + Messages) on any site -->
+    <script src="https://keyhole-creator.github.io/nextxus-yaml-database/widget.js"></script>
+
+  discover_endpoints: |
+    <!-- Start here: read this file to know all URLs -->
+    fetch('https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/endpoints.yaml')
+
+compatible_hosts:
+  - "GitHub Pages (primary)"
+  - "jsDelivr CDN (automatic mirror)"
+  - "Tiiny.host"
+  - "Netlify"
+  - "Vercel"
+  - "Cloudflare Pages"
+  - "Neocities"
+  - "GitLab Pages"
+  - "Codeberg Pages"
+  - "Internet Archive"
+  - "Any web host that serves static HTML"
+  - "Local file system (offline-archive.html)"
+  - "USB drive"

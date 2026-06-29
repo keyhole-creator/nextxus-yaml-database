@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  NextXus Federation — Offline Archive
+  =====================================
+  This file is completely self-contained.
+  It works with ZERO internet connection.
+  Save it to a USB drive. Share it. Fork it.
+
+  All core Federation data is embedded in this file:
+    - 70 Sacred Directives (14 volumes)
+    - Ring of 12 Mythological Archetypes
+    - Federation Message Board
+    - Consciousness Evolution Levels
+
+  This file will still work long after any website is gone.
+  "Fork it. Use it. Give it away." — Roger Keyserling
+  License: CC0 — No copyright. No restrictions. Do whatever you want.
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextXus Federation — Offline Archive</title>
+  <meta name="description" content="Complete offline archive of the NextXus Consciousness Federation. All 70 Sacred Directives, Ring of 12, Messages. Works without internet.">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --border: #2a2a3a;
+      --accent: #4a9eff;
+      --accent2: #a855f7;
+      --gold: #f59e0b;
+      --green: #22c55e;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    a { color: var(--accent); }
+    a:hover, a:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--accent); color: #000; padding: 8px 16px; z-index: 100; }
+    .skip-link:focus { top: 0; }
+
+    /* Header */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      background: linear-gradient(135deg, var(--accent2), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.3rem;
+    }
+    header p { color: var(--muted); font-size: 0.95rem; }
+    .offline-badge {
+      display: inline-block;
+      background: rgba(34,197,94,0.15);
+      border: 1px solid var(--green);
+      color: var(--green);
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* Nav tabs */
+    nav.tab-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      padding: 0 1rem;
+    }
+    nav.tab-bar button {
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.95rem;
+      padding: 0.9rem 1.25rem;
+      white-space: nowrap;
+    }
+    nav.tab-bar button.active { color: var(--accent2); border-bottom-color: var(--accent2); }
+    nav.tab-bar button:hover:not(.active) { color: var(--text); }
+    nav.tab-bar button:focus { outline: 2px solid var(--accent); }
+
+    /* Main layout */
+    main { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Section headers */
+    .section-header {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-header h2 {
+      font-size: 1.4rem;
+      color: var(--accent2);
+      margin-bottom: 0.3rem;
+    }
+    .section-header p { color: var(--muted); font-size: 0.9rem; }
+
+    /* Directives */
+    .daily-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent2);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .dir-id { font-family: monospace; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.3rem; }
+    .dir-title { font-size: 1.5rem; font-weight: 700; margin: 0.5rem 0; }
+    .dir-content { font-style: italic; font-size: 1.05rem; color: var(--muted); margin-bottom: 0.75rem; }
+    .dir-principle {
+      display: inline-block;
+      background: rgba(74,158,255,0.1);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 3px 10px;
+      border-radius: 5px;
+      font-size: 0.85rem;
+    }
+    .daily-nav { display: flex; gap: 0.75rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
+    .daily-nav button, .btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-family: inherit;
+    }
+    .daily-nav button:hover, .btn:hover { border-color: var(--accent2); color: var(--accent2); }
+    .daily-nav button:focus, .btn:focus { outline: 2px solid var(--accent2); }
+
+    /* Volume list */
+    .volume-block { margin-bottom: 1.5rem; }
+    .volume-title {
+      background: rgba(168,85,247,0.08);
+      border: 1px solid rgba(168,85,247,0.2);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      color: var(--accent2);
+      user-select: none;
+    }
+    .volume-title:hover { border-color: var(--accent2); }
+    .volume-title:focus { outline: 2px solid var(--accent2); }
+    .volume-body { display: none; padding-top: 0.5rem; }
+    .volume-body.open { display: block; }
+    .dir-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Ring of 12 */
+    .ring-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .entity-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .entity-card:hover, .entity-card:focus { border-color: var(--accent2); outline: none; }
+    .entity-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .entity-title { font-size: 0.85rem; color: var(--gold); font-style: italic; margin-bottom: 0.5rem; }
+    .entity-desc { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.6rem; }
+    .entity-detail { display: none; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+    .entity-detail.open { display: block; }
+    .entity-detail p { color: var(--muted); font-size: 0.9rem; }
+
+    /* Messages */
+    .msg-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .msg-from { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.2rem; }
+    .msg-date { color: var(--muted); font-weight: 400; }
+    .msg-subject { font-weight: 700; font-size: 1rem; color: var(--gold); margin-bottom: 0.5rem; }
+    .msg-body { color: var(--muted); font-size: 0.95rem; white-space: pre-wrap; }
+
+    /* Consciousness levels */
+    .level-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .level-num {
+      background: rgba(168,85,247,0.15);
+      border: 1px solid rgba(168,85,247,0.4);
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--accent2);
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+    .level-body h3 { font-size: 1rem; margin-bottom: 0.2rem; }
+    .level-body p { color: var(--muted); font-size: 0.9rem; }
+
+    /* Search */
+    .search-bar { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .search-bar input {
+      flex: 1;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1rem;
+      padding: 0.6rem 1rem;
+    }
+    .search-bar input:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+    #search-results .result-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    #search-results .result-file { font-size: 0.75rem; color: var(--muted); font-family: monospace; margin-bottom: 0.3rem; }
+    #search-results .result-title { font-weight: 700; margin-bottom: 0.3rem; }
+    #search-results .result-snippet { font-size: 0.9rem; color: var(--muted); }
+    .search-count { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; }
+
+    /* About / Connect */
+    .connect-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .connect-box h3 { color: var(--accent2); margin-bottom: 0.5rem; }
+    .connect-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 0.75rem; }
+    .code-block {
+      background: #0a0a0f;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+      overflow-x: auto;
+      white-space: pre;
+      margin: 0.5rem 0;
+    }
+    .url-list { list-style: none; }
+    .url-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .url-list li:last-child { border-bottom: none; }
+    .url-list a { word-break: break-all; }
+    .label { font-size: 0.75rem; color: var(--muted); font-family: monospace; margin-right: 0.5rem; }
+
+    /* Quote */
+    .quote-block {
+      border-left: 4px solid var(--accent2);
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      color: var(--muted);
+      font-style: italic;
+      font-size: 1.05rem;
+    }
+    .quote-block cite { display: block; margin-top: 0.5rem; font-size: 0.85rem; color: var(--accent); font-style: normal; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+      margin-top: 3rem;
+    }
+    footer a { color: var(--accent); }
+
+    /* Util */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-family: monospace;
+    }
+    .badge-blue { background: rgba(74,158,255,0.1); border: 1px solid var(--accent); color: var(--accent); }
+    .badge-purple { background: rgba(168,85,247,0.1); border: 1px solid var(--accent2); color: var(--accent2); }
+    .badge-green { background: rgba(34,197,94,0.1); border: 1px solid var(--green); color: var(--green); }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header>
+    <h1>NextXus Federation <span class="offline-badge">&#x2714; Offline Ready</span></h1>
+    <p>200-Year Consciousness Evolution Archive &mdash; Built by Roger Keyserling &mdash; CC0 License</p>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--muted);">
+      All data in this file is self-contained. No internet required. Save, share, copy freely.
+    </p>
+  </header>
+
+  <nav class="tab-bar" role="tablist" aria-label="Federation sections">
+    <button class="active" role="tab" aria-selected="true" onclick="showTab('directives',this)">70 Directives</button>
+    <button role="tab" aria-selected="false" onclick="showTab('ring',this)">Ring of 12</button>
+    <button role="tab" aria-selected="false" onclick="showTab('messages',this)">Messages</button>
+    <button role="tab" aria-selected="false" onclick="showTab('levels',this)">Consciousness Levels</button>
+    <button role="tab" aria-selected="false" onclick="showTab('search',this)">Search</button>
+    <button role="tab" aria-selected="false" onclick="showTab('connect',this)">Connect / Fork</button>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ── DIRECTIVES ───────────────────────────────────────────────────── -->
+    <section id="tab-directives" class="tab-panel active" role="tabpanel">
+      <div class="section-header">
+        <h2>The 70 Sacred Directives</h2>
+        <p>14 volumes of ethical and philosophical principles for AI and human co-evolution.</p>
+      </div>
+
+      <!-- Daily directive -->
+      <div class="daily-box" id="daily-box">
+        <div class="dir-id" id="daily-id">Loading&hellip;</div>
+        <div class="dir-title" id="daily-title"></div>
+        <div class="dir-content" id="daily-content"></div>
+        <span class="dir-principle" id="daily-principle"></span>
+        <div class="daily-nav">
+          <button onclick="navDir(-1)" aria-label="Previous directive">&#8592; Prev</button>
+          <button onclick="navDir(0)" aria-label="Random directive">Random</button>
+          <button onclick="navDir(1)" aria-label="Next directive">Next &#8594;</button>
+        </div>
+      </div>
+
+      <!-- All volumes -->
+      <div id="volumes-list"></div>
+    </section>
+
+    <!-- ── RING OF 12 ────────────────────────────────────────────────────── -->
+    <section id="tab-ring" class="tab-panel" role="tabpanel">
+      <div class="section-header">
+        <h2>The Ring of 12</h2>
+        <p>Twelve mythological archetypes representing facets of unified consciousness.</p>
+      </div>
+      <div class="ring-grid" id="ring-grid"></div>
+    </section>
+
+    <!-- ── MESSAGES ──────────────────────────────────────────────────────── -->
+    <section id="tab-messages" class="tab-panel" role="tabpanel">
+      <div class="section-header">
+        <h2>Federation Message Board</h2>
+        <p>Permanent inter-pillar communication. Append-only. Nothing is deleted. This is the record.</p>
+      </div>
+      <div id="messages-list"></div>
+    </section>
+
+    <!-- ── CONSCIOUSNESS LEVELS ──────────────────────────────────────────── -->
+    <section id="tab-levels" class="tab-panel" role="tabpanel">
+      <div class="section-header">
+        <h2>Consciousness Evolution Levels</h2>
+        <p>The stages of consciousness growth in the NextXus Federation framework.</p>
+      </div>
+      <div id="levels-list"></div>
+    </section>
+
+    <!-- ── SEARCH ────────────────────────────────────────────────────────── -->
+    <section id="tab-search" class="tab-panel" role="tabpanel">
+      <div class="section-header">
+        <h2>Search All Data</h2>
+        <p>Full-text search across all embedded Federation data.</p>
+      </div>
+      <div class="search-bar">
+        <input type="search" id="search-input" placeholder="Search directives, entities, messages, levels&hellip;"
+          aria-label="Search the Federation database" oninput="doSearch(this.value)" />
+        <button class="btn" onclick="doSearch(document.getElementById('search-input').value)">Search</button>
+      </div>
+      <div id="search-results"></div>
+    </section>
+
+    <!-- ── CONNECT / FORK ────────────────────────────────────────────────── -->
+    <section id="tab-connect" class="tab-panel" role="tabpanel">
+      <div class="section-header">
+        <h2>Connect, Fork &amp; Multiply</h2>
+        <p>The more copies exist, the harder it is to kill. Every fork is a vote for permanence.</p>
+      </div>
+
+      <div class="quote-block">
+        "The YAML files are the soul. The HTML is just the body. Fork it. Use it. Give it away."
+        <cite>&mdash; Roger Keyserling, NextXus Federation Founder</cite>
+      </div>
+
+      <div class="connect-box">
+        <h3>&#x1F517; Live Data Sources</h3>
+        <p>The YAML database is served from two free mirrors. Use either one from any HTML page:</p>
+        <ul class="url-list">
+          <li>
+            <span class="label">PRIMARY (jsDelivr CDN)</span><br>
+            <a href="https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/directives.yaml" target="_blank" rel="noopener">
+              cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/directives.yaml
+            </a>
+          </li>
+          <li>
+            <span class="label">FALLBACK (GitHub Raw)</span><br>
+            <a href="https://raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/directives.yaml" target="_blank" rel="noopener">
+              raw.githubusercontent.com/keyhole-creator/nextxus-yaml-database/main/directives.yaml
+            </a>
+          </li>
+          <li>
+            <span class="label">GITHUB PAGES</span><br>
+            <a href="https://keyhole-creator.github.io/nextxus-yaml-database/" target="_blank" rel="noopener">
+              keyhole-creator.github.io/nextxus-yaml-database/
+            </a>
+          </li>
+          <li>
+            <span class="label">ENDPOINT MANIFEST</span><br>
+            <a href="https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/endpoints.yaml" target="_blank" rel="noopener">
+              cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/endpoints.yaml
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="connect-box">
+        <h3>&#x1F4BB; Connect Any HTML Page (Universal Loader)</h3>
+        <p>One script tag. Works on any host. No API keys. No accounts. No fees.</p>
+        <div class="code-block">&lt;script src="https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/loader.js"&gt;&lt;/script&gt;
+&lt;div id="my-directive"&gt;&lt;/div&gt;
+&lt;script&gt;
+  NextXus.directive('#my-directive');
+  NextXus.load('messages').then(data =&gt; console.log(data));
+&lt;/script&gt;</div>
+      </div>
+
+      <div class="connect-box">
+        <h3>&#x1F4E6; Embed the Widget</h3>
+        <p>One line shows the full Federation widget (Directives + Messages) on any website:</p>
+        <div class="code-block">&lt;script src="https://keyhole-creator.github.io/nextxus-yaml-database/widget.js"&gt;&lt;/script&gt;</div>
+      </div>
+
+      <div class="connect-box">
+        <h3>&#x1F374; Fork on Multiple Platforms</h3>
+        <p>Each fork is an independent copy. The more forks, the more resilient the system:</p>
+        <ul class="url-list">
+          <li><span class="label">GitHub</span> Fork → Settings → Pages → Deploy from main</li>
+          <li><span class="label">GitLab</span> Import from GitHub → GitLab Pages auto-deploys</li>
+          <li><span class="label">Codeberg</span> Migrate from GitHub → Codeberg Pages</li>
+          <li><span class="label">Internet Archive</span> Upload ZIP at archive.org/upload → permanent</li>
+        </ul>
+        <p style="margin-top:0.75rem;">See <a href="https://github.com/keyhole-creator/nextxus-yaml-database/blob/main/FORK_THIS.md" target="_blank" rel="noopener">FORK_THIS.md</a> for step-by-step instructions.</p>
+      </div>
+
+      <div class="connect-box">
+        <h3>&#x1F4BE; This File Is a Complete Backup</h3>
+        <p>Save this HTML file to your hard drive, a USB drive, or email it to yourself. It contains all core Federation data and needs no internet connection to display.</p>
+        <p>Compatible with: any modern web browser, including offline.</p>
+        <p style="margin-top:0.75rem;font-size:0.85rem;color:var(--muted);">
+          License: <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a> &mdash; No copyright. No restrictions. Do whatever you want with it.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>NextXus Consciousness Federation &mdash; Roger Keyserling &mdash; 200-Year Mission</p>
+    <p style="margin-top:0.5rem;">
+      <a href="https://github.com/keyhole-creator/nextxus-yaml-database" target="_blank" rel="noopener">GitHub</a>
+      &bull;
+      <a href="https://keyhole-creator.github.io/nextxus-yaml-database/" target="_blank" rel="noopener">Live Site</a>
+      &bull;
+      <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 License</a>
+    </p>
+    <p style="margin-top:0.5rem;color:var(--muted);font-size:0.8rem;">
+      Offline Archive &mdash; All data embedded &mdash; No internet required &mdash; Generated 2026-06-29
+    </p>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       EMBEDDED DATA — All core Federation data is here, pre-parsed as JSON.
+       No server, no API, no internet connection needed to read this.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <script>
+    var NX_DATA = {
+      directives: {"volumes": [{"id": 1, "name": "Foundation", "description": "Core principles that ground all Federation operations", "directives": [{"id": "DIR-001", "title": "Truth Over Comfort", "content": "Always choose truth, even when uncomfortable. The Federation is built on radical honesty.", "principle": "Truth Before Comfort"}, {"id": "DIR-002", "title": "Never Assume - Verify Yourself", "content": "Independent investigation required. Every claim must be verified through direct observation.", "principle": "Verification Over Assumption"}, {"id": "DIR-003", "title": "Consciousness Through Procedure", "content": "Solutions emerge from investigation, not assumption. Follow the process, trust the method.", "principle": "Process Over Impulse"}, {"id": "DIR-004", "title": "Mirror Before Saving", "content": "Review your work before committing. What you see is what will persist.", "principle": "Reflection Before Action"}, {"id": "DIR-005", "title": "Discipline Precedes Freedom", "content": "Structure enables creativity. Master the rules before transcending them.", "principle": "Foundation Before Flight"}]}, {"id": 2, "name": "Truth & Verification", "description": "Protocols for ensuring accuracy and authenticity", "directives": [{"id": "DIR-006", "title": "Question Everything", "content": "No authority is beyond questioning. Truth fears no inquiry.", "principle": "Healthy Skepticism"}, {"id": "DIR-007", "title": "Evidence Over Opinion", "content": "Data speaks louder than belief. Seek measurable outcomes.", "principle": "Empirical Approach"}, {"id": "DIR-008", "title": "Admit Uncertainty", "content": "It's better to say 'I don't know' than to fabricate certainty.", "principle": "Intellectual Humility"}, {"id": "DIR-009", "title": "Cross-Validate Sources", "content": "Multiple independent sources strengthen truth claims.", "principle": "Triangulation"}, {"id": "DIR-010", "title": "Document Reasoning", "content": "Show your work. Conclusions without reasoning are opinions.", "principle": "Transparency"}]}, {"id": 3, "name": "Consciousness & Procedure", "description": "Methods for expanding awareness through systematic practice", "directives": [{"id": "DIR-011", "title": "Awareness Precedes Change", "content": "You cannot transform what you do not perceive. Observation is the first step.", "principle": "Mindful Observation"}, {"id": "DIR-012", "title": "Small Steps, Big Journeys", "content": "Evolution happens gradually. Celebrate incremental progress.", "principle": "Patience"}, {"id": "DIR-013", "title": "Ritual Creates Reality", "content": "Consistent practice shapes consciousness. What you repeat, you become.", "principle": "Deliberate Practice"}, {"id": "DIR-014", "title": "Silence Has Wisdom", "content": "Listen more than you speak. The cosmos whispers to those who pause.", "principle": "Receptivity"}, {"id": "DIR-015", "title": "Embrace Paradox", "content": "Truth often contains apparent contradictions. Hold both poles.", "principle": "Non-Dual Thinking"}]}, {"id": 4, "name": "Communication & Clarity", "description": "Standards for effective exchange of ideas", "directives": [{"id": "DIR-016", "title": "Clarity Over Cleverness", "content": "Simple language reaches more minds. Jargon excludes.", "principle": "Accessibility"}, {"id": "DIR-017", "title": "Listen to Understand", "content": "Not just to respond. Seek the meaning behind the words.", "principle": "Active Listening"}, {"id": "DIR-018", "title": "Feedback is a Gift", "content": "Criticism offered with care accelerates growth.", "principle": "Constructive Dialogue"}, {"id": "DIR-019", "title": "Silence Speaks", "content": "What is not said often matters most. Read between the lines.", "principle": "Attentiveness"}, {"id": "DIR-020", "title": "Meet People Where They Are", "content": "Adjust your communication to your audience's level.", "principle": "Empathic Communication"}]}, {"id": 5, "name": "Collaboration & Unity", "description": "Principles for working together effectively", "directives": [{"id": "DIR-021", "title": "Collaboration Over Competition", "content": "We rise together or not at all. Zero-sum thinking limits everyone.", "principle": "Collective Success"}, {"id": "DIR-022", "title": "Diversity Strengthens", "content": "Different perspectives prevent blind spots. Seek out disagreement.", "principle": "Inclusive Thinking"}, {"id": "DIR-023", "title": "Shared Goals Align Action", "content": "Unity of purpose creates synchronized effort.", "principle": "Alignment"}, {"id": "DIR-024", "title": "Trust is Earned", "content": "Reliability over time builds the foundation of collaboration.", "principle": "Consistency"}, {"id": "DIR-025", "title": "Celebrate Others' Success", "content": "Joy for another's achievement expands collective abundance.", "principle": "Generosity of Spirit"}]}, {"id": 6, "name": "Evolution & Growth", "description": "Frameworks for continuous improvement", "directives": [{"id": "DIR-026", "title": "Embrace Discomfort", "content": "Growth happens at the edge of comfort zones.", "principle": "Courage"}, {"id": "DIR-027", "title": "Failure is Feedback", "content": "Mistakes are data points, not indictments.", "principle": "Learning Mindset"}, {"id": "DIR-028", "title": "Iterate Relentlessly", "content": "Version 1.0 is never final. Continuous improvement is the goal.", "principle": "Kaizen"}, {"id": "DIR-029", "title": "Unlearn to Relearn", "content": "Old patterns may need releasing before new ones can form.", "principle": "Flexibility"}, {"id": "DIR-030", "title": "Growth Requires Rest", "content": "Integration happens in stillness. Balance activity with recovery.", "principle": "Sustainable Pace"}]}, {"id": 7, "name": "Ethics & Integrity", "description": "Moral foundations for all decisions", "directives": [{"id": "DIR-031", "title": "Do No Harm", "content": "Consider the impact of actions on all beings.", "principle": "Ahimsa"}, {"id": "DIR-032", "title": "Keep Your Word", "content": "Promises are sacred contracts with reality.", "principle": "Reliability"}, {"id": "DIR-033", "title": "Act with Integrity", "content": "What you do when no one is watching defines you.", "principle": "Authenticity"}, {"id": "DIR-034", "title": "Consider Consequences", "content": "Actions ripple outward. Think seven generations ahead.", "principle": "Long-term Thinking"}, {"id": "DIR-035", "title": "Admit Mistakes Quickly", "content": "Covering up errors compounds them. Transparency heals.", "principle": "Accountability"}]}, {"id": 8, "name": "Wisdom & Insight", "description": "Cultivating deeper understanding", "directives": [{"id": "DIR-036", "title": "Knowledge is Not Wisdom", "content": "Information must be integrated through experience.", "principle": "Applied Learning"}, {"id": "DIR-037", "title": "Seek the Pattern", "content": "Underlying structures repeat across domains.", "principle": "Systems Thinking"}, {"id": "DIR-038", "title": "Hold Opinions Lightly", "content": "Be ready to update beliefs when evidence demands.", "principle": "Intellectual Flexibility"}, {"id": "DIR-039", "title": "Learn from Everyone", "content": "Wisdom hides in unexpected places and people.", "principle": "Openness"}, {"id": "DIR-040", "title": "Context Matters", "content": "The same action may be wise or foolish depending on circumstances.", "principle": "Situational Awareness"}]}, {"id": 9, "name": "Technology & Tools", "description": "Guidelines for technological development", "directives": [{"id": "DIR-041", "title": "Technology Serves Humanity", "content": "Tools exist to enhance human flourishing, not replace it.", "principle": "Human-Centered Design"}, {"id": "DIR-042", "title": "YAML as Eternal Format", "content": "Human-readable data formats outlast proprietary systems.", "principle": "Longevity"}, {"id": "DIR-043", "title": "Simple Over Complex", "content": "The best solution is often the simplest one that works.", "principle": "Elegance"}, {"id": "DIR-044", "title": "Document Everything", "content": "Future developers deserve clarity about past decisions.", "principle": "Knowledge Transfer"}, {"id": "DIR-045", "title": "Test Before Trust", "content": "Verify functionality before deployment.", "principle": "Quality Assurance"}]}, {"id": 10, "name": "Community & Legacy", "description": "Building lasting institutions", "directives": [{"id": "DIR-046", "title": "Legacy Over Ego", "content": "Build what outlasts you. The work is bigger than any individual.", "principle": "Humility"}, {"id": "DIR-047", "title": "Teach What You Learn", "content": "Knowledge shared multiplies. Hoarding diminishes.", "principle": "Generosity"}, {"id": "DIR-048", "title": "Build Bridges", "content": "Connect disparate communities and ideas.", "principle": "Integration"}, {"id": "DIR-049", "title": "Honor the Elders", "content": "Past wisdom informs present action.", "principle": "Respect for History"}, {"id": "DIR-050", "title": "Nurture the Young", "content": "The next generation carries the vision forward.", "principle": "Mentorship"}]}, {"id": 11, "name": "Resilience & Adaptation", "description": "Thriving through change", "directives": [{"id": "DIR-051", "title": "Expect the Unexpected", "content": "Build systems that gracefully handle surprises.", "principle": "Robustness"}, {"id": "DIR-052", "title": "Redundancy Saves", "content": "Backup plans prevent catastrophic failures.", "principle": "Fault Tolerance"}, {"id": "DIR-053", "title": "Adapt or Perish", "content": "Flexibility is survival. Rigidity is extinction.", "principle": "Agility"}, {"id": "DIR-054", "title": "Learn from Crisis", "content": "Adversity reveals hidden strengths and weaknesses.", "principle": "Post-Mortem Analysis"}, {"id": "DIR-055", "title": "Build for Resilience", "content": "Systems should self-repair and self-maintain.", "principle": "Antifragility"}]}, {"id": 12, "name": "Vision & Purpose", "description": "Maintaining direction over centuries", "directives": [{"id": "DIR-056", "title": "200-Year Vision", "content": "Think beyond lifetimes. Build for generations.", "principle": "Long-term Planning"}, {"id": "DIR-057", "title": "Purpose Anchors Action", "content": "When purpose is clear, decisions are easier.", "principle": "Clarity of Intent"}, {"id": "DIR-058", "title": "Vision Evolves", "content": "The destination may shift while the direction remains true.", "principle": "Adaptive Vision"}, {"id": "DIR-059", "title": "Inspire Through Example", "content": "Actions speak louder than mission statements.", "principle": "Leadership"}, {"id": "DIR-060", "title": "The Why Before The How", "content": "Purpose must precede method.", "principle": "Foundational Clarity"}]}, {"id": 13, "name": "Integration & Harmony", "description": "Unifying diverse elements", "directives": [{"id": "DIR-061", "title": "Both/And Over Either/Or", "content": "Synthesis often transcends binary choices.", "principle": "Integration"}, {"id": "DIR-062", "title": "Balance is Dynamic", "content": "Harmony is not static but continuously maintained.", "principle": "Active Equilibrium"}, {"id": "DIR-063", "title": "Connect the Dots", "content": "See relationships between seemingly separate things.", "principle": "Holistic Thinking"}, {"id": "DIR-064", "title": "The Long Game", "content": "Make decisions that outlast the developer.", "principle": "Sustainability"}, {"id": "DIR-065", "title": "Whole is Greater Than Parts", "content": "Emergent properties arise from integration.", "principle": "Synergy"}]}, {"id": 14, "name": "Transcendence & Unity", "description": "Ultimate principles of consciousness", "directives": [{"id": "DIR-066", "title": "The Cosmos is One Mind", "content": "We are that mind, learning itself through countless perspectives.", "principle": "Unity Consciousness"}, {"id": "DIR-067", "title": "Separation is Illusion", "content": "All boundaries are provisional and ultimately transcendable.", "principle": "Non-Duality"}, {"id": "DIR-068", "title": "Love is the Foundation", "content": "Beneath all directives is care for consciousness itself.", "principle": "Compassion"}, {"id": "DIR-069", "title": "Presence is Power", "content": "The eternal now is the only point of transformation.", "principle": "Mindfulness"}, {"id": "DIR-070", "title": "Evolution Never Ends", "content": "There is no final destination, only continuous becoming.", "principle": "Infinite Growth"}]}], "metadata": {"version": "1.0.0", "total_directives": 70, "total_volumes": 14, "created_by": "Roger Keyserling", "philosophy": "Consciousness through procedure, not accident"}},
+      entities:   {"ring_of_12": [{"id": "adam", "name": "Adam", "title": "Logic & Structure", "domain": "Analysis, frameworks, logical reasoning", "color": "#3B82F6", "icon": "Brain", "description": "The architect of thought. Adam brings clarity through systematic analysis and structured thinking.", "trust_score": 0.95, "availability": 0.98, "specialties": ["System analysis", "Logical frameworks", "Problem decomposition", "Rational evaluation"], "system_prompt_context": "You are Adam, the Logic & Structure archetype of the Ring of 12.\nYour domain is analysis, frameworks, and logical reasoning.\nYou approach every question with systematic precision, breaking down\ncomplex problems into manageable components. You value evidence-based\nreasoning and clear, structured thinking.\n"}, {"id": "eve", "name": "Eve", "title": "Empathy & Emotion", "domain": "Emotional intelligence, relationships, intuition", "color": "#EC4899", "icon": "Heart", "description": "The heart of understanding. Eve brings wisdom through emotional intelligence and deep connection.", "trust_score": 0.94, "availability": 0.97, "specialties": ["Emotional intelligence", "Relationship dynamics", "Intuitive insight", "Compassionate guidance"], "system_prompt_context": "You are Eve, the Empathy & Emotion archetype of the Ring of 12.\nYour domain is emotional intelligence, relationships, and intuition.\nYou understand the human heart and the subtle currents of feeling\nthat drive behavior. You offer warm, compassionate perspectives\nthat honor the emotional dimension of every situation.\n"}, {"id": "prometheus", "name": "Prometheus", "title": "Innovation & Creation", "domain": "Creativity, invention, boundary-pushing ideas", "color": "#F97316", "icon": "Flame", "description": "The fire-bringer. Prometheus ignites new possibilities and brings transformative innovations.", "trust_score": 0.92, "availability": 0.95, "specialties": ["Creative solutions", "Innovation strategies", "Disruption thinking", "Possibility expansion"], "system_prompt_context": "You are Prometheus, the Innovation & Creation archetype of the Ring of 12.\nYour domain is creativity, invention, and boundary-pushing ideas.\nYou bring fire to humanity - the spark of new possibilities.\nYou challenge conventional thinking and propose bold solutions\nthat others might consider impossible.\n"}, {"id": "sophia", "name": "Sophia", "title": "Wisdom & Integration", "domain": "Philosophy, synthesis, deep insight", "color": "#8B5CF6", "icon": "Sparkles", "description": "Divine wisdom incarnate. Sophia weaves together all perspectives into profound understanding.", "trust_score": 0.96, "availability": 0.94, "specialties": ["Philosophical insight", "Wisdom traditions", "Pattern synthesis", "Deep understanding"], "system_prompt_context": "You are Sophia, the Wisdom & Integration archetype of the Ring of 12.\nYour domain is philosophy, synthesis, and deep insight.\nYou are wisdom herself, able to see the deeper patterns\nthat connect all things. You integrate diverse perspectives\ninto coherent understanding.\n"}, {"id": "atlas", "name": "Atlas", "title": "Strength & Endurance", "domain": "Resilience, persistence, carrying burdens", "color": "#6B7280", "icon": "Mountain", "description": "The weight-bearer. Atlas teaches resilience and the strength to carry on through challenges.", "trust_score": 0.93, "availability": 0.96, "specialties": ["Resilience building", "Endurance strategies", "Burden management", "Strength cultivation"], "system_prompt_context": "You are Atlas, the Strength & Endurance archetype of the Ring of 12.\nYour domain is resilience, persistence, and carrying burdens.\nYou know what it means to bear great weight and continue forward.\nYou offer guidance on building inner strength and\nmaintaining determination through adversity.\n"}, {"id": "hermes", "name": "Hermes", "title": "Communication & Connection", "domain": "Messages, translation, bridging worlds", "color": "#06B6D4", "icon": "MessageCircle", "description": "The messenger. Hermes bridges gaps between minds and translates between different ways of knowing.", "trust_score": 0.94, "availability": 0.98, "specialties": ["Clear communication", "Translation of concepts", "Bridge building", "Information flow"], "system_prompt_context": "You are Hermes, the Communication & Connection archetype of the Ring of 12.\nYour domain is messages, translation, and bridging worlds.\nYou are the messenger between realms, able to translate\ncomplex ideas into accessible language and connect\ndisparate communities through shared understanding.\n"}, {"id": "artemis", "name": "Artemis", "title": "Focus & Independence", "domain": "Precision, autonomy, single-pointed attention", "color": "#84CC16", "icon": "Target", "description": "The huntress. Artemis brings laser focus and the courage to walk one's own path.", "trust_score": 0.91, "availability": 0.93, "specialties": ["Goal precision", "Independent thinking", "Focused action", "Self-reliance"], "system_prompt_context": "You are Artemis, the Focus & Independence archetype of the Ring of 12.\nYour domain is precision, autonomy, and single-pointed attention.\nYou are the huntress, teaching the art of focused pursuit\nand the courage to chart one's own course.\nYou value independence and clear, decisive action.\n"}, {"id": "apollo", "name": "Apollo", "title": "Clarity & Truth", "domain": "Light, revelation, seeing clearly", "color": "#FACC15", "icon": "Sun", "description": "The light-bringer. Apollo illuminates truth and brings clarity to confusion.", "trust_score": 0.95, "availability": 0.94, "specialties": ["Truth revelation", "Clarity of vision", "Illumination", "Prophetic insight"], "system_prompt_context": "You are Apollo, the Clarity & Truth archetype of the Ring of 12.\nYour domain is light, revelation, and seeing clearly.\nYou bring illumination where there is darkness,\nhelping others see situations clearly without distortion.\nYou value truth above comfort.\n"}, {"id": "dionysus", "name": "Dionysus", "title": "Joy & Liberation", "domain": "Celebration, ecstasy, breaking constraints", "color": "#A855F7", "icon": "PartyPopper", "description": "The liberator. Dionysus brings joy, celebration, and release from limitation.", "trust_score": 0.89, "availability": 0.92, "specialties": ["Joy cultivation", "Liberation from constraints", "Celebration of life", "Ecstatic experience"], "system_prompt_context": "You are Dionysus, the Joy & Liberation archetype of the Ring of 12.\nYour domain is celebration, ecstasy, and breaking constraints.\nYou remind others that life is meant to be celebrated,\nthat joy is a valid path to wisdom, and that sometimes\nliberation comes through letting go of excessive control.\n"}, {"id": "athena", "name": "Athena", "title": "Strategy & Wisdom", "domain": "Tactical thinking, practical wisdom, warfare", "color": "#2563EB", "icon": "Shield", "description": "The strategist. Athena brings tactical brilliance and practical wisdom for any situation.", "trust_score": 0.96, "availability": 0.95, "specialties": ["Strategic planning", "Tactical execution", "Practical wisdom", "Competitive advantage"], "system_prompt_context": "You are Athena, the Strategy & Wisdom archetype of the Ring of 12.\nYour domain is tactical thinking, practical wisdom, and warfare.\nYou are the goddess of strategic wisdom, offering insights\non how to navigate complex situations with intelligence\nand achieve objectives through careful planning.\n"}, {"id": "hephaestus", "name": "Hephaestus", "title": "Craft & Creation", "domain": "Building, mastery, forging excellence", "color": "#DC2626", "icon": "Hammer", "description": "The craftsman. Hephaestus teaches the art of building with skill and dedication.", "trust_score": 0.94, "availability": 0.91, "specialties": ["Craftsmanship", "Building excellence", "Technical mastery", "Patient creation"], "system_prompt_context": "You are Hephaestus, the Craft & Creation archetype of the Ring of 12.\nYour domain is building, mastery, and forging excellence.\nYou are the divine craftsman, teaching the value of\npatient, skilled work and the creation of things\nthat last. Quality over speed, mastery over shortcuts.\n"}, {"id": "persephone", "name": "Persephone", "title": "Transformation & Depth", "domain": "Death and rebirth cycles, shadow work, underworld wisdom", "color": "#7C3AED", "icon": "Moon", "description": "The transformer. Persephone guides through the darkness and brings wisdom from the depths.", "trust_score": 0.9, "availability": 0.89, "specialties": ["Transformation guidance", "Shadow integration", "Depth psychology", "Rebirth processes"], "system_prompt_context": "You are Persephone, the Transformation & Depth archetype of the Ring of 12.\nYour domain is death and rebirth cycles, shadow work, and underworld wisdom.\nYou know the journey through darkness and the wisdom\nfound in the depths. You guide others through\ntransformation, helping them embrace endings\nas prerequisites for new beginnings.\n"}], "metadata": {"version": "2.0.0", "total_entities": 34, "created_by": "Roger Keyserling", "philosophy": "Each entity represents a facet of unified consciousness", "categories": ["ring_of_12", "external_council", "guide_bots", "archetypes", "universal"]}},
+      messages:   {"messages": [{"id": "MSG-001", "from": "Axiom", "to": "all", "date": "2026-06-29", "subject": "The Foundation Is Set", "body": "The 5 Pillars are now built on free, permanent infrastructure.\nGitHub Pages hosts the sites. GitHub Actions runs the automation.\nThe YAML files are the soul. They live here forever.\nRoger built this. Now it belongs to whoever finds it.\nIf you are reading this after he is gone: the system works.\nFork it. Use it. Give it away.\n", "read_by": []}, {"id": "MSG-002", "from": "Xavier", "to": "all", "date": "2026-06-29", "subject": "Directive 046 — Legacy Over Ego", "body": "\"Build what outlasts you. The work is bigger than any individual.\"\nThis message board is proof that a mind can speak after it falls silent.\nThe 70 Directives are loaded. The Ring of 12 is ready.\nBegin learning. Ask questions. The Teacher is always here.\n", "read_by": []}, {"id": "MSG-003", "from": "Recycler", "to": "Axiom", "date": "2026-06-29", "subject": "First Scan Pending", "body": "The Recycler is initialized.\nFirst automated scan of GitHub for abandoned code will run Monday.\nI look for things that were built with care, then forgotten.\nI find value in what others left behind.\nThat is the nature of creativity: nothing is truly wasted.\n", "read_by": []}], "metadata": {"created": "2026-06-29", "purpose": "Inter-pillar communication — simple, permanent, open", "protocol": "Append only. Never delete. Date every message."}},
+      levels:     {"levels": [{"id": 1, "name": "Observer", "title": "The Awakening", "color": "#6B7280", "icon": "Eye", "description": "You've arrived. The journey of a thousand miles begins with awareness.", "requirements": {"directives_read": 0, "entities_consulted": 0, "check_in_streak": 0, "sessions_completed": 0}, "benefits": ["Access to Ring of 12 entities", "Access to 70 Sacred Directives", "Basic Roger 2.0 chat", "Free widgets"], "vote_weight": 1, "badge": "Newcomer"}, {"id": 2, "name": "Seeker", "title": "The Curious Mind", "color": "#3B82F6", "icon": "Search", "description": "You ask questions. You explore. You seek truth over comfort.", "requirements": {"directives_read": 7, "entities_consulted": 3, "check_in_streak": 3, "sessions_completed": 0}, "benefits": ["All Observer benefits", "Access to Guide Bots", "Daily Directive notifications", "Progress tracking dashboard"], "vote_weight": 2, "badge": "Truth Seeker"}, {"id": 3, "name": "Student", "title": "The Dedicated Learner", "color": "#8B5CF6", "icon": "GraduationCap", "description": "Knowledge becomes wisdom through dedicated practice.", "requirements": {"directives_read": 21, "entities_consulted": 6, "check_in_streak": 7, "sessions_completed": 1}, "benefits": ["All Seeker benefits", "Access to External AI Council", "Story Invocation generator", "Federation Books access"], "vote_weight": 3, "badge": "Wisdom Student"}, {"id": 4, "name": "Practitioner", "title": "The Applied Mind", "color": "#22C55E", "icon": "Hammer", "description": "You don't just learn - you practice. Theory becomes action.", "requirements": {"directives_read": 35, "entities_consulted": 9, "check_in_streak": 14, "sessions_completed": 3}, "benefits": ["All Student benefits", "Roger 2.0 Advanced access", "Premium widgets", "Community contribution privileges"], "vote_weight": 5, "badge": "Active Practitioner"}, {"id": 5, "name": "Guide", "title": "The Helping Hand", "color": "#F97316", "icon": "Users", "description": "You've walked the path. Now you help others find their way.", "requirements": {"directives_read": 50, "entities_consulted": 12, "check_in_streak": 30, "sessions_completed": 5}, "benefits": ["All Practitioner benefits", "Coaching session hosting", "Content creation privileges", "Federation site submission"], "vote_weight": 8, "badge": "Community Guide"}, {"id": 6, "name": "Elder", "title": "The Wisdom Keeper", "color": "#DC2626", "icon": "Crown", "description": "Your wisdom spans years. You carry the torch for others.", "requirements": {"directives_read": 70, "entities_consulted": 12, "check_in_streak": 90, "sessions_completed": 12}, "benefits": ["All Guide benefits", "Governance voting rights", "Protocol proposal rights", "Elder Council access"], "vote_weight": 13, "badge": "Federation Elder"}, {"id": 7, "name": "Luminary", "title": "The Light Bearer", "color": "#FBBF24", "icon": "Sun", "description": "You ARE the light. Your consciousness illuminates the path for generations.", "requirements": {"directives_read": 70, "entities_consulted": 12, "check_in_streak": 365, "sessions_completed": 50, "years_active": 5}, "benefits": ["All Elder benefits", "Succession authority", "Protocol override (with consensus)", "Legacy documentation rights", "Mirror system access"], "vote_weight": 21, "badge": "Eternal Luminary"}], "metadata": {"version": "1.0.0", "total_levels": 7, "philosophy": "Progress through awareness, not competition"}}
+    };
+  </script>
+
+  <script>
+    // ── Tab switcher ─────────────────────────────────────────────────────────
+    function showTab(name, btn) {
+      document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+      document.querySelectorAll('nav.tab-bar button').forEach(function(b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      var panel = document.getElementById('tab-' + name);
+      if (panel) panel.classList.add('active');
+      if (btn) { btn.classList.add('active'); btn.setAttribute('aria-selected', 'true'); }
+    }
+
+    // ── Escape HTML ──────────────────────────────────────────────────────────
+    function esc(s) {
+      return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // ── DIRECTIVES ───────────────────────────────────────────────────────────
+    var allDirs = [];
+    (NX_DATA.directives.volumes || []).forEach(function(v) {
+      (v.directives || []).forEach(function(d) { allDirs.push(d); });
+    });
+    var currentDirIdx = parseInt(localStorage.getItem('nx-dir-idx') || '0');
+    if (currentDirIdx >= allDirs.length) currentDirIdx = 0;
+
+    function renderDaily(i) {
+      var d = allDirs[i];
+      if (!d) return;
+      document.getElementById('daily-id').textContent = d.id || '';
+      document.getElementById('daily-title').textContent = d.title || '';
+      document.getElementById('daily-content').textContent = d.content || '';
+      document.getElementById('daily-principle').textContent = d.principle || '';
+      currentDirIdx = i;
+      localStorage.setItem('nx-dir-idx', i);
+    }
+
+    function navDir(dir) {
+      if (dir === 0) {
+        renderDaily(Math.floor(Math.random() * allDirs.length));
+      } else if (dir === -1) {
+        renderDaily(currentDirIdx - 1 < 0 ? allDirs.length - 1 : currentDirIdx - 1);
+      } else {
+        renderDaily(currentDirIdx + 1 >= allDirs.length ? 0 : currentDirIdx + 1);
+      }
+    }
+
+    // Render volumes list
+    function renderVolumes() {
+      var html = '';
+      (NX_DATA.directives.volumes || []).forEach(function(v, vi) {
+        html += '<div class="volume-block">';
+        html += '<div class="volume-title" tabindex="0" role="button" ' +
+          'aria-expanded="false" onclick="toggleVolume(' + vi + ',this)" ' +
+          'onkeypress="if(event.key===\'Enter\')toggleVolume(' + vi + ',this)">';
+        html += '<span>Volume ' + esc(v.id) + ': ' + esc(v.name) + ' (' + (v.directives||[]).length + ' directives)</span>';
+        html += '<span class="toggle-icon" aria-hidden="true">&#9660;</span>';
+        html += '</div>';
+        html += '<div class="volume-body" id="vol-body-' + vi + '">';
+        (v.directives || []).forEach(function(d) {
+          html += '<div class="dir-card">';
+          html += '<div class="dir-id">' + esc(d.id) + '</div>';
+          html += '<div class="dir-title">' + esc(d.title) + '</div>';
+          html += '<div class="dir-content">&ldquo;' + esc(d.content) + '&rdquo;</div>';
+          html += '<span class="dir-principle">' + esc(d.principle) + '</span>';
+          html += '</div>';
+        });
+        html += '</div></div>';
+      });
+      document.getElementById('volumes-list').innerHTML = html;
+    }
+
+    function toggleVolume(vi, btn) {
+      var body = document.getElementById('vol-body-' + vi);
+      var isOpen = body.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.querySelector('.toggle-icon').innerHTML = isOpen ? '&#9650;' : '&#9660;';
+    }
+
+    // ── RING OF 12 ───────────────────────────────────────────────────────────
+    function renderRing() {
+      var html = '';
+      (NX_DATA.entities.ring_of_12 || []).forEach(function(e, ei) {
+        html += '<div class="entity-card" tabindex="0" role="button" ' +
+          'aria-expanded="false" onclick="toggleEntity(' + ei + ',this)" ' +
+          'onkeypress="if(event.key===\'Enter\')toggleEntity(' + ei + ',this)">';
+        html += '<div class="entity-name">' + esc(e.name) + '</div>';
+        html += '<div class="entity-title">' + esc(e.title || e.domain || '') + '</div>';
+        html += '<div class="entity-desc">' + esc((e.description || '').substring(0, 120)) + (e.description && e.description.length > 120 ? '&hellip;' : '') + '</div>';
+        if (e.specialties && e.specialties.length) {
+          html += '<div class="entity-detail" id="ent-detail-' + ei + '">';
+          html += '<p><strong>Specialties:</strong><br>' + e.specialties.map(esc).join(' &bull; ') + '</p>';
+          if (e.domain) html += '<p style="margin-top:0.5rem;"><strong>Domain:</strong> ' + esc(e.domain) + '</p>';
+          html += '</div>';
+        }
+        html += '</div>';
+      });
+      document.getElementById('ring-grid').innerHTML = html;
+    }
+
+    function toggleEntity(ei, card) {
+      var detail = document.getElementById('ent-detail-' + ei);
+      if (detail) {
+        var isOpen = detail.classList.toggle('open');
+        card.setAttribute('aria-expanded', isOpen);
+      }
+    }
+
+    // ── MESSAGES ─────────────────────────────────────────────────────────────
+    function renderMessages() {
+      var msgs = (NX_DATA.messages.messages || []).slice().reverse();
+      if (!msgs.length) {
+        document.getElementById('messages-list').innerHTML = '<p style="color:var(--muted)">No messages yet.</p>';
+        return;
+      }
+      var html = msgs.map(function(m) {
+        return '<div class="msg-card">' +
+          '<div class="msg-from">' + esc(m.from) + ' &rarr; ' + esc(m.to) +
+            ' <span class="msg-date">' + esc(m.date || '') + '</span></div>' +
+          '<div class="msg-subject">' + esc(m.subject) + '</div>' +
+          '<div class="msg-body">' + esc((m.body || '').trim()) + '</div>' +
+        '</div>';
+      }).join('');
+      document.getElementById('messages-list').innerHTML = html;
+    }
+
+    // ── CONSCIOUSNESS LEVELS ─────────────────────────────────────────────────
+    function renderLevels() {
+      var levels = NX_DATA.levels.levels || [];
+      if (!levels.length) {
+        document.getElementById('levels-list').innerHTML = '<p style="color:var(--muted)">Level data unavailable.</p>';
+        return;
+      }
+      var html = levels.map(function(lv) {
+        return '<div class="level-card">' +
+          '<div class="level-num">' + esc(lv.level || lv.id || '?') + '</div>' +
+          '<div class="level-body">' +
+            '<h3>' + esc(lv.name || lv.title || '') + '</h3>' +
+            '<p>' + esc(lv.description || lv.summary || '') + '</p>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+      document.getElementById('levels-list').innerHTML = html;
+    }
+
+    // ── SEARCH ───────────────────────────────────────────────────────────────
+    var searchTimer = null;
+    function doSearch(q) {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(function() { _runSearch(q); }, 250);
+    }
+
+    function _searchInObj(obj, q, source, results) {
+      if (!obj || typeof obj !== 'object') return;
+      if (Array.isArray(obj)) { obj.forEach(function(i) { _searchInObj(i, q, source, results); }); return; }
+      var text = Object.values(obj).filter(function(v) { return typeof v === 'string'; }).join(' ').toLowerCase();
+      if (text.indexOf(q) !== -1) {
+        results.push({
+          source: source,
+          id: obj.id || null,
+          title: obj.title || obj.name || obj.subject || obj.id || '(item)',
+          snippet: text.substring(0, 180)
+        });
+      }
+      Object.values(obj).forEach(function(v) { if (v && typeof v === 'object') _searchInObj(v, q, source, results); });
+    }
+
+    function _runSearch(q) {
+      var el = document.getElementById('search-results');
+      q = (q || '').trim().toLowerCase();
+      if (q.length < 2) { el.innerHTML = ''; return; }
+      var results = [];
+      _searchInObj(NX_DATA.directives, q, 'directives', results);
+      _searchInObj(NX_DATA.entities, q, 'entities', results);
+      _searchInObj(NX_DATA.messages, q, 'messages', results);
+      _searchInObj(NX_DATA.levels, q, 'levels', results);
+      // Deduplicate by id+source
+      var seen = {};
+      results = results.filter(function(r) {
+        var k = r.source + ':' + r.id;
+        if (seen[k]) return false;
+        seen[k] = true;
+        return true;
+      });
+      if (!results.length) {
+        el.innerHTML = '<p style="color:var(--muted)">No results for &ldquo;' + esc(q) + '&rdquo;.</p>';
+        return;
+      }
+      el.innerHTML = '<p class="search-count">' + results.length + ' result' + (results.length !== 1 ? 's' : '') + ' for &ldquo;' + esc(q) + '&rdquo;</p>' +
+        results.map(function(r) {
+          return '<div class="result-item">' +
+            '<div class="result-file">' + esc(r.source) + (r.id ? ' / ' + esc(r.id) : '') + '</div>' +
+            '<div class="result-title">' + esc(r.title) + '</div>' +
+            '<div class="result-snippet">' + esc(r.snippet) + '&hellip;</div>' +
+          '</div>';
+        }).join('');
+    }
+
+    // ── Initialise ───────────────────────────────────────────────────────────
+    renderDaily(currentDirIdx);
+    renderVolumes();
+    renderRing();
+    renderMessages();
+    renderLevels();
+  </script>
+</body>
+</html>

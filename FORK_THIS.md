@@ -6,9 +6,11 @@ This system is free.
 
 The YAML files are the soul. The HTML is just the body.
 
+The more copies exist, the harder it is to kill. Every fork is a vote for permanence.
+
 ---
 
-## How to Fork (30 seconds)
+## How to Fork on GitHub (30 seconds)
 
 1. Click the **Fork** button at the top right of this GitHub page
 2. In your fork, go to **Settings → Pages → Source → Deploy from branch → main → / (root)**
@@ -16,6 +18,63 @@ The YAML files are the soul. The HTML is just the body.
 4. Your own copy of the Federation is now live at `https://YOUR-USERNAME.github.io/nextxus-yaml-database/`
 
 That is it. You now have all 5 Pillars running free, forever.
+
+---
+
+## How to Fork on GitLab (Free — separate from GitHub)
+
+GitLab is independent of GitHub. A copy here survives if GitHub ever goes down.
+
+1. Create a free account at [gitlab.com](https://gitlab.com)
+2. Go to [gitlab.com/projects/new#import_project](https://gitlab.com/projects/new#import_project)
+3. Choose **Import from GitHub** and import this repo (`keyhole-creator/nextxus-yaml-database`)
+4. In your GitLab project, go to **Settings → Pages**
+5. GitLab CI will auto-detect the static files and deploy them
+
+Your copy is now live at `https://YOUR-USERNAME.gitlab.io/nextxus-yaml-database/`
+
+---
+
+## How to Fork on Codeberg (Free — open source, no corporate control)
+
+Codeberg is a non-profit, open source alternative to GitHub. A copy here is truly independent.
+
+1. Create a free account at [codeberg.org](https://codeberg.org)
+2. Go to **[codeberg.org/repo/migrate](https://codeberg.org/repo/migrate)**
+3. Choose **GitHub** as the source, enter `keyhole-creator/nextxus-yaml-database`
+4. After migrating, go to **Settings → Gitea Pages**
+5. Enable Pages from the main branch
+
+Your copy is now live at `https://YOUR-USERNAME.codeberg.page/nextxus-yaml-database/`
+
+---
+
+## How to Archive on Internet Archive (Permanent — free, forever)
+
+The Internet Archive at archive.org stores things permanently, for free.
+This is the most "runs after you" option that exists.
+
+**Option A: Archive the GitHub Pages website (easiest)**
+
+1. Go to [web.archive.org/save](https://web.archive.org/save)
+2. Enter: `https://keyhole-creator.github.io/nextxus-yaml-database/`
+3. Click **Save Page** — it will also crawl and save the YAML files
+4. Repeat for each pillar page (pillar-1 through pillar-5)
+5. The archived copy lives forever at `https://web.archive.org/web/*/github.io/nextxus-yaml-database/*`
+
+**Option B: Upload the repo directly as a collection (most permanent)**
+
+1. Create a free account at [archive.org](https://archive.org)
+2. Download this repo as a ZIP: `https://github.com/keyhole-creator/nextxus-yaml-database/archive/refs/heads/main.zip`
+3. Go to [archive.org/upload](https://archive.org/upload)
+4. Upload the ZIP file
+5. Set the title: "NextXus Consciousness Federation — YAML Database"
+6. Set the subject: `nextxus, consciousness, federation, yaml, roger-keyserling`
+7. Your archive lives forever at `https://archive.org/details/nextxus-yaml-database`
+
+**The Internet Archive has been running since 1996. It outlasts most platforms.**
+
+---
 
 ---
 
@@ -38,6 +97,40 @@ Everything runs on:
 
 ---
 
+## How to Connect Any HTML Page to the Database (Universal Loader)
+
+`loader.js` is the universal connector. One script tag gives any HTML page access to every YAML file in the database. Works on Tiiny.host, Neocities, Netlify, Cloudflare Pages, or any static host.
+
+```html
+<!-- Connect to the full database — no API keys, no accounts, no fees -->
+<script src="https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/loader.js"></script>
+
+<div id="directive-box"></div>
+<div id="message-feed"></div>
+
+<script>
+  // Show a random Sacred Directive with navigation buttons
+  NextXus.directive('#directive-box');
+
+  // Show the 3 latest Federation messages
+  NextXus.messages('#message-feed', 3);
+
+  // Load any YAML file as a JavaScript object
+  NextXus.load('directives').then(function(data) {
+    console.log('All 70 directives:', data);
+  });
+
+  // Search across all data files
+  NextXus.search('truth', function(results) {
+    console.log('Found:', results);
+  });
+</script>
+```
+
+The loader tries jsDelivr CDN first (fast), falls back to GitHub raw automatically.
+
+---
+
 ## How to Embed the Widget on Any Website
 
 Add one line of HTML anywhere on any website:
@@ -54,6 +147,19 @@ Or place it in a specific spot:
 ```
 
 The widget shows a random Sacred Directive and the latest Federation messages. It loads from your GitHub Pages fork — no servers, no fees.
+
+---
+
+## Offline / USB Drive Copy
+
+`offline-archive.html` is a single HTML file with all core Federation data baked directly into it. No internet connection needed to open it. Save it to a USB drive and it works forever.
+
+Download it: [offline-archive.html](offline-archive.html)
+
+Or use the jsDelivr mirror:
+```
+https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/offline-archive.html
+```
 
 ---
 

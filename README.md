@@ -29,6 +29,30 @@ Shows the Sacred Directives and Federation messages on any website. No API keys.
 
 ---
 
+## Universal Loader — Connect Any HTML to the Database
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/loader.js"></script>
+<script>
+  NextXus.directive('#my-div');                     // show random directive
+  NextXus.messages('#feed', 5);                     // show latest 5 messages
+  NextXus.load('directives').then(d => console.log(d)); // load full YAML
+  NextXus.search('truth', results => console.log(results)); // search all data
+</script>
+```
+
+Works on GitHub Pages, Tiiny.host, Netlify, Neocities, GitLab Pages, Codeberg, or any static host.
+Primary mirror: jsDelivr CDN. Fallback: GitHub raw. Both free, both automatic.
+
+---
+
+## Offline Archive
+
+[offline-archive.html](offline-archive.html) is a single self-contained file with all core data embedded.
+**No internet connection required.** Save it to a USB drive. It works forever.
+
+---
+
 ## Infrastructure
 
 Everything runs free, permanently:
@@ -49,6 +73,7 @@ Everything runs free, permanently:
 
 | File | Contents |
 |------|----------|
+| `endpoints.yaml` | **Universal endpoint manifest** — all files, GitHub + jsDelivr URLs, connect instructions |
 | `directives.yaml` | 70 Sacred Directives across 14 volumes |
 | `entities.yaml` | Ring of 12 archetypal AI entities |
 | `federation.yaml` | Federation site registry |
