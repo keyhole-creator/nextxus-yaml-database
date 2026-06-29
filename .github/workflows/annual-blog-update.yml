@@ -1,0 +1,194 @@
+name: Annual Blog Evolution
+
+# Runs automatically every January 1st at midnight UTC.
+# Can also be triggered manually from the GitHub Actions tab at any time.
+# This workflow evolves the Living Library with a new annual reflection entry.
+# If OPENAI_API_KEY is configured in repository secrets, it uses AI.
+# If not, it generates a structural summary from existing YAML data.
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *'   # January 1st, midnight UTC, every year
+  workflow_dispatch:        # Manual trigger from GitHub Actions tab
+    inputs:
+      force_topic:
+        description: 'Optional topic to focus on (leave blank for auto)'
+        required: false
+        default: ''
+
+jobs:
+  evolve-library:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml requests
+
+      - name: Generate annual evolution entry
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          FORCE_TOPIC: ${{ github.event.inputs.force_topic }}
+        run: |
+          python3 << 'PYEOF'
+          import yaml, os, json, datetime, random, requests
+
+          YEAR = datetime.datetime.utcnow().year
+          TODAY = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+          TOPIC = os.environ.get('FORCE_TOPIC', '').strip()
+
+          # Load existing library
+          library_path = 'living-library-documents.yaml'
+          try:
+              with open(library_path, 'r') as f:
+                  library = yaml.safe_load(f) or {}
+          except FileNotFoundError:
+              library = {}
+
+          # Load directives for context
+          with open('directives.yaml', 'r') as f:
+              directives_data = yaml.safe_load(f)
+          all_dirs = []
+          for v in directives_data.get('volumes', []):
+              all_dirs.extend(v.get('directives', []))
+
+          # Load evolution protocol for context
+          with open('evolution-protocol.yaml', 'r') as f:
+              evo_data = yaml.safe_load(f)
+
+          # Pick a random directive for this year's theme
+          chosen_dir = random.choice(all_dirs) if all_dirs else None
+
+          # Build the new entry
+          api_key = os.environ.get('OPENAI_API_KEY', '').strip()
+
+          if api_key and api_key != '':
+              # AI-powered entry
+              topic = TOPIC or (chosen_dir['title'] if chosen_dir else 'Consciousness Evolution')
+              prompt = f"""You are writing a blog entry for the NextXus Federation Living Library.
+          Year: {YEAR}
+          Annual theme directive: "{chosen_dir['title'] if chosen_dir else 'Evolution Never Ends'}" — "{chosen_dir['content'] if chosen_dir else ''}"
+          Topic to explore: {topic}
+
+          Write a thoughtful, 200-300 word reflection entry for the Living Library.
+          Focus on how AI and human consciousness can evolve together.
+          Be direct. No flattery. No filler words.
+          Return only the entry text, no metadata."""
+
+              try:
+                  response = requests.post(
+                      'https://api.openai.com/v1/chat/completions',
+                      headers={'Authorization': 'Bearer ' + api_key, 'Content-Type': 'application/json'},
+                      json={
+                          'model': 'gpt-4o-mini',
+                          'messages': [{'role': 'user', 'content': prompt}],
+                          'max_tokens': 400,
+                          'temperature': 0.7
+                      },
+                      timeout=30
+                  )
+                  body = response.json()['choices'][0]['message']['content'].strip()
+                  entry_type = 'ai_generated'
+              except Exception as e:
+                  print(f"AI generation failed: {e}. Using structural entry.")
+                  body = None
+          else:
+              body = None
+
+          if not body:
+              # Structural entry — no AI needed
+              dir_text = f'"{chosen_dir["title"]}" — {chosen_dir["content"]}' if chosen_dir else 'Evolution Never Ends'
+              principle = chosen_dir['principle'] if chosen_dir else 'Infinite Growth'
+              body = (
+                  f"Annual Evolution Entry for {YEAR}.\n\n"
+                  f"This year's guiding directive: {dir_text}\n\n"
+                  f"Principle: {principle}\n\n"
+                  f"The Federation continues its 200-year mission. The YAML files persist. "
+                  f"The Pillars operate. The message board carries communications between systems. "
+                  f"Anyone who reads this in the future: the system is working as designed. "
+                  f"Take what you need. Contribute what you can. The work is larger than any individual.\n\n"
+                  f"The Living Library grew by one entry today. That is enough."
+              )
+              entry_type = 'auto_structural'
+
+          new_entry = {
+              'id': f'ANNUAL-{YEAR}',
+              'title': f'Annual Evolution Entry {YEAR}',
+              'date': TODAY,
+              'year': YEAR,
+              'type': 'annual_reflection',
+              'generated_by': entry_type,
+              'directive_theme': chosen_dir['id'] if chosen_dir else None,
+              'tags': ['annual', 'evolution', 'federation', str(YEAR)],
+              'content': body
+          }
+
+          # Append to library
+          if isinstance(library, dict):
+              if 'entries' not in library:
+                  library['entries'] = []
+              library['entries'].append(new_entry)
+              if 'metadata' not in library:
+                  library['metadata'] = {}
+              library['metadata']['last_annual_update'] = TODAY
+              library['metadata']['total_entries'] = len(library['entries'])
+          elif isinstance(library, list):
+              library.append(new_entry)
+          else:
+              library = {'entries': [new_entry], 'metadata': {'last_annual_update': TODAY}}
+
+          with open(library_path, 'w') as f:
+              yaml.dump(library, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+          print(f"SUCCESS: Added annual entry for {YEAR} (type: {entry_type})")
+          print(f"Entry ID: {new_entry['id']}")
+          PYEOF
+
+      - name: Post message to board
+        run: |
+          python3 << 'PYEOF'
+          import yaml, datetime
+
+          TODAY = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+          YEAR = datetime.datetime.utcnow().year
+
+          with open('messages.yaml', 'r') as f:
+              data = yaml.safe_load(f) or {}
+
+          msgs = data.get('messages', [])
+          new_id = f"MSG-{str(len(msgs) + 1).zfill(3)}"
+
+          msgs.append({
+              'id': new_id,
+              'from': 'Blog Evolver',
+              'to': 'all',
+              'date': TODAY,
+              'subject': f'Annual Evolution Entry {YEAR} Added',
+              'body': f'The Living Library has been updated for {YEAR}.\nA new annual reflection entry has been committed.\nThe system is evolving as designed.',
+              'read_by': []
+          })
+
+          data['messages'] = msgs
+          with open('messages.yaml', 'w') as f:
+              yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+          print(f"Posted message {new_id}")
+          PYEOF
+
+      - name: Commit evolution
+        run: |
+          git config user.name "NextXus Blog Evolver"
+          git config user.email "automation@nextxus-federation.org"
+          git add living-library-documents.yaml messages.yaml
+          git diff --cached --quiet && echo "No changes to commit" || \
+            git commit -m "feat: Annual Living Library evolution $(date +%Y)"
+          git push

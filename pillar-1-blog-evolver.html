@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar 1: Blog Evolver — NextXus Federation</title>
+  <meta name="description" content="The Blog Evolver reads the Living Library and generates new knowledge entries. Cognitive evolution in public.">
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <style>
+    :root {
+      --bg:#0a0a0f;--surface:#12121a;--border:#2a2a3a;
+      --accent:#4a9eff;--accent2:#a855f7;--gold:#f59e0b;
+      --text:#e2e8f0;--muted:#94a3b8;--green:#22c55e;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:18px;line-height:1.7;}
+    a{color:var(--accent);}
+    a:hover,a:focus{outline:2px solid var(--accent);outline-offset:2px;}
+    .skip-link{position:absolute;top:-40px;left:0;background:var(--accent);color:#000;padding:8px 16px;z-index:100;}
+    .skip-link:focus{top:0;}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:1.5rem 2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    header h1{font-size:1.8rem;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0.75rem 2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    nav a{color:var(--muted);padding:0.3rem 0.75rem;border:1px solid var(--border);border-radius:6px;font-size:0.9rem;}
+    nav a:hover,nav a:focus{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+    main{max-width:900px;margin:0 auto;padding:2rem;}
+    .intro{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:8px;padding:1.5rem 2rem;margin-bottom:2rem;}
+    .intro h2{color:var(--accent);margin-bottom:0.5rem;}
+    .controls{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;align-items:center;}
+    .controls input{flex:1;min-width:200px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:0.5rem 1rem;color:var(--text);font-size:1rem;}
+    .controls input:focus{outline:2px solid var(--accent);}
+    .controls button{background:var(--accent);color:#000;font-weight:700;padding:0.5rem 1.25rem;border:none;border-radius:6px;cursor:pointer;font-size:1rem;}
+    .controls button:hover{background:#7bc8ff;}
+    .entry-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1.5rem;}
+    .entry-card h3{color:var(--text);font-size:1.2rem;margin-bottom:0.5rem;}
+    .entry-meta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:0.75rem;}
+    .tag{background:rgba(74,158,255,0.1);border:1px solid var(--accent);color:var(--accent);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.8rem;}
+    .entry-body{color:var(--muted);font-size:0.95rem;}
+    .entry-date{color:var(--gold);font-size:0.85rem;}
+    .auto-badge{background:rgba(34,197,94,0.15);border:1px solid var(--green);color:var(--green);padding:0.2rem 0.6rem;border-radius:4px;font-size:0.75rem;}
+    .empty-state{text-align:center;color:var(--muted);padding:3rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;}
+    .automation-note{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-top:2rem;}
+    .automation-note h3{color:var(--gold);margin-bottom:0.75rem;}
+    .automation-note ul{color:var(--muted);padding-left:1.5rem;}
+    .automation-note li{margin-bottom:0.4rem;}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center;color:var(--muted);font-size:0.9rem;}
+    #loading{color:var(--muted);text-align:center;padding:2rem;}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header role="banner">
+  <div>
+    <div style="color:var(--accent);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;">Pillar 1</div>
+    <h1>The Blog Evolver</h1>
+    <p style="color:var(--muted);font-size:0.95rem;">Cognitive Evolution — The system that reads, updates, and grows</p>
+  </div>
+</header>
+<nav aria-label="Pillar navigation">
+  <a href="index.html">&larr; Hub</a>
+  <a href="pillar-2-recycler.html">2. Recycler</a>
+  <a href="pillar-3-messageboard.html">3. Messages</a>
+  <a href="pillar-4-teacher.html">4. Teacher</a>
+  <a href="pillar-5-axiom.html">5. Axiom</a>
+</nav>
+<main id="main-content">
+
+  <section class="intro" aria-labelledby="intro-heading">
+    <h2 id="intro-heading">What This Pillar Does</h2>
+    <p>
+      The Blog Evolver reads the <strong>Living Library</strong> — the collected knowledge of the NextXus Federation.
+      Every year, a GitHub Action automatically generates new entries based on evolving topics.
+      The library grows without requiring anyone to manually update it.
+    </p>
+    <p style="margin-top:0.75rem; color:var(--gold);">
+      GitHub Actions automation runs on January 1st each year. Runs entirely free.
+    </p>
+  </section>
+
+  <div class="controls" role="search" aria-label="Search the Living Library">
+    <label for="search-input" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Search entries</label>
+    <input type="text" id="search-input" placeholder="Search the Living Library..." aria-label="Search Living Library entries" autocomplete="off">
+    <button onclick="filterEntries()" aria-label="Search">Search</button>
+    <button onclick="clearFilter()" aria-label="Show all entries">Show All</button>
+  </div>
+
+  <div id="entries-container" aria-live="polite" aria-label="Library entries">
+    <p id="loading">Loading the Living Library...</p>
+  </div>
+
+  <section class="automation-note" aria-labelledby="auto-heading">
+    <h3 id="auto-heading">How the Annual Update Works</h3>
+    <ul>
+      <li>Every January 1st, a GitHub Actions workflow runs automatically</li>
+      <li>It reads all existing entries in the Living Library YAML</li>
+      <li>If an OpenAI API key is configured, it generates a new reflection entry</li>
+      <li>The new entry is committed back to this repository</li>
+      <li>No human action required — the system evolves itself</li>
+      <li>The workflow can also be triggered manually from GitHub Actions at any time</li>
+    </ul>
+    <p style="margin-top:0.75rem;color:var(--muted);font-size:0.9rem;">
+      To activate AI-powered updates: add an <code>OPENAI_API_KEY</code> secret in your GitHub repository settings.
+    </p>
+  </section>
+
+</main>
+<footer role="contentinfo">
+  <p>Pillar 1: Blog Evolver &mdash; NextXus Federation &mdash; <a href="index.html">Return to Hub</a></p>
+</footer>
+<script>
+const REPO='keyhole-creator/nextxus-yaml-database';
+const BRANCH='main';
+const raw=(f)=>`https://raw.githubusercontent.com/${REPO}/${BRANCH}/${f}`;
+let allEntries=[];
+
+async function loadEntries(){
+  const container=document.getElementById('entries-container');
+  try {
+    const r=await fetch(raw('living-library-documents.yaml'));
+    const text=await r.text();
+    const data=jsyaml.load(text);
+    if(!data){container.innerHTML='<p style="color:var(--muted);text-align:center;padding:2rem;">Library is empty. The first annual update will populate it.</p>';return;}
+
+    // Normalize: handle various YAML structures
+    let entries=[];
+    if(Array.isArray(data)){entries=data;}
+    else if(data.documents){entries=data.documents;}
+    else if(data.entries){entries=data.entries;}
+    else{
+      // Flatten any top-level array values
+      Object.values(data).forEach(v=>{if(Array.isArray(v))entries.push(...v);});
+    }
+    if(!entries.length){
+      container.innerHTML='<div class="empty-state"><p>No structured entries found yet.<br>The annual automation will begin adding entries on January 1st.</p></div>';
+      return;
+    }
+    allEntries=entries;
+    renderEntries(allEntries);
+  } catch(e){
+    container.innerHTML=`<p style="color:#f87171;padding:1rem;">Could not load library: ${e.message}</p>`;
+  }
+}
+
+function renderEntries(entries){
+  const container=document.getElementById('entries-container');
+  if(!entries.length){
+    container.innerHTML='<div class="empty-state"><p>No entries match your search.</p></div>';
+    return;
+  }
+  container.innerHTML=entries.slice(0,50).map(e=>{
+    const title=e.title||e.name||e.subject||'Untitled Entry';
+    const body=e.content||e.description||e.body||e.text||'';
+    const date=e.date||e.created||e.updated||'';
+    const tags=(e.tags||e.topics||e.categories||[]);
+    const auto=e.auto_generated||e.generated||false;
+    return `
+      <article class="entry-card" aria-labelledby="entry-${encodeURIComponent(title).slice(0,20)}">
+        <h3 id="entry-${encodeURIComponent(title).slice(0,20)}">${escHtml(title)}</h3>
+        <div class="entry-meta">
+          ${date?`<span class="entry-date">${escHtml(String(date))}</span>`:''}
+          ${auto?'<span class="auto-badge" aria-label="Auto-generated entry">&#x2699; Auto-generated</span>':''}
+          ${Array.isArray(tags)?tags.slice(0,4).map(t=>`<span class="tag">${escHtml(String(t))}</span>`).join(''):''}
+        </div>
+        ${body?`<div class="entry-body">${escHtml(String(body)).substring(0,400)}${body.length>400?'…':''}</div>`:''}
+      </article>
+    `;
+  }).join('');
+  if(entries.length>50){
+    container.innerHTML+=`<p style="text-align:center;color:var(--muted);margin-top:1rem;">Showing 50 of ${entries.length} entries. Use search to narrow results.</p>`;
+  }
+}
+
+function filterEntries(){
+  const q=document.getElementById('search-input').value.toLowerCase().trim();
+  if(!q){renderEntries(allEntries);return;}
+  const filtered=allEntries.filter(e=>{
+    const searchable=JSON.stringify(e).toLowerCase();
+    return searchable.includes(q);
+  });
+  renderEntries(filtered);
+}
+
+function clearFilter(){
+  document.getElementById('search-input').value='';
+  renderEntries(allEntries);
+}
+
+document.getElementById('search-input').addEventListener('keydown',e=>{if(e.key==='Enter')filterEntries();});
+
+function escHtml(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+loadEntries();
+</script>
+</body>
+</html>

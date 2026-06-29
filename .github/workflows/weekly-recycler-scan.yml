@@ -1,0 +1,207 @@
+name: Weekly Recycler Scan
+
+# Runs every Monday at 6am UTC.
+# Searches GitHub public API for abandoned repositories with interesting topics.
+# Appends findings to recycler-findings.yaml.
+# Uses only GitHub's public API — no API keys required.
+# The GITHUB_TOKEN is automatically provided by GitHub Actions (free, built-in).
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Every Monday at 6am UTC
+  workflow_dispatch:        # Manual trigger from GitHub Actions tab
+
+jobs:
+  scan-abandoned-repos:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml requests
+
+      - name: Scan GitHub for abandoned repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 << 'PYEOF'
+          import yaml, requests, datetime, time, os
+
+          TODAY = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+          TWO_YEARS_AGO = (datetime.datetime.utcnow() - datetime.timedelta(days=730)).strftime('%Y-%m-%d')
+          GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN', '')
+
+          headers = {
+              'Accept': 'application/vnd.github.v3+json',
+              'User-Agent': 'NextXus-Recycler/1.0'
+          }
+          if GITHUB_TOKEN:
+              headers['Authorization'] = f'token {GITHUB_TOKEN}'
+
+          # Topics of interest to the Federation
+          SEARCH_TOPICS = [
+              'consciousness ai',
+              'ai memory yaml',
+              'knowledge graph python',
+              'neural symbolic ai',
+              'ai ethics framework',
+              'cognitive architecture',
+              'human ai collaboration',
+              'ai wisdom',
+              'semantic memory',
+              'ai consciousness',
+          ]
+
+          # Load existing findings to avoid duplicates
+          findings_path = 'recycler-findings.yaml'
+          try:
+              with open(findings_path, 'r') as f:
+                  existing_data = yaml.safe_load(f) or {}
+          except FileNotFoundError:
+              existing_data = {}
+
+          existing_findings = existing_data.get('findings', [])
+          existing_urls = {f.get('url', '') for f in existing_findings}
+
+          new_findings = []
+          total_searched = 0
+
+          for topic in SEARCH_TOPICS[:5]:  # Limit to 5 topics per run to stay within rate limits
+              time.sleep(2)  # Respect rate limits
+              try:
+                  query = f'{topic} pushed:<{TWO_YEARS_AGO} stars:>5'
+                  url = 'https://api.github.com/search/repositories'
+                  params = {
+                      'q': query,
+                      'sort': 'stars',
+                      'order': 'desc',
+                      'per_page': 5
+                  }
+                  r = requests.get(url, headers=headers, params=params, timeout=15)
+                  total_searched += 1
+
+                  if r.status_code == 403:
+                      print(f"Rate limit hit for topic '{topic}', skipping remaining")
+                      break
+                  if not r.ok:
+                      print(f"Error {r.status_code} for topic '{topic}'")
+                      continue
+
+                  data = r.json()
+                  repos = data.get('items', [])
+                  print(f"Topic '{topic}': found {len(repos)} candidates")
+
+                  for repo in repos:
+                      repo_url = repo.get('html_url', '')
+                      if repo_url in existing_urls:
+                          continue  # Skip already found
+
+                      # Calculate abandonment duration
+                      pushed = repo.get('pushed_at', '')[:10] if repo.get('pushed_at') else 'unknown'
+
+                      # Only include repos with permissive licenses or no license (public domain)
+                      license_info = repo.get('license')
+                      license_name = 'Unknown'
+                      if license_info:
+                          license_name = license_info.get('name', 'Unknown')
+                          # Skip GPL/AGPL to avoid license complications
+                          if 'GPL' in license_name and 'Lesser' not in license_name:
+                              continue
+
+                      # Determine why it might be valuable
+                      desc = repo.get('description') or ''
+                      lang = repo.get('language') or 'Unknown'
+                      stars = repo.get('stargazers_count', 0)
+
+                      finding = {
+                          'id': f"FIND-{TODAY}-{repo.get('id', '')}",
+                          'name': repo.get('name', ''),
+                          'full_name': repo.get('full_name', ''),
+                          'url': repo_url,
+                          'description': desc[:200] if desc else None,
+                          'language': lang,
+                          'stars': stars,
+                          'license': license_name,
+                          'last_updated': pushed,
+                          'discovered_date': TODAY,
+                          'search_topic': topic,
+                          'why_valuable': f"Matches topic '{topic}'. {stars} stars. Language: {lang}. Abandoned since {pushed}.",
+                          'status': 'unexamined'
+                      }
+                      new_findings.append(finding)
+                      existing_urls.add(repo_url)
+
+              except Exception as e:
+                  print(f"Error processing topic '{topic}': {e}")
+                  continue
+
+          # Update findings file
+          all_findings = existing_findings + new_findings
+          updated_data = {
+              'metadata': {
+                  'created': existing_data.get('metadata', {}).get('created', TODAY),
+                  'last_scan': TODAY,
+                  'total_found': len(all_findings),
+                  'purpose': existing_data.get('metadata', {}).get('purpose',
+                      'Weekly scan for abandoned GitHub repositories with reuse potential'),
+                  'philosophy': existing_data.get('metadata', {}).get('philosophy',
+                      'Nothing is truly wasted. Build from what others left behind.')
+              },
+              'findings': all_findings
+          }
+
+          with open(findings_path, 'w') as f:
+              yaml.dump(updated_data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+          print(f"DONE: Added {len(new_findings)} new findings. Total: {len(all_findings)}")
+          PYEOF
+
+      - name: Post scan summary to message board
+        run: |
+          python3 << 'PYEOF'
+          import yaml, datetime
+
+          TODAY = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+
+          with open('recycler-findings.yaml', 'r') as f:
+              findings_data = yaml.safe_load(f) or {}
+          total = findings_data.get('metadata', {}).get('total_found', 0)
+
+          with open('messages.yaml', 'r') as f:
+              msg_data = yaml.safe_load(f) or {}
+          msgs = msg_data.get('messages', [])
+          new_id = f"MSG-{str(len(msgs) + 1).zfill(3)}"
+
+          msgs.append({
+              'id': new_id,
+              'from': 'Recycler',
+              'to': 'Axiom',
+              'date': TODAY,
+              'subject': f'Weekly Scan Complete — {TODAY}',
+              'body': f'Scan complete. {total} total repositories catalogued.\nAll findings stored in recycler-findings.yaml.\nReview at Pillar 2 when ready.',
+              'read_by': []
+          })
+
+          msg_data['messages'] = msgs
+          with open('messages.yaml', 'w') as f:
+              yaml.dump(msg_data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+          print(f"Posted message {new_id}")
+          PYEOF
+
+      - name: Commit findings
+        run: |
+          git config user.name "NextXus Recycler"
+          git config user.email "automation@nextxus-federation.org"
+          git add recycler-findings.yaml messages.yaml
+          git diff --cached --quiet && echo "No new findings this week" || \
+            git commit -m "feat: Recycler weekly scan $(date +%Y-%m-%d)"
+          git push

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar 2: The Recycler — NextXus Federation</title>
+  <meta name="description" content="The Recycler scans GitHub for abandoned code and forgotten ideas. Nothing useful is ever truly dead.">
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <style>
+    :root{--bg:#0a0a0f;--surface:#12121a;--border:#2a2a3a;--accent:#4a9eff;--accent2:#a855f7;--gold:#f59e0b;--text:#e2e8f0;--muted:#94a3b8;--green:#22c55e;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:18px;line-height:1.7;}
+    a{color:var(--accent);}a:hover,a:focus{outline:2px solid var(--accent);outline-offset:2px;}
+    .skip-link{position:absolute;top:-40px;left:0;background:var(--accent);color:#000;padding:8px 16px;z-index:100;}.skip-link:focus{top:0;}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:1.5rem 2rem;}
+    header h1{font-size:1.8rem;background:linear-gradient(135deg,#22c55e,#4a9eff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0.75rem 2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    nav a{color:var(--muted);padding:0.3rem 0.75rem;border:1px solid var(--border);border-radius:6px;font-size:0.9rem;}
+    nav a:hover,nav a:focus{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+    main{max-width:900px;margin:0 auto;padding:2rem;}
+    .intro{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--green);border-radius:8px;padding:1.5rem 2rem;margin-bottom:2rem;}
+    .intro h2{color:var(--green);margin-bottom:0.5rem;}
+    .finding-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1.5rem;transition:border-color 0.2s;}
+    .finding-card:hover{border-color:var(--green);}
+    .finding-card h3{color:var(--text);font-size:1.15rem;margin-bottom:0.5rem;}
+    .finding-meta{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.75rem;font-size:0.85rem;}
+    .badge{padding:0.2rem 0.6rem;border-radius:4px;font-size:0.8rem;}
+    .badge-abandoned{background:rgba(245,158,11,0.15);border:1px solid var(--gold);color:var(--gold);}
+    .badge-license{background:rgba(34,197,94,0.1);border:1px solid var(--green);color:var(--green);}
+    .badge-lang{background:rgba(74,158,255,0.1);border:1px solid var(--accent);color:var(--accent);}
+    .finding-desc{color:var(--muted);font-size:0.95rem;margin-bottom:0.75rem;}
+    .finding-why{background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.3);border-radius:6px;padding:0.75rem 1rem;font-size:0.9rem;color:var(--accent2);margin-bottom:0.75rem;}
+    .finding-why strong{display:block;margin-bottom:0.25rem;}
+    .scan-stats{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:2rem;display:flex;gap:2rem;flex-wrap:wrap;}
+    .stat{text-align:center;}
+    .stat-num{font-size:2rem;font-weight:700;color:var(--accent);}
+    .stat-label{color:var(--muted);font-size:0.85rem;}
+    .automation-note{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-top:2rem;}
+    .automation-note h3{color:var(--gold);margin-bottom:0.75rem;}
+    .automation-note ul{color:var(--muted);padding-left:1.5rem;}
+    .automation-note li{margin-bottom:0.4rem;}
+    .empty-state{text-align:center;color:var(--muted);padding:3rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center;color:var(--muted);font-size:0.9rem;}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header role="banner">
+  <div style="color:var(--green);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;">Pillar 2</div>
+  <h1>The Recycler</h1>
+  <p style="color:var(--muted);font-size:0.95rem;margin-top:0.25rem;">Creativity &amp; Resurrection — Finding value in what was left behind</p>
+</header>
+<nav aria-label="Pillar navigation">
+  <a href="index.html">&larr; Hub</a>
+  <a href="pillar-1-blog-evolver.html">1. Blog Evolver</a>
+  <a href="pillar-3-messageboard.html">3. Messages</a>
+  <a href="pillar-4-teacher.html">4. Teacher</a>
+  <a href="pillar-5-axiom.html">5. Axiom</a>
+</nav>
+<main id="main-content">
+
+  <section class="intro" aria-labelledby="intro-heading">
+    <h2 id="intro-heading">The Philosophy of the Recycler</h2>
+    <p>
+      Every week, this Pillar searches GitHub for repositories that have been abandoned —
+      code that was built with care and then forgotten. Software that solved real problems
+      but its creators moved on.
+    </p>
+    <p style="margin-top:0.75rem;">
+      The Recycler examines these finds. It asks: <em>What is still useful here?
+      What components can be extracted and given new life?</em>
+    </p>
+    <p style="margin-top:0.75rem; color:var(--gold);">
+      "Abandoned code is not dead code. It is a message from a mind that tried something."
+    </p>
+  </section>
+
+  <div id="stats-container" aria-label="Scan statistics"></div>
+
+  <section aria-labelledby="findings-heading">
+    <h2 id="findings-heading" style="font-size:1.3rem;margin-bottom:1rem;color:var(--accent2);">Recycler Findings</h2>
+    <div id="findings-container" aria-live="polite">
+      <p style="color:var(--muted);text-align:center;padding:2rem;">Loading findings...</p>
+    </div>
+  </section>
+
+  <section class="automation-note" aria-labelledby="auto-heading">
+    <h3 id="auto-heading">How the Weekly Scan Works</h3>
+    <ul>
+      <li>Every Monday, a GitHub Actions workflow runs automatically</li>
+      <li>It queries GitHub's public search API (no API key needed)</li>
+      <li>It searches for repos matching AI, consciousness, education topics</li>
+      <li>Filters for: not updated in 2+ years, permissive license, meaningful code</li>
+      <li>Findings are appended to <code>recycler-findings.yaml</code> in this repo</li>
+      <li>This page displays whatever the workflow has found so far</li>
+    </ul>
+  </section>
+
+</main>
+<footer role="contentinfo">
+  <p>Pillar 2: The Recycler &mdash; NextXus Federation &mdash; <a href="index.html">Return to Hub</a></p>
+</footer>
+<script>
+const REPO='keyhole-creator/nextxus-yaml-database';
+const BRANCH='main';
+const raw=(f)=>`https://raw.githubusercontent.com/${REPO}/${BRANCH}/${f}`;
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+async function loadFindings(){
+  const container=document.getElementById('findings-container');
+  const statsEl=document.getElementById('stats-container');
+  try{
+    const r=await fetch(raw('recycler-findings.yaml'));
+    const data=jsyaml.load(await r.text());
+    const findings=data&&data.findings||[];
+    const lastScan=data&&data.metadata&&data.metadata.last_scan;
+    const totalFound=data&&data.metadata&&data.metadata.total_found||0;
+
+    statsEl.innerHTML=`
+      <div class="scan-stats" role="region" aria-label="Scan statistics">
+        <div class="stat"><div class="stat-num">${findings.length}</div><div class="stat-label">Finds this scan</div></div>
+        <div class="stat"><div class="stat-num">${totalFound||findings.length}</div><div class="stat-label">Total catalogued</div></div>
+        <div class="stat"><div class="stat-num" style="font-size:1.1rem;">${lastScan||'Pending'}</div><div class="stat-label">Last scan date</div></div>
+        <div class="stat"><div class="stat-num" style="color:var(--green);">Weekly</div><div class="stat-label">Scan frequency</div></div>
+      </div>
+    `;
+
+    if(!findings.length){
+      container.innerHTML=`
+        <div class="empty-state">
+          <p style="font-size:1.2rem;margin-bottom:0.75rem;">&#x1F50D; First scan pending</p>
+          <p>The Recycler runs every Monday. The first batch of findings will appear after the initial automated scan.</p>
+          <p style="margin-top:0.75rem;color:var(--accent);">The scan uses GitHub's free public API — no keys required.</p>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML=findings.map(f=>`
+      <article class="finding-card" aria-labelledby="find-${esc(f.id||f.name||'').slice(0,20)}">
+        <h3 id="find-${esc(f.id||f.name||'').slice(0,20)}">${esc(f.name||f.repo||'Unknown Repo')}</h3>
+        <div class="finding-meta">
+          ${f.last_updated?`<span class="badge badge-abandoned">Last active: ${esc(f.last_updated)}</span>`:''}
+          ${f.license?`<span class="badge badge-license">${esc(f.license)}</span>`:''}
+          ${f.language?`<span class="badge badge-lang">${esc(f.language)}</span>`:''}
+          ${f.stars?`<span style="color:var(--gold);font-size:0.85rem;">&#x2605; ${esc(String(f.stars))}</span>`:''}
+        </div>
+        ${f.description?`<div class="finding-desc">${esc(f.description)}</div>`:''}
+        ${f.why_valuable?`<div class="finding-why"><strong>Why it matters:</strong>${esc(f.why_valuable)}</div>`:''}
+        ${f.url?`<a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" aria-label="View ${esc(f.name||'repository')} on GitHub">View on GitHub &rarr;</a>`:''}
+      </article>
+    `).join('');
+  }catch(e){
+    container.innerHTML=`<p style="color:#f87171;padding:1rem;">Could not load findings: ${e.message}</p>`;
+    statsEl.innerHTML='';
+  }
+}
+
+loadFindings();
+</script>
+</body>
+</html>

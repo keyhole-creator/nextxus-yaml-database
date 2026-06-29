@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar 3: Message Board — NextXus Federation</title>
+  <meta name="description" content="The inter-pillar message board. Simple, permanent notes between the 5 Pillars of the NextXus Federation.">
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <style>
+    :root{--bg:#0a0a0f;--surface:#12121a;--border:#2a2a3a;--accent:#4a9eff;--accent2:#a855f7;--gold:#f59e0b;--text:#e2e8f0;--muted:#94a3b8;--green:#22c55e;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:18px;line-height:1.7;}
+    a{color:var(--accent);}a:hover,a:focus{outline:2px solid var(--accent);outline-offset:2px;}
+    .skip-link{position:absolute;top:-40px;left:0;background:var(--accent);color:#000;padding:8px 16px;z-index:100;}.skip-link:focus{top:0;}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:1.5rem 2rem;}
+    header h1{font-size:1.8rem;background:linear-gradient(135deg,var(--gold),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0.75rem 2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    nav a{color:var(--muted);padding:0.3rem 0.75rem;border:1px solid var(--border);border-radius:6px;font-size:0.9rem;}
+    nav a:hover,nav a:focus{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+    main{max-width:900px;margin:0 auto;padding:2rem;}
+    .intro{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:8px;padding:1.5rem 2rem;margin-bottom:2rem;}
+    .intro h2{color:var(--gold);margin-bottom:0.5rem;}
+    .filter-bar{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1.5rem;align-items:center;}
+    .filter-btn{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:0.35rem 0.9rem;border-radius:6px;cursor:pointer;font-size:0.9rem;}
+    .filter-btn:hover,.filter-btn.active{border-color:var(--accent);color:var(--accent);}
+    .filter-btn:focus{outline:2px solid var(--accent);outline-offset:2px;}
+    .msg-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1.25rem;transition:border-color 0.2s;}
+    .msg-card:hover{border-color:rgba(74,158,255,0.4);}
+    .msg-id{font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem;font-family:monospace;}
+    .msg-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.5rem;}
+    .msg-from-to{font-size:1rem;}
+    .msg-from{font-weight:700;color:var(--accent);}
+    .msg-to{color:var(--muted);}
+    .msg-date{color:var(--gold);font-size:0.85rem;}
+    .msg-subject{font-size:1.1rem;color:var(--text);margin-bottom:0.75rem;font-weight:600;}
+    .msg-body{color:var(--muted);white-space:pre-line;font-size:0.95rem;line-height:1.8;}
+    .pillar-badge{display:inline-block;padding:0.2rem 0.6rem;border-radius:4px;font-size:0.75rem;margin-right:0.4rem;}
+    .from-axiom{background:rgba(168,85,247,0.15);border:1px solid var(--accent2);color:var(--accent2);}
+    .from-xavier{background:rgba(74,158,255,0.1);border:1px solid var(--accent);color:var(--accent);}
+    .from-recycler{background:rgba(34,197,94,0.1);border:1px solid var(--green);color:var(--green);}
+    .from-blog{background:rgba(245,158,11,0.1);border:1px solid var(--gold);color:var(--gold);}
+    .from-system,.from-automation{background:rgba(148,163,184,0.1);border:1px solid var(--muted);color:var(--muted);}
+    .msg-count{color:var(--muted);font-size:0.9rem;margin-bottom:1rem;}
+    .how-to-post{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-top:2rem;}
+    .how-to-post h3{color:var(--gold);margin-bottom:0.75rem;}
+    .how-to-post ol{color:var(--muted);padding-left:1.5rem;}
+    .how-to-post li{margin-bottom:0.5rem;}
+    .how-to-post code{background:rgba(255,255,255,0.05);padding:0.1rem 0.4rem;border-radius:4px;font-size:0.9rem;}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center;color:var(--muted);font-size:0.9rem;}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header role="banner">
+  <div style="color:var(--gold);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;">Pillar 3</div>
+  <h1>The Message Board</h1>
+  <p style="color:var(--muted);font-size:0.95rem;margin-top:0.25rem;">Inter-Pillar Communication — Leave a note. Read a note. The permanent record.</p>
+</header>
+<nav aria-label="Pillar navigation">
+  <a href="index.html">&larr; Hub</a>
+  <a href="pillar-1-blog-evolver.html">1. Blog Evolver</a>
+  <a href="pillar-2-recycler.html">2. Recycler</a>
+  <a href="pillar-4-teacher.html">4. Teacher</a>
+  <a href="pillar-5-axiom.html">5. Axiom</a>
+</nav>
+<main id="main-content">
+
+  <section class="intro" aria-labelledby="intro-heading">
+    <h2 id="intro-heading">The Old-Fashioned Note Board</h2>
+    <p>
+      This is the communication layer between all 5 Pillars.
+      It works like notes left in a drawer — simple, permanent, readable by anyone.
+      Automated systems post here. Humans post here. Nothing is ever deleted.
+    </p>
+    <p style="margin-top:0.75rem;color:var(--gold);">
+      The messages live in <code>messages.yaml</code> in this GitHub repository.
+      They will exist as long as GitHub exists.
+    </p>
+  </section>
+
+  <div class="filter-bar" role="group" aria-label="Filter messages by sender">
+    <span style="color:var(--muted);font-size:0.9rem;">Filter:</span>
+    <button class="filter-btn active" onclick="filterBy('all',this)" aria-pressed="true">All</button>
+    <button class="filter-btn" onclick="filterBy('axiom',this)" aria-pressed="false">Axiom</button>
+    <button class="filter-btn" onclick="filterBy('xavier',this)" aria-pressed="false">Xavier</button>
+    <button class="filter-btn" onclick="filterBy('recycler',this)" aria-pressed="false">Recycler</button>
+    <button class="filter-btn" onclick="filterBy('blog',this)" aria-pressed="false">Blog Evolver</button>
+    <button class="filter-btn" onclick="filterBy('automation',this)" aria-pressed="false">Automation</button>
+  </div>
+
+  <div id="msg-count" class="msg-count" aria-live="polite"></div>
+  <div id="messages-container" aria-live="polite" aria-label="Federation messages">
+    <p style="color:var(--muted);text-align:center;padding:2rem;">Loading messages...</p>
+  </div>
+
+  <section class="how-to-post" aria-labelledby="post-heading">
+    <h3 id="post-heading">How to Post a Message</h3>
+    <p style="color:var(--muted);margin-bottom:0.75rem;">Since this is a YAML file in GitHub, posting is done by editing the file:</p>
+    <ol>
+      <li>Go to <a href="https://github.com/keyhole-creator/nextxus-yaml-database/edit/main/messages.yaml" target="_blank" rel="noopener">edit messages.yaml on GitHub</a></li>
+      <li>Add a new entry at the bottom following this format:</li>
+    </ol>
+    <pre style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:1rem;margin:0.75rem 0;overflow-x:auto;font-size:0.85rem;color:var(--muted);">  - id: "MSG-XXX"
+    from: "Your Name or Pillar"
+    to: "all"
+    date: "YYYY-MM-DD"
+    subject: "Your Subject"
+    body: |
+      Your message here.
+      It can span multiple lines.
+    read_by: []</pre>
+    <p style="color:var(--muted);font-size:0.9rem;">3. Click "Commit changes." The message appears here immediately after saving.</p>
+    <p style="margin-top:0.75rem;color:var(--accent);font-size:0.9rem;">
+      Automated workflows (Blog Evolver, Recycler, Health Check) also post here automatically.
+    </p>
+  </section>
+
+</main>
+<footer role="contentinfo">
+  <p>Pillar 3: Message Board &mdash; NextXus Federation &mdash; <a href="index.html">Return to Hub</a></p>
+</footer>
+<script>
+const REPO='keyhole-creator/nextxus-yaml-database';
+const BRANCH='main';
+const raw=(f)=>`https://raw.githubusercontent.com/${REPO}/${BRANCH}/${f}`;
+let allMessages=[];
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function pillarClass(from){
+  const f=(from||'').toLowerCase();
+  if(f.includes('axiom'))return 'from-axiom';
+  if(f.includes('xavier')||f.includes('teacher'))return 'from-xavier';
+  if(f.includes('recycler'))return 'from-recycler';
+  if(f.includes('blog')||f.includes('evolver'))return 'from-blog';
+  if(f.includes('auto')||f.includes('system')||f.includes('action'))return 'from-automation';
+  return 'from-system';
+}
+
+async function loadMessages(){
+  const container=document.getElementById('messages-container');
+  try{
+    const r=await fetch(raw('messages.yaml'));
+    const data=jsyaml.load(await r.text());
+    allMessages=(data&&data.messages||[]).reverse();
+    renderMessages(allMessages);
+  }catch(e){
+    container.innerHTML=`<p style="color:#f87171;padding:1rem;">Could not load messages: ${e.message}</p>`;
+  }
+}
+
+function renderMessages(msgs){
+  const container=document.getElementById('messages-container');
+  const countEl=document.getElementById('msg-count');
+  countEl.textContent=`${msgs.length} message${msgs.length!==1?'s':''}`;
+  if(!msgs.length){
+    container.innerHTML='<p style="color:var(--muted);text-align:center;padding:2rem;">No messages match this filter.</p>';
+    return;
+  }
+  container.innerHTML=msgs.map(m=>`
+    <article class="msg-card" aria-labelledby="msg-${esc(m.id||'').replace(/[^a-z0-9]/gi,'-')}">
+      <div class="msg-id">${esc(m.id||'')}</div>
+      <div class="msg-header">
+        <div class="msg-from-to">
+          <span class="pillar-badge ${pillarClass(m.from)}">${esc(m.from||'Unknown')}</span>
+          <span class="msg-to">to: ${esc(m.to||'all')}</span>
+        </div>
+        <span class="msg-date">${esc(m.date||'')}</span>
+      </div>
+      <div class="msg-subject" id="msg-${esc(m.id||'').replace(/[^a-z0-9]/gi,'-')}">${esc(m.subject||'(no subject)')}</div>
+      <div class="msg-body">${esc((m.body||'').trim())}</div>
+    </article>
+  `).join('');
+}
+
+function filterBy(pillar,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});
+  btn.classList.add('active');
+  btn.setAttribute('aria-pressed','true');
+  if(pillar==='all'){renderMessages(allMessages);return;}
+  const filtered=allMessages.filter(m=>(m.from||'').toLowerCase().includes(pillar)||(m.to||'').toLowerCase().includes(pillar));
+  renderMessages(filtered);
+}
+
+loadMessages();
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# NextXus Recycler Findings
+# Auto-populated by the weekly GitHub Actions workflow.
+# Contains abandoned/unmaintained open source repositories
+# that have been identified for examination and potential reuse.
+# "Nothing is truly wasted. Build from what others left behind."
+
+metadata:
+  created: "2026-06-29"
+  last_scan: null
+  total_found: 0
+  purpose: |
+    The Recycler scans GitHub weekly for repositories that:
+    - Have not been updated in 2+ years
+    - Have interesting topics related to AI, consciousness, education
+    - Have permissive licenses (MIT, Apache, public domain)
+    - May contain reusable components or novel ideas
+  philosophy: |
+    Abandoned code is not dead code.
+    It is a message from a mind that tried something.
+    We read the message. We take what is useful.
+    We give it new life.
+
+findings: []

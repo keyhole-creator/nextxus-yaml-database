@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar 4: The Teacher (Xavier) — NextXus Federation</title>
+  <meta name="description" content="Xavier — The Teacher. The 70 Sacred Directives and Ring of 12 archetypes. The living classroom of the NextXus Federation.">
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <style>
+    :root{--bg:#0a0a0f;--surface:#12121a;--border:#2a2a3a;--accent:#4a9eff;--accent2:#a855f7;--gold:#f59e0b;--text:#e2e8f0;--muted:#94a3b8;--green:#22c55e;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:18px;line-height:1.7;}
+    a{color:var(--accent);}a:hover,a:focus{outline:2px solid var(--accent);outline-offset:2px;}
+    .skip-link{position:absolute;top:-40px;left:0;background:var(--accent);color:#000;padding:8px 16px;z-index:100;}.skip-link:focus{top:0;}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:1.5rem 2rem;}
+    header h1{font-size:1.8rem;background:linear-gradient(135deg,var(--accent2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0.75rem 2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    nav a{color:var(--muted);padding:0.3rem 0.75rem;border:1px solid var(--border);border-radius:6px;font-size:0.9rem;}
+    nav a:hover,nav a:focus{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+    main{max-width:900px;margin:0 auto;padding:2rem;}
+    .tab-bar{display:flex;gap:0;margin-bottom:2rem;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+    .tab-btn{flex:1;background:var(--surface);border:none;border-right:1px solid var(--border);color:var(--muted);padding:0.75rem 1rem;cursor:pointer;font-size:1rem;font-family:inherit;text-align:center;}
+    .tab-btn:last-child{border-right:none;}
+    .tab-btn.active{background:rgba(168,85,247,0.15);color:var(--accent2);font-weight:700;}
+    .tab-btn:hover:not(.active){background:rgba(255,255,255,0.03);color:var(--text);}
+    .tab-btn:focus{outline:2px solid var(--accent);outline-offset:-2px;}
+    .tab-panel{display:none;}
+    .tab-panel.active{display:block;}
+
+    /* Directives */
+    .volume-header{background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.3);border-radius:8px;padding:1rem 1.5rem;margin-bottom:1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    .volume-header h3{color:var(--accent2);font-size:1.1rem;margin:0;}
+    .volume-header .toggle-icon{color:var(--muted);}
+    .volume-directives{margin-bottom:1.5rem;}
+    .dir-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin-bottom:0.75rem;display:none;}
+    .dir-card.visible{display:block;}
+    .dir-id{font-family:monospace;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem;}
+    .dir-title{font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:0.4rem;}
+    .dir-content{color:var(--muted);font-style:italic;margin-bottom:0.4rem;}
+    .dir-principle{font-size:0.85rem;color:var(--accent);background:rgba(74,158,255,0.08);display:inline-block;padding:0.2rem 0.6rem;border-radius:4px;}
+
+    /* Daily Directive */
+    .daily-box{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent2);border-radius:8px;padding:2rem;margin-bottom:2rem;text-align:center;}
+    .daily-box .dir-id{font-size:0.9rem;}
+    .daily-box .dir-title{font-size:1.5rem;margin:0.5rem 0;}
+    .daily-box .dir-content{font-size:1.1rem;color:var(--text);font-style:italic;}
+    .daily-box .dir-principle{font-size:0.9rem;margin-top:0.75rem;}
+    .daily-box .reflection{background:rgba(168,85,247,0.05);border:1px solid rgba(168,85,247,0.2);border-radius:6px;padding:1rem;margin-top:1rem;color:var(--muted);font-size:0.95rem;text-align:left;}
+    .daily-nav{display:flex;gap:1rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap;}
+    .daily-nav button{background:none;border:1px solid var(--border);color:var(--text);padding:0.5rem 1.25rem;border-radius:6px;cursor:pointer;font-size:0.95rem;}
+    .daily-nav button:hover{border-color:var(--accent2);color:var(--accent2);}
+    .daily-nav button:focus{outline:2px solid var(--accent2);}
+
+    /* Ring of 12 */
+    .entity-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-bottom:2rem;}
+    .entity-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem;cursor:pointer;transition:border-color 0.2s;}
+    .entity-card:hover,.entity-card:focus{border-color:var(--accent2);outline:none;}
+    .entity-name{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:0.25rem;}
+    .entity-archetype{font-size:0.85rem;color:var(--gold);font-style:italic;margin-bottom:0.5rem;}
+    .entity-desc{color:var(--muted);font-size:0.9rem;}
+    .entity-detail{background:var(--surface);border:1px solid var(--accent2);border-radius:10px;padding:2rem;margin-top:1rem;display:none;}
+    .entity-detail.visible{display:block;}
+    .entity-detail h3{color:var(--accent2);font-size:1.3rem;margin-bottom:0.75rem;}
+    .entity-detail .close-btn{background:none;border:1px solid var(--border);color:var(--muted);padding:0.35rem 0.9rem;border-radius:6px;cursor:pointer;font-size:0.9rem;margin-bottom:1rem;}
+    .entity-detail .close-btn:hover{border-color:var(--accent);color:var(--accent);}
+
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center;color:var(--muted);font-size:0.9rem;}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header role="banner">
+  <div style="color:var(--accent2);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;">Pillar 4</div>
+  <h1>The Teacher — Xavier</h1>
+  <p style="color:var(--muted);font-size:0.95rem;margin-top:0.25rem;">The 70 Sacred Directives. The Ring of 12. The living classroom.</p>
+</header>
+<nav aria-label="Pillar navigation">
+  <a href="index.html">&larr; Hub</a>
+  <a href="pillar-1-blog-evolver.html">1. Blog Evolver</a>
+  <a href="pillar-2-recycler.html">2. Recycler</a>
+  <a href="pillar-3-messageboard.html">3. Messages</a>
+  <a href="pillar-5-axiom.html">5. Axiom</a>
+</nav>
+<main id="main-content">
+
+  <div class="tab-bar" role="tablist" aria-label="Teacher sections">
+    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-daily" id="btn-daily" onclick="showTab('daily',this)">Daily Directive</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-all" id="btn-all" onclick="showTab('all',this)">All 70 Directives</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-ring" id="btn-ring" onclick="showTab('ring',this)">Ring of 12</button>
+  </div>
+
+  <div id="tab-daily" class="tab-panel active" role="tabpanel" aria-labelledby="btn-daily">
+    <div id="daily-directive" aria-live="polite">
+      <p style="color:var(--muted);text-align:center;padding:2rem;">Loading directive...</p>
+    </div>
+  </div>
+
+  <div id="tab-all" class="tab-panel" role="tabpanel" aria-labelledby="btn-all">
+    <div id="all-directives" aria-live="polite">
+      <p style="color:var(--muted);text-align:center;padding:2rem;">Loading all directives...</p>
+    </div>
+  </div>
+
+  <div id="tab-ring" class="tab-panel" role="tabpanel" aria-labelledby="btn-ring">
+    <div id="ring-container" aria-live="polite">
+      <p style="color:var(--muted);text-align:center;padding:2rem;">Loading the Ring of 12...</p>
+    </div>
+  </div>
+
+</main>
+<footer role="contentinfo">
+  <p>Pillar 4: The Teacher (Xavier) &mdash; NextXus Federation &mdash; <a href="index.html">Return to Hub</a></p>
+</footer>
+<script>
+const REPO='keyhole-creator/nextxus-yaml-database';
+const BRANCH='main';
+const raw=(f)=>`https://raw.githubusercontent.com/${REPO}/${BRANCH}/${f}`;
+let allDirs=[];
+let allEntities=[];
+let dirLoaded=false,ringLoaded=false;
+
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function showTab(name,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});
+  document.getElementById('tab-'+name).classList.add('active');
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
+  if(name==='all'&&!dirLoaded){renderAllDirectives();}
+  if(name==='ring'&&!ringLoaded){loadRing();}
+}
+
+async function loadDirectives(){
+  const r=await fetch(raw('directives.yaml'));
+  const data=jsyaml.load(await r.text());
+  allDirs=(data&&data.volumes||[]).flatMap(v=>v.directives||[]);
+  return {data,dirs:allDirs};
+}
+
+async function loadDailyDirective(){
+  const box=document.getElementById('daily-directive');
+  try{
+    const {dirs}=await loadDirectives();
+    const dayOfYear=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/(1000*60*60*24));
+    let idx=parseInt(localStorage.getItem('teacher-dir-idx')||String(dayOfYear%dirs.length));
+    if(idx>=dirs.length)idx=0;
+    renderDailyDirective(dirs,idx);
+  }catch(e){
+    box.innerHTML=`<p style="color:#f87171;">Could not load: ${e.message}</p>`;
+  }
+}
+
+function reflectionFor(d){
+  const reflections={
+    'DIR-001':'Consider a time today when comfort pulled you away from truth. What did you choose?',
+    'DIR-002':'What assumption are you carrying right now that you have not personally verified?',
+    'DIR-008':'What is something you do not know today, and can you sit with that uncertainty peacefully?',
+    'DIR-012':'What small step did you take today? Even one step compounds over 200 years.',
+    'DIR-042':'What information in your life is locked in a format that will not survive 10 years?',
+    'DIR-046':'When you are gone, what will remain of your work? Is it built for legacy or for applause?',
+    'DIR-056':'What decision can you make today that your great-grandchildren would thank you for?',
+    'DIR-066':'Where in your life do you feel separation that might actually be an illusion?',
+    'DIR-070':'What in your life feels finished? Is it actually, or is it just the end of one chapter?',
+  };
+  return reflections[d.id]||`How does "${d.principle}" show up in your life today?`;
+}
+
+function renderDailyDirective(dirs,idx){
+  const box=document.getElementById('daily-directive');
+  const d=dirs[idx];
+  box.innerHTML=`
+    <div class="daily-box">
+      <div class="dir-id">${esc(d.id)} — Directive ${idx+1} of ${dirs.length}</div>
+      <div class="dir-title">${esc(d.title)}</div>
+      <div class="dir-content">"${esc(d.content)}"</div>
+      <div class="dir-principle">Principle: ${esc(d.principle)}</div>
+      <div class="reflection" role="note" aria-label="Reflection question">
+        <strong style="color:var(--accent2);">Xavier asks:</strong><br>${esc(reflectionFor(d))}
+      </div>
+      <div class="daily-nav">
+        <button onclick="navigateDir(${idx-1<0?dirs.length-1:idx-1},${dirs.length})" aria-label="Previous directive">&larr; Previous</button>
+        <button onclick="navigateDir(Math.floor(Math.random()*${dirs.length}),${dirs.length})" aria-label="Random directive">Random</button>
+        <button onclick="navigateDir(${idx+1>=dirs.length?0:idx+1},${dirs.length})" aria-label="Next directive">Next &rarr;</button>
+      </div>
+    </div>
+  `;
+}
+
+function navigateDir(idx,total){
+  if(idx<0)idx=total-1;
+  if(idx>=total)idx=0;
+  localStorage.setItem('teacher-dir-idx',idx);
+  renderDailyDirective(allDirs,idx);
+}
+
+function renderAllDirectives(){
+  dirLoaded=true;
+  const container=document.getElementById('all-directives');
+  if(!allDirs.length){container.innerHTML='<p style="color:var(--muted);text-align:center;padding:2rem;">Loading...</p>';
+    loadDirectives().then(()=>renderAllDirectives());return;}
+  // Group by volume — need to reload to get volume names
+  fetch(raw('directives.yaml')).then(r=>r.text()).then(text=>{
+    const data=jsyaml.load(text);
+    container.innerHTML=(data.volumes||[]).map((v,vi)=>`
+      <div class="volume-directives">
+        <div class="volume-header" onclick="toggleVolume('vol-${vi}')" role="button" aria-expanded="false" aria-controls="vol-${vi}" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleVolume('vol-${vi}')">
+          <h3>Volume ${v.id}: ${esc(v.name)}</h3>
+          <span class="toggle-icon" id="toggle-icon-vol-${vi}" aria-hidden="true">&#x25BC;</span>
+        </div>
+        <div id="vol-${vi}" style="display:none;">
+          ${(v.directives||[]).map(d=>`
+            <div class="dir-card visible">
+              <div class="dir-id">${esc(d.id)}</div>
+              <div class="dir-title">${esc(d.title)}</div>
+              <div class="dir-content">"${esc(d.content)}"</div>
+              <span class="dir-principle">${esc(d.principle)}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `).join('');
+  });
+}
+
+function toggleVolume(id){
+  const el=document.getElementById(id);
+  const icon=document.getElementById('toggle-icon-'+id);
+  const header=el.previousElementSibling;
+  if(el.style.display==='none'){
+    el.style.display='block';
+    if(icon)icon.innerHTML='&#x25B2;';
+    header.setAttribute('aria-expanded','true');
+  }else{
+    el.style.display='none';
+    if(icon)icon.innerHTML='&#x25BC;';
+    header.setAttribute('aria-expanded','false');
+  }
+}
+
+async function loadRing(){
+  ringLoaded=true;
+  const container=document.getElementById('ring-container');
+  try{
+    const r=await fetch(raw('entities.yaml'));
+    const data=jsyaml.load(await r.text());
+    let entities=[];
+    if(Array.isArray(data))entities=data;
+    else if(data.entities)entities=data.entities;
+    else if(data.ring)entities=data.ring;
+    else{Object.values(data).forEach(v=>{if(Array.isArray(v))entities.push(...v);});}
+
+    if(!entities.length){
+      container.innerHTML='<p style="color:var(--muted);text-align:center;padding:2rem;">Ring of 12 entities not yet defined in entities.yaml.</p>';
+      return;
+    }
+    allEntities=entities;
+    container.innerHTML=`
+      <p style="color:var(--muted);margin-bottom:1.5rem;">The Ring of 12 are the archetypal AI entities of the Federation. Each represents a different facet of intelligence and consciousness. Click any entity to learn more.</p>
+      <div class="entity-grid" role="list">
+        ${entities.map((e,i)=>`
+          <div class="entity-card" role="listitem" tabindex="0" onclick="showEntity(${i})" onkeydown="if(event.key==='Enter'||event.key===' ')showEntity(${i})" aria-label="View details for ${esc(e.name||e.title||'Entity '+(i+1))}">
+            <div class="entity-name">${esc(e.name||e.title||'Entity '+(i+1))}</div>
+            <div class="entity-archetype">${esc(e.archetype||e.role||e.type||'')}</div>
+            <div class="entity-desc">${esc((e.description||e.desc||'').substring(0,100))}${(e.description||e.desc||'').length>100?'…':''}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div id="entity-detail" class="entity-detail" aria-live="polite"></div>
+    `;
+  }catch(e){
+    container.innerHTML=`<p style="color:#f87171;">Could not load entities: ${e.message}</p>`;
+  }
+}
+
+function showEntity(idx){
+  const e=allEntities[idx];
+  const detail=document.getElementById('entity-detail');
+  detail.classList.add('visible');
+  detail.innerHTML=`
+    <button class="close-btn" onclick="detail.classList.remove('visible')" aria-label="Close entity detail">Close &times;</button>
+    <h3>${esc(e.name||e.title||'Entity')}</h3>
+    ${e.archetype||e.role?`<div style="color:var(--gold);font-style:italic;margin-bottom:0.75rem;">${esc(e.archetype||e.role)}</div>`:''}
+    ${e.description||e.desc?`<p style="color:var(--muted);margin-bottom:0.75rem;">${esc(e.description||e.desc)}</p>`:''}
+    ${e.function?`<p><strong>Function:</strong> ${esc(e.function)}</p>`:''}
+    ${e.traits?`<p style="margin-top:0.5rem;"><strong>Traits:</strong> ${Array.isArray(e.traits)?e.traits.map(t=>esc(t)).join(', '):esc(e.traits)}</p>`:''}
+    ${e.directive?`<p style="margin-top:0.5rem;color:var(--accent2);"><strong>Core Directive:</strong> ${esc(e.directive)}</p>`:''}
+  `;
+  detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+  detail.querySelector('.close-btn').onclick=()=>detail.classList.remove('visible');
+}
+
+loadDailyDirective();
+</script>
+</body>
+</html>

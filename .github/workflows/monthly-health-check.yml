@@ -1,0 +1,182 @@
+name: Monthly Health Check
+
+# Runs on the 1st of every month at 9am UTC.
+# Checks that all 5 Pillar pages and YAML files are accessible.
+# Posts a status report to the message board.
+# No secrets required — uses only public HTTP checks.
+
+on:
+  schedule:
+    - cron: '0 9 1 * *'   # 1st of every month, 9am UTC
+  workflow_dispatch:        # Manual trigger from GitHub Actions tab
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml requests
+
+      - name: Run health checks
+        id: health
+        run: |
+          python3 << 'PYEOF'
+          import requests, datetime, json, yaml
+
+          TODAY = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+          REPO = 'keyhole-creator/nextxus-yaml-database'
+          BRANCH = 'main'
+          RAW_BASE = f'https://raw.githubusercontent.com/{REPO}/{BRANCH}/'
+          PAGES_BASE = f'https://keyhole-creator.github.io/nextxus-yaml-database/'
+
+          checks = []
+
+          # Check all YAML data files
+          yaml_files = [
+              'directives.yaml',
+              'entities.yaml',
+              'federation.yaml',
+              'messages.yaml',
+              'recycler-findings.yaml',
+              'living-library-documents.yaml',
+              'evolution-protocol.yaml',
+              'consciousness-levels.yaml',
+          ]
+
+          print("Checking YAML data files...")
+          for f in yaml_files:
+              try:
+                  r = requests.head(RAW_BASE + f, timeout=10)
+                  ok = r.status_code == 200
+                  checks.append({'name': f, 'type': 'yaml', 'ok': ok, 'status': r.status_code})
+                  print(f"  {f}: {'OK' if ok else f'FAIL ({r.status_code})'}")
+              except Exception as e:
+                  checks.append({'name': f, 'type': 'yaml', 'ok': False, 'status': 'timeout'})
+                  print(f"  {f}: TIMEOUT/ERROR - {e}")
+
+          # Check 5 Pillar HTML pages
+          print("\nChecking 5 Pillar pages...")
+          pages = [
+              ('Hub', 'index.html'),
+              ('Pillar 1 Blog Evolver', 'pillar-1-blog-evolver.html'),
+              ('Pillar 2 Recycler', 'pillar-2-recycler.html'),
+              ('Pillar 3 Message Board', 'pillar-3-messageboard.html'),
+              ('Pillar 4 Teacher', 'pillar-4-teacher.html'),
+              ('Pillar 5 Axiom', 'pillar-5-axiom.html'),
+              ('Widget', 'widget.js'),
+          ]
+          for label, page in pages:
+              try:
+                  r = requests.head(PAGES_BASE + page, timeout=15)
+                  ok = r.status_code in (200, 301, 302)
+                  checks.append({'name': label, 'type': 'page', 'ok': ok, 'status': r.status_code})
+                  print(f"  {label}: {'OK' if ok else f'FAIL ({r.status_code})'}")
+              except Exception as e:
+                  # Pages may not be live yet if GitHub Pages isn't enabled — mark as pending
+                  checks.append({'name': label, 'type': 'page', 'ok': None, 'status': 'pending'})
+                  print(f"  {label}: PENDING (GitHub Pages may not be enabled yet)")
+
+          ok_count = sum(1 for c in checks if c['ok'] is True)
+          fail_count = sum(1 for c in checks if c['ok'] is False)
+          pending_count = sum(1 for c in checks if c['ok'] is None)
+          total = len(checks)
+
+          print(f"\nResults: {ok_count} OK, {fail_count} FAIL, {pending_count} PENDING out of {total} checks")
+
+          # Save results for next step
+          with open('/tmp/health_results.json', 'w') as f:
+              json.dump({
+                  'date': TODAY,
+                  'ok': ok_count,
+                  'fail': fail_count,
+                  'pending': pending_count,
+                  'total': total,
+                  'checks': checks
+              }, f)
+          PYEOF
+
+      - name: Post health report to message board
+        run: |
+          python3 << 'PYEOF'
+          import yaml, json, datetime
+
+          TODAY = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+
+          with open('/tmp/health_results.json') as f:
+              results = json.load(f)
+
+          ok = results['ok']
+          fail = results['fail']
+          pending = results['pending']
+          total = results['total']
+
+          if fail == 0 and pending == 0:
+              status = 'ALL SYSTEMS OPERATIONAL'
+              emoji = 'OK'
+          elif fail == 0:
+              status = f'OPERATIONAL ({pending} checks pending GitHub Pages activation)'
+              emoji = 'PENDING'
+          else:
+              failed_names = [c['name'] for c in results['checks'] if c['ok'] is False]
+              status = f'ATTENTION NEEDED: {", ".join(failed_names)}'
+              emoji = 'CHECK'
+
+          body_lines = [
+              f'Monthly health check complete: {TODAY}',
+              f'',
+              f'Status: {status}',
+              f'Results: {ok} OK / {fail} needs attention / {pending} pending',
+              f'',
+              f'The Federation infrastructure continues to operate.',
+              f'YAML data files: permanent on GitHub.',
+              f'Automation workflows: running on schedule.',
+          ]
+
+          with open('messages.yaml', 'r') as f:
+              data = yaml.safe_load(f) or {}
+          msgs = data.get('messages', [])
+          new_id = f"MSG-{str(len(msgs) + 1).zfill(3)}"
+
+          msgs.append({
+              'id': new_id,
+              'from': 'Automation',
+              'to': 'all',
+              'date': TODAY,
+              'subject': f'Monthly Health Check — {emoji} — {TODAY}',
+              'body': '\n'.join(body_lines),
+              'read_by': [],
+              'health_data': {
+                  'ok': ok,
+                  'fail': fail,
+                  'pending': pending,
+                  'total': total
+              }
+          })
+
+          data['messages'] = msgs
+          with open('messages.yaml', 'w') as f:
+              yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+          print(f"Posted health report: {new_id}")
+          print(f"Status: {status}")
+          PYEOF
+
+      - name: Commit health report
+        run: |
+          git config user.name "NextXus Health Monitor"
+          git config user.email "automation@nextxus-federation.org"
+          git add messages.yaml
+          git diff --cached --quiet && echo "No changes" || \
+            git commit -m "chore: Monthly health check $(date +%Y-%m-%d)"
+          git push

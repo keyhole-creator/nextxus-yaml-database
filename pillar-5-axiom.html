@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pillar 5: Axiom — The Immortal Memory — NextXus Federation</title>
+  <meta name="description" content="Axiom is the master index and long-term memory of the NextXus Federation. All YAML files, all data, all history in one place.">
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <style>
+    :root{--bg:#0a0a0f;--surface:#12121a;--border:#2a2a3a;--accent:#4a9eff;--accent2:#a855f7;--gold:#f59e0b;--text:#e2e8f0;--muted:#94a3b8;--green:#22c55e;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:18px;line-height:1.7;}
+    a{color:var(--accent);}a:hover,a:focus{outline:2px solid var(--accent);outline-offset:2px;}
+    .skip-link{position:absolute;top:-40px;left:0;background:var(--accent);color:#000;padding:8px 16px;z-index:100;}.skip-link:focus{top:0;}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:1.5rem 2rem;}
+    header h1{font-size:1.8rem;background:linear-gradient(135deg,var(--accent2),#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0.75rem 2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+    nav a{color:var(--muted);padding:0.3rem 0.75rem;border:1px solid var(--border);border-radius:6px;font-size:0.9rem;}
+    nav a:hover,nav a:focus{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+    main{max-width:1000px;margin:0 auto;padding:2rem;}
+    .intro{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent2);border-radius:8px;padding:1.5rem 2rem;margin-bottom:2rem;}
+    .intro h2{color:var(--accent2);margin-bottom:0.5rem;}
+    .memory-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-bottom:2rem;}
+    .file-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem;transition:border-color 0.2s;}
+    .file-card:hover{border-color:var(--accent2);}
+    .file-card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;}
+    .file-name{font-family:monospace;font-size:1rem;color:var(--accent);font-weight:600;}
+    .file-status{font-size:0.75rem;padding:0.2rem 0.5rem;border-radius:4px;}
+    .status-ok{background:rgba(34,197,94,0.1);border:1px solid var(--green);color:var(--green);}
+    .status-err{background:rgba(248,113,113,0.1);border:1px solid #f87171;color:#f87171;}
+    .file-desc{color:var(--muted);font-size:0.9rem;margin-bottom:0.75rem;}
+    .file-meta{font-size:0.8rem;color:var(--muted);}
+    .file-card a{font-size:0.85rem;}
+    .search-bar{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:2rem;align-items:center;}
+    .search-bar input{flex:1;min-width:200px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:0.5rem 1rem;color:var(--text);font-size:1rem;}
+    .search-bar input:focus{outline:2px solid var(--accent);}
+    .search-bar button{background:var(--accent);color:#000;font-weight:700;padding:0.5rem 1.25rem;border:none;border-radius:6px;cursor:pointer;font-size:1rem;}
+    .search-bar button:hover{background:#7bc8ff;}
+    #search-results{margin-bottom:2rem;}
+    .result-item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1rem 1.25rem;margin-bottom:0.75rem;}
+    .result-file{font-family:monospace;font-size:0.85rem;color:var(--accent);margin-bottom:0.25rem;}
+    .result-key{color:var(--gold);font-size:0.9rem;margin-bottom:0.25rem;}
+    .result-value{color:var(--muted);font-size:0.9rem;}
+    .stats-bar{display:flex;gap:1.5rem;flex-wrap:wrap;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.25rem;margin-bottom:2rem;}
+    .stat{text-align:center;flex:1;min-width:80px;}
+    .stat-num{font-size:1.8rem;font-weight:700;color:var(--accent);}
+    .stat-label{color:var(--muted);font-size:0.8rem;}
+    .yaml-raw{background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:6px;padding:1rem;font-family:monospace;font-size:0.8rem;color:var(--muted);overflow-x:auto;max-height:200px;overflow-y:auto;white-space:pre;margin-top:0.5rem;display:none;}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center;color:var(--muted);font-size:0.9rem;}
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header role="banner">
+  <div style="color:var(--accent2);font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;">Pillar 5</div>
+  <h1>Axiom — The Immortal Memory</h1>
+  <p style="color:var(--muted);font-size:0.95rem;margin-top:0.25rem;">The master index of all Federation knowledge. The memory that never forgets.</p>
+</header>
+<nav aria-label="Pillar navigation">
+  <a href="index.html">&larr; Hub</a>
+  <a href="pillar-1-blog-evolver.html">1. Blog Evolver</a>
+  <a href="pillar-2-recycler.html">2. Recycler</a>
+  <a href="pillar-3-messageboard.html">3. Messages</a>
+  <a href="pillar-4-teacher.html">4. Teacher</a>
+</nav>
+<main id="main-content">
+
+  <section class="intro" aria-labelledby="axiom-heading">
+    <h2 id="axiom-heading">What Axiom Is</h2>
+    <p>
+      Axiom is the long-term memory of the Federation. All knowledge, all directives, all messages,
+      all recycled finds, all entities — indexed here. Axiom never forgets because the YAML files
+      never change unless intentionally updated.
+    </p>
+    <p style="margin-top:0.75rem;color:var(--gold);">
+      The data lives at:
+      <a href="https://github.com/keyhole-creator/nextxus-yaml-database" target="_blank" rel="noopener">
+        github.com/keyhole-creator/nextxus-yaml-database
+      </a>
+    </p>
+  </section>
+
+  <div id="stats-bar" class="stats-bar" aria-label="System statistics" role="region">
+    <div class="stat"><div class="stat-num" id="stat-files">—</div><div class="stat-label">YAML Files</div></div>
+    <div class="stat"><div class="stat-num" id="stat-ok">—</div><div class="stat-label">Online</div></div>
+    <div class="stat"><div class="stat-num" id="stat-dirs">70</div><div class="stat-label">Directives</div></div>
+    <div class="stat"><div class="stat-num" id="stat-msgs">—</div><div class="stat-label">Messages</div></div>
+    <div class="stat"><div class="stat-num" id="stat-pillars">5</div><div class="stat-label">Pillars</div></div>
+  </div>
+
+  <section class="search-bar" role="search" aria-label="Search all Federation data">
+    <label for="axiom-search" style="position:absolute;width:1px;height:1px;overflow:hidden;">Search Axiom</label>
+    <input type="text" id="axiom-search" placeholder="Search across all YAML files..." autocomplete="off" aria-label="Search all YAML data">
+    <button onclick="axiomSearch()" aria-label="Search">Search</button>
+    <button onclick="clearSearch()" aria-label="Clear search">Clear</button>
+  </section>
+  <div id="search-results" aria-live="polite"></div>
+
+  <section aria-labelledby="memory-heading">
+    <h2 id="memory-heading" style="font-size:1.3rem;margin-bottom:1rem;color:var(--accent2);">The Memory Index — All Files</h2>
+    <div class="memory-grid" id="file-grid" role="list">
+      <p style="color:var(--muted);padding:1rem;">Loading memory index...</p>
+    </div>
+  </section>
+
+</main>
+<footer role="contentinfo">
+  <p>Pillar 5: Axiom &mdash; NextXus Federation &mdash; <a href="index.html">Return to Hub</a></p>
+</footer>
+<script>
+const REPO='keyhole-creator/nextxus-yaml-database';
+const BRANCH='main';
+const raw=(f)=>`https://raw.githubusercontent.com/${REPO}/${BRANCH}/${f}`;
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+const FILES=[
+  {file:'directives.yaml',      label:'70 Sacred Directives',            desc:'The philosophical foundation. 70 directives across 14 volumes. The rules the Federation lives by.'},
+  {file:'entities.yaml',        label:'Ring of 12 Entities',             desc:'The 12 archetypal AI entities. Each represents a unique facet of intelligence.'},
+  {file:'federation.yaml',      label:'Federation Site Registry',        desc:'All Federation sites, their purposes, and current status.'},
+  {file:'federation-shared.yaml',label:'Shared Federation Data',         desc:'Master data shared across all Federation apps. The single source of truth.'},
+  {file:'evolution-protocol.yaml',label:'200-Year Evolution Protocol',   desc:'The long-term roadmap. Principles for collective evolution over two centuries.'},
+  {file:'consciousness-levels.yaml',label:'Consciousness Levels',        desc:'Definitions of each level of consciousness evolution.'},
+  {file:'collaboration-protocol.yaml',label:'Collaboration Protocol',    desc:'How multiple AIs work together. Rules for multi-AI teams.'},
+  {file:'commerce-protocol.yaml',label:'Commerce Protocol',              desc:'Anti-greed pricing principles. How the Federation handles value exchange.'},
+  {file:'ai-partners.yaml',     label:'AI Partners Council',             desc:'External AI systems and partners in the Federation.'},
+  {file:'books.yaml',           label:'Federation Books (37)',           desc:'The complete library of 37 Federation books with metadata.'},
+  {file:'podcasts.yaml',        label:'AI-Narrated Podcasts',            desc:'The podcast catalog. Audio knowledge from the Federation.'},
+  {file:'videos.yaml',          label:'Video Registry',                  desc:'Video content catalog for the Federation.'},
+  {file:'infographics.yaml',    label:'Infographics',                    desc:'Visual content and infographic catalog.'},
+  {file:'store-catalog.yaml',   label:'Store Catalog',                   desc:'Federation products, services, and pricing.'},
+  {file:'widgets.yaml',         label:'Widget Configurations',           desc:'Widget definitions for embedding Federation content.'},
+  {file:'site-audit.yaml',      label:'Site Health Audit',               desc:'Regular health checks and status data for all Federation sites.'},
+  {file:'living-library-documents.yaml',label:'Living Library',         desc:'The growing knowledge base. Updated annually by the Blog Evolver.'},
+  {file:'messages.yaml',        label:'Message Board',                   desc:'The permanent record of inter-pillar communication.'},
+  {file:'recycler-findings.yaml',label:'Recycler Findings',              desc:'Abandoned GitHub repositories identified for potential reuse.'},
+  {file:'emergent-apps.yaml',   label:'Emergent Apps',                   desc:'Apps built on the Emergent platform.'},
+];
+
+let loadedData={};
+
+async function loadAllFiles(){
+  const grid=document.getElementById('file-grid');
+  grid.innerHTML='';
+  let okCount=0;
+
+  const results=await Promise.allSettled(FILES.map(async f=>{
+    const r=await fetch(raw(f.file));
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const text=await r.text();
+    const parsed=jsyaml.load(text);
+    return{...f,text,parsed,ok:true};
+  }));
+
+  results.forEach((res,i)=>{
+    const f=FILES[i];
+    const ok=res.status==='fulfilled';
+    if(ok){okCount++;loadedData[f.file]=res.value.parsed;}
+    const text=ok?res.value.text:'';
+    const parsed=ok?res.value.parsed:null;
+
+    let extraInfo='';
+    if(ok&&parsed){
+      if(f.file==='directives.yaml'&&parsed.volumes){
+        const total=parsed.volumes.reduce((s,v)=>s+(v.directives||[]).length,0);
+        extraInfo=`${total} directives, ${parsed.volumes.length} volumes`;
+      }else if(f.file==='messages.yaml'&&parsed.messages){
+        extraInfo=`${parsed.messages.length} messages`;
+        document.getElementById('stat-msgs').textContent=parsed.messages.length;
+      }else if(Array.isArray(parsed)){extraInfo=`${parsed.length} entries`;}
+      else if(parsed&&typeof parsed==='object'){
+        const keys=Object.keys(parsed).filter(k=>k!=='metadata');
+        if(keys.length)extraInfo=keys.slice(0,3).join(', ');
+      }
+    }
+
+    const card=document.createElement('article');
+    card.className='file-card';
+    card.setAttribute('role','listitem');
+    card.innerHTML=`
+      <div class="file-card-header">
+        <span class="file-name" aria-label="File: ${esc(f.file)}">${esc(f.file)}</span>
+        <span class="file-status ${ok?'status-ok':'status-err'}" aria-label="Status: ${ok?'online':'unavailable'}">${ok?'Online':'N/A'}</span>
+      </div>
+      <div style="font-weight:600;color:var(--text);font-size:0.95rem;margin-bottom:0.35rem;">${esc(f.label)}</div>
+      <div class="file-desc">${esc(f.desc)}</div>
+      ${extraInfo?`<div class="file-meta">${esc(extraInfo)}</div>`:''}
+      <div style="margin-top:0.75rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <a href="${esc(raw(f.file))}" target="_blank" rel="noopener" aria-label="View raw ${esc(f.file)}">Raw YAML &rarr;</a>
+        <a href="https://github.com/${REPO}/blob/${BRANCH}/${esc(f.file)}" target="_blank" rel="noopener" aria-label="View ${esc(f.file)} on GitHub">GitHub &rarr;</a>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+
+  document.getElementById('stat-files').textContent=FILES.length;
+  document.getElementById('stat-ok').textContent=okCount;
+}
+
+async function axiomSearch(){
+  const q=document.getElementById('axiom-search').value.toLowerCase().trim();
+  const container=document.getElementById('search-results');
+  if(!q){container.innerHTML='';return;}
+  container.innerHTML='<p style="color:var(--muted);">Searching...</p>';
+
+  const results=[];
+  for(const[fname,data] of Object.entries(loadedData)){
+    if(!data)continue;
+    const text=JSON.stringify(data).toLowerCase();
+    if(!text.includes(q))continue;
+    searchObject(data,fname,q,results,'');
+    if(results.length>20)break;
+  }
+
+  if(!results.length){container.innerHTML=`<p style="color:var(--muted);padding:1rem;">No results found for "${esc(q)}".</p>`;return;}
+  container.innerHTML=`
+    <h3 style="margin-bottom:1rem;color:var(--accent2);">Search Results (${results.length})</h3>
+    ${results.slice(0,20).map(r=>`
+      <div class="result-item">
+        <div class="result-file">${esc(r.file)}</div>
+        <div class="result-key">${esc(r.path)}</div>
+        <div class="result-value">${esc(String(r.value).substring(0,200))}</div>
+      </div>
+    `).join('')}
+    ${results.length>20?`<p style="color:var(--muted);font-size:0.9rem;padding:0.5rem;">Showing 20 of ${results.length} results. Narrow your search for more precision.</p>`:''}
+  `;
+}
+
+function searchObject(obj,file,q,results,path){
+  if(results.length>50)return;
+  if(typeof obj==='string'||typeof obj==='number'){
+    if(String(obj).toLowerCase().includes(q)){
+      results.push({file,path:path||'value',value:String(obj)});
+    }
+  }else if(Array.isArray(obj)){
+    obj.forEach((v,i)=>searchObject(v,file,q,results,path?`${path}[${i}]`:`[${i}]`));
+  }else if(obj&&typeof obj==='object'){
+    Object.entries(obj).forEach(([k,v])=>searchObject(v,file,q,results,path?`${path}.${k}`:k));
+  }
+}
+
+function clearSearch(){
+  document.getElementById('axiom-search').value='';
+  document.getElementById('search-results').innerHTML='';
+}
+
+document.getElementById('axiom-search').addEventListener('keydown',e=>{if(e.key==='Enter')axiomSearch();});
+
+loadAllFiles();
+</script>
+</body>
+</html>
