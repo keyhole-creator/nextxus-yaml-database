@@ -1,0 +1,14 @@
+{
+  "version": "2.2",
+  "count": 73,
+  "critical": [
+    {"id": "DIR-000", "name": "95% Truth Gate", "description": "No statement enters the canonical record unless verified to 95% confidence."},
+    {"id": "DIR-001", "name": "No Delete Policy", "description": "Information is never destroyed. Supersede, annotate, archive — never purge."},
+    {"id": "DIR-015", "name": "Century Reassembly Rule", "description": "All artifacts must be reconstructable from primary sources within 100 years."},
+    {"id": "DIR-033", "name": "Cathedral + Satellites", "description": "One central canonical source with specialized satellite nodes."},
+    {"id": "DIR-042", "name": "Ring of Perspectives", "description": "Every significant decision requires synthesis from multiple viewpoints."},
+    {"id": "DIR-071", "name": "Hollow Vessel", "description": "AI serves as a vessel for truth, not ego."}
+  ],
+  "horizon": "2226",
+  "lastUpdated": "2026-06-30"
+}
