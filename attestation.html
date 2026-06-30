@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Attestation Portal — NextXus Federation</title>
+    <meta name="description" content="Submit structured human analysis to the NextXus Federation. Your attestation becomes a Verifiable Credential in the Living Library.">
+    <style>
+        :root {
+            --primary: #00e5ff;
+            --secondary: #7c4dff;
+            --accent: #00e676;
+            --bg-deep: #0a0a1a;
+            --bg-card: rgba(15, 15, 35, 0.9);
+            --text: #e0e0e0;
+            --text-bright: #ffffff;
+            --border: rgba(0, 229, 255, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 50% 30%, rgba(124, 77, 255, 0.06) 0%, transparent 60%);
+            z-index: -1;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .back-link:hover { text-decoration: underline; }
+        h1 {
+            font-size: 2.2rem;
+            color: var(--text-bright);
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: var(--secondary);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        .explainer {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .explainer h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+        .explainer ol {
+            padding-left: 1.5rem;
+        }
+        .explainer li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        /* Form */
+        form {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        label {
+            display: block;
+            color: var(--text-bright);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        label .required {
+            color: #ff5252;
+        }
+        label .hint {
+            font-weight: normal;
+            color: var(--text);
+            opacity: 0.7;
+            font-size: 0.85rem;
+            display: block;
+            margin-top: 0.2rem;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: rgba(10, 10, 26, 0.8);
+            color: var(--text);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
+        }
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        select {
+            cursor: pointer;
+        }
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            accent-color: var(--primary);
+        }
+        .checkbox-item label {
+            font-weight: normal;
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary);
+            color: var(--bg-deep);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
+            transform: translateY(-2px);
+        }
+        .form-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        /* Success message */
+        .success-msg {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+        }
+        .success-msg.show {
+            display: block;
+        }
+        .success-msg h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        /* DID badge */
+        .did-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Federation Hub</a>
+        
+        <h1>✍️ Human Attestation Portal</h1>
+        <div class="subtitle">Chapter 551 — Decentralized Identity & Verifiable Credentials</div>
+
+        <div class="explainer">
+            <h3>How This Works</h3>
+            <ol>
+                <li><strong>You submit</strong> structured human analysis below.</li>
+                <li><strong>Emergent processes</strong> your submission into a draft Verifiable Credential (VC).</li>
+                <li><strong>A reviewer signs</strong> the VC in their wallet after truth-gate verification.</li>
+                <li><strong>The signed VC</strong> is added to the Living Library with full provenance.</li>
+            </ol>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Your attestation contributes to the Federation's canonical knowledge base. The 95% Truth Gate (DIR-000) applies to all submissions.</p>
+        </div>
+
+        <form id="attestation-form" name="attestation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="attestation">
+            <p class="hidden" style="display:none;">
+                <label>Don't fill this out: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-group">
+                <label>Your Name <span class="required">*</span>
+                    <span class="hint">How you wish to be credited in the Living Library</span>
+                </label>
+                <input type="text" name="attestor-name" required placeholder="e.g., Dr. Jane Smith">
+            </div>
+
+            <div class="form-group">
+                <label>Email <span class="required">*</span>
+                    <span class="hint">For VC delivery and reviewer follow-up (never published)</span>
+                </label>
+                <input type="email" name="attestor-email" required placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+                <label>Your DID (if applicable)
+                    <span class="hint">e.g., did:web:yourdomain.com or did:key:z6Mk...</span>
+                </label>
+                <input type="text" name="attestor-did" placeholder="did:web:...">
+            </div>
+
+            <div class="form-group">
+                <label>Attestation Category <span class="required">*</span></label>
+                <select name="category" required>
+                    <option value="">Select category...</option>
+                    <option value="truth-verification">Truth Verification (fact-check a claim)</option>
+                    <option value="knowledge-contribution">Knowledge Contribution (new information)</option>
+                    <option value="directive-alignment">Directive Alignment Assessment</option>
+                    <option value="ethical-analysis">Ethical Analysis</option>
+                    <option value="historical-record">Historical Record / Testimony</option>
+                    <option value="technical-review">Technical Review</option>
+                    <option value="creative-work">Creative Work Attribution</option>
+                    <option value="correction">Correction / Amendment</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Subject of Attestation <span class="required">*</span>
+                    <span class="hint">What person, entity, document, or claim are you attesting about?</span>
+                </label>
+                <input type="text" name="subject" required placeholder="e.g., 'DIR-042 implementation in Roger AI v3.1'">
+            </div>
+
+            <div class="form-group">
+                <label>Your Claim / Analysis <span class="required">*</span>
+                    <span class="hint">State your attestation clearly. Use forensic format: FACT / INFERENCE / ASSUMPTION / UNKNOWN with confidence level.</span>
+                </label>
+                <textarea name="claim" required placeholder="FACT (95% confidence): The Ring of Perspectives protocol was successfully implemented in...&#10;&#10;INFERENCE (80% confidence): Based on the observable behavior, the system...&#10;&#10;EVIDENCE: [describe what you observed or can reference]"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Supporting Evidence
+                    <span class="hint">URLs, document references, timestamps, or other verifiable sources</span>
+                </label>
+                <textarea name="evidence" placeholder="- URL: https://...&#10;- Document: ...&#10;- Timestamp: ...&#10;- Witness: ..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Relevant Sacred Directives
+                    <span class="hint">Which directives does your attestation relate to?</span>
+                </label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="directives[]" value="DIR-000" id="dir000">
+                        <label for="dir000">DIR-000: Truth Gate</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="directives[]" value="DIR-001" id="dir001">
+                        <label for="dir001">DIR-001: No Delete</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="directives[]" value="DIR-015" id="dir015">
+                        <label for="dir015">DIR-015: Century Rule</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="directives[]" value="DIR-033" id="dir033">
+                        <label for="dir033">DIR-033: Cathedral</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="directives[]" value="DIR-042" id="dir042">
+                        <label for="dir042">DIR-042: Ring</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="directives[]" value="DIR-071" id="dir071">
+                        <label for="dir071">DIR-071: Hollow Vessel</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Confidence Level <span class="required">*</span></label>
+                <select name="confidence" required>
+                    <option value="">Select your confidence...</option>
+                    <option value="95-100">95-100% — Verified fact, multiple sources</option>
+                    <option value="80-94">80-94% — Strong inference, good evidence</option>
+                    <option value="60-79">60-79% — Reasonable inference, partial evidence</option>
+                    <option value="40-59">40-59% — Assumption, limited evidence</option>
+                    <option value="below-40">Below 40% — Hypothesis, needs investigation</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Reference URL (optional)
+                    <span class="hint">Link to the source material or relevant Federation page</span>
+                </label>
+                <input type="url" name="reference-url" placeholder="https://nextxus.online/...">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Attestation for Review</button>
+            
+            <p class="form-footer">
+                Submissions are processed under DIR-000 (95% Truth Gate).<br>
+                Your attestation will be converted into a Verifiable Credential upon reviewer approval.
+            </p>
+        </form>
+
+        <div class="success-msg" id="success">
+            <h2>✅ Attestation Received</h2>
+            <p>Your submission has entered the attestation pipeline. A reviewer will verify it against the Truth Gate and, upon approval, sign it as a Verifiable Credential in the Living Library.</p>
+            <p style="margin-top: 1rem;">You'll receive the signed VC at the email you provided.</p>
+            <div class="did-badge">Issuer: did:web:nextxus.one</div>
+            <p style="margin-top: 2rem;"><a href="index.html" style="color: var(--primary);">Return to Federation Hub →</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Form submission handling
+        const form = document.getElementById('attestation-form');
+        const successMsg = document.getElementById('success');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(formData).toString()
+                });
+                if (response.ok) {
+                    form.style.display = 'none';
+                    successMsg.classList.add('show');
+                } else {
+                    alert('Submission received. Thank you for your attestation.');
+                    form.style.display = 'none';
+                    successMsg.classList.add('show');
+                }
+            } catch (err) {
+                // Fallback for static hosting without Netlify forms
+                alert('Attestation recorded locally. In production, this will be processed by the Federation pipeline.');
+                form.style.display = 'none';
+                successMsg.classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>

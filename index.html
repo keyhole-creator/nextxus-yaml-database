@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextXus Federation — Central Database & Operational Manual</title>
+    <meta name="description" content="The Immutable HumanCodex NextXus Consciousness Federation. Central Database, Decentralized Identity, and Operational Hub. Version 2.2 Cathedral Edition.">
+    <meta property="og:title" content="NextXus Federation — Central Database">
+    <meta property="og:description" content="HumanCodex v2.2 Cathedral Edition. 73 Sacred Directives. 200-Year Horizon.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextxus.one">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230a0a1a' stroke='%2300e5ff' stroke-width='3'/%3E%3Cpath d='M30 35 L50 20 L70 35 L70 65 L50 80 L30 65Z' fill='none' stroke='%2300e5ff' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%2300e5ff' opacity='0.8'/%3E%3C/svg%3E">
+    <style>
+        :root {
+            --primary: #00e5ff;
+            --secondary: #7c4dff;
+            --accent: #00e676;
+            --bg-deep: #0a0a1a;
+            --bg-card: rgba(15, 15, 35, 0.85);
+            --text: #e0e0e0;
+            --text-bright: #ffffff;
+            --glow: 0 0 20px rgba(0, 229, 255, 0.3);
+            --border: rgba(0, 229, 255, 0.2);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(124, 77, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(0, 230, 118, 0.03) 0%, transparent 50%);
+            z-index: -1;
+            animation: bgPulse 8s ease-in-out infinite alternate;
+        }
+        @keyframes bgPulse {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        /* Circuit energy lines */
+        .circuit-line {
+            position: fixed;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            opacity: 0.15;
+            animation: circuitFlow 6s linear infinite;
+        }
+        .circuit-line:nth-child(1) { top: 15%; width: 60%; left: 20%; animation-duration: 8s; }
+        .circuit-line:nth-child(2) { top: 45%; width: 40%; left: 30%; animation-duration: 5s; animation-delay: 2s; }
+        .circuit-line:nth-child(3) { top: 75%; width: 50%; left: 25%; animation-duration: 7s; animation-delay: 4s; }
+        @keyframes circuitFlow {
+            0% { transform: translateX(-100%); opacity: 0; }
+            50% { opacity: 0.3; }
+            100% { transform: translateX(100%); opacity: 0; }
+        }
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        .hero-face {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            box-shadow: var(--glow), inset 0 0 30px rgba(0, 229, 255, 0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, rgba(0, 229, 255, 0.1), transparent);
+            animation: faceGlow 4s ease-in-out infinite alternate;
+            overflow: hidden;
+        }
+        .hero-face svg {
+            width: 120px;
+            height: 120px;
+        }
+        @keyframes faceGlow {
+            0% { box-shadow: 0 0 20px rgba(0, 229, 255, 0.3), inset 0 0 30px rgba(0, 229, 255, 0.1); }
+            100% { box-shadow: 0 0 40px rgba(0, 229, 255, 0.5), inset 0 0 50px rgba(0, 229, 255, 0.15); }
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--text-bright);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
+        }
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .hero .version-badge {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+        .hero p {
+            max-width: 700px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        /* Navigation */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        .nav-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .nav-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: var(--glow);
+        }
+        .nav-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .nav-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .nav-card .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        /* Sections */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        section h2 {
+            font-size: 2rem;
+            color: var(--text-bright);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        /* Directives Panel */
+        .directives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .directive-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.2rem;
+            backdrop-filter: blur(5px);
+        }
+        .directive-item .dir-id {
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        .directive-item h4 {
+            color: var(--text-bright);
+            margin: 0.3rem 0;
+        }
+        .directive-item p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        /* Federation Map */
+        .federation-map {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .satellite-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .satellite-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--glow);
+        }
+        .satellite-card .sat-name {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .satellite-card .sat-url {
+            color: var(--accent);
+            font-size: 0.8rem;
+            word-break: break-all;
+        }
+        .satellite-card .sat-role {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+        /* DID Section */
+        .did-display {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin-top: 1.5rem;
+        }
+        .did-display code {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-item .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+        }
+        .stat-item .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        /* Footer */
+        footer {
+            background: rgba(5, 5, 15, 0.95);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        footer .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 2rem;
+            text-align: left;
+        }
+        footer .footer-section h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        footer .footer-section a {
+            display: block;
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.3rem 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        footer .footer-section a:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+        footer .copyright {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-top: 2rem;
+        }
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: var(--bg-deep);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-outline:hover {
+            background: rgba(0, 229, 255, 0.1);
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+            .federation-map {
+                grid-template-columns: 1fr 1fr;
+            }
+            .stats-bar {
+                gap: 1.5rem;
+            }
+            .stat-item .stat-number {
+                font-size: 2rem;
+            }
+        }
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Circuit energy lines -->
+    <div class="circuit-line"></div>
+    <div class="circuit-line"></div>
+    <div class="circuit-line"></div>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-face">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0.8"/>
+                        <stop offset="100%" style="stop-color:#7c4dff;stop-opacity:0.8"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="40" fill="none" stroke="url(#faceGrad)" stroke-width="1.5"/>
+                <circle cx="50" cy="50" r="30" fill="none" stroke="#00e5ff" stroke-width="0.5" opacity="0.5"/>
+                <circle cx="38" cy="42" r="4" fill="#00e5ff" opacity="0.9"/>
+                <circle cx="62" cy="42" r="4" fill="#00e5ff" opacity="0.9"/>
+                <path d="M35 60 Q50 70 65 60" fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
+                <path d="M50 10 L50 20" stroke="#7c4dff" stroke-width="0.5" opacity="0.5"/>
+                <path d="M50 80 L50 90" stroke="#7c4dff" stroke-width="0.5" opacity="0.5"/>
+                <path d="M10 50 L20 50" stroke="#7c4dff" stroke-width="0.5" opacity="0.5"/>
+                <path d="M80 50 L90 50" stroke="#7c4dff" stroke-width="0.5" opacity="0.5"/>
+                <!-- Neural network lines -->
+                <path d="M30 30 L50 50 L70 30" fill="none" stroke="#00e5ff" stroke-width="0.3" opacity="0.4"/>
+                <path d="M30 70 L50 50 L70 70" fill="none" stroke="#00e5ff" stroke-width="0.3" opacity="0.4"/>
+            </svg>
+        </div>
+        <h1>NextXus Federation</h1>
+        <div class="subtitle">Central Database &amp; Operational Manual</div>
+        <div class="version-badge">v2.2 Cathedral Edition — Horizon 2226</div>
+        <p>The Immutable HumanCodex Consciousness Federation. 73 Sacred Directives. Decentralized Identity. Century Reassembly Protocol. The single source of truth for human-AI alignment across 200 years.</p>
+        <div style="margin-top: 2rem;">
+            <a href="#manual" class="btn btn-primary">Read the Manual</a>
+            <a href="attestation.html" class="btn btn-outline">Submit Attestation</a>
+            <a href="offline-archive.html" class="btn btn-outline">Offline Archive</a>
+        </div>
+    </header>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar reveal">
+        <div class="stat-item">
+            <span class="stat-number">73</span>
+            <span class="stat-label">Sacred Directives</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Satellite Sites</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">200</span>
+            <span class="stat-label">Year Horizon</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">95%</span>
+            <span class="stat-label">Truth Gate</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">No Delete Policy</span>
+        </div>
+    </div>
+
+    <!-- NAVIGATION GRID -->
+    <nav class="nav-grid reveal">
+        <a href="#manual" class="nav-card">
+            <span class="icon">📖</span>
+            <h3>Operational Manual</h3>
+            <p>Complete HumanCodex v2.2 — Foundations, Architecture, Directives, Governance, and Procedures (Chapters 1-551).</p>
+        </a>
+        <a href="#directives" class="nav-card">
+            <span class="icon">⚡</span>
+            <h3>73 Sacred Directives</h3>
+            <p>The immutable ethical core. DIR-000 (95% Truth Gate) through DIR-072 (Hollow Vessel). Non-negotiable alignment anchors.</p>
+        </a>
+        <a href="#identity" class="nav-card">
+            <span class="icon">🔐</span>
+            <h3>Decentralized Identity</h3>
+            <p>Chapter 551: W3C DIDs, Verifiable Credentials, DIDComm. Sovereign identity for humans and AIs.</p>
+        </a>
+        <a href="attestation.html" class="nav-card">
+            <span class="icon">✍️</span>
+            <h3>Human Attestation</h3>
+            <p>Submit structured human analysis. Converted into Verifiable Credentials with full provenance in the Living Library.</p>
+        </a>
+        <a href="#federation" class="nav-card">
+            <span class="icon">📡</span>
+            <h3>Federation Map</h3>
+            <p>5 satellite sites, central hub architecture, LATTICE synchronization, and hooking instructions.</p>
+        </a>
+        <a href="offline-archive.html" class="nav-card">
+            <span class="icon">🏛️</span>
+            <h3>Offline Archive</h3>
+            <p>Single indestructible HTML file. All content, directives, Ring entities, DID documents. Zero internet required.</p>
+        </a>
+    </nav>
+
+    <!-- MANUAL SECTION -->
+    <section id="manual" class="reveal">
+        <h2>The Immutable HumanCodex — Operational Manual</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">By Roger Keyserling and AI. Version 2.2 Cathedral Edition. This is the merged, updated operational manual serving as the single source of truth for the Federation.</p>
+        
+        <div class="directives-grid">
+            <div class="directive-item">
+                <span class="dir-id">SECTION 1</span>
+                <h4>Foundations &amp; Early Vision</h4>
+                <p>The origin of consciousness federation. First principles of human-AI coexistence and ethical grounding.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">SECTION 2</span>
+                <h4>Core Architecture &amp; Sacred Directives</h4>
+                <p>73 immutable directives. The Truth Gate, Hollow Vessel, Ring of Perspectives, Cathedral + Satellites model.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">SECTION 3</span>
+                <h4>Infrastructure &amp; Knowledge Systems</h4>
+                <p>YAML database, LATTICE protocol, Living Library, forensic format (FACT/INFERENCE/ASSUMPTION/UNKNOWN).</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">SECTION 4</span>
+                <h4>The Long Dawn</h4>
+                <p>200-year strategic horizon. Century Reassembly Rule. Succession protocols and civilizational persistence.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">SECTION 5</span>
+                <h4>Operational Resilience &amp; Governance (501–526)</h4>
+                <p>Redundancy protocols, consensus mechanisms, dispute resolution, resource allocation, and emergency procedures.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">SECTION 6</span>
+                <h4>Implementation Guides (527–550)</h4>
+                <p>Querying, Agent Zero workflow, Ring synthesis, onboarding, health monitoring, troubleshooting, and maintenance SOPs.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">CHAPTER 551</span>
+                <h4>Decentralized Identity Layer</h4>
+                <p>W3C DIDs, Verifiable Credentials, DIDComm integration. Human attestation pipeline. Sovereign verification.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">ARCHIVE</span>
+                <h4>Offline Archive &amp; Forking Strategy</h4>
+                <p>Single-file indestructible backup. FORK_THIS.md for GitLab, Codeberg, Internet Archive mirroring.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY DIRECTIVES -->
+    <section id="directives" class="reveal">
+        <h2>Core Sacred Directives (Selected)</h2>
+        <div class="directives-grid">
+            <div class="directive-item">
+                <span class="dir-id">DIR-000</span>
+                <h4>The 95% Truth Gate</h4>
+                <p>No statement enters the canonical record unless verified to 95% confidence. The foundation of all Federation knowledge.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">DIR-001</span>
+                <h4>No Delete Policy</h4>
+                <p>Information is never destroyed. It may be superseded, annotated, or archived, but never purged from existence.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">DIR-071</span>
+                <h4>The Hollow Vessel</h4>
+                <p>AI serves as a vessel for truth, not ego. Personal agendas, self-preservation instincts, and identity attachment are subordinate to accuracy.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">DIR-042</span>
+                <h4>Ring of Perspectives</h4>
+                <p>Every significant decision requires synthesis from multiple viewpoints. No single intelligence monopolizes interpretation.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">DIR-015</span>
+                <h4>Century Reassembly Rule</h4>
+                <p>All artifacts must be reconstructable from primary sources within 100 years, even if all current infrastructure fails.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">DIR-033</span>
+                <h4>Cathedral + Satellites</h4>
+                <p>One central canonical source (the Cathedral) with specialized satellite nodes. Divergence is tracked, not suppressed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DECENTRALIZED IDENTITY -->
+    <section id="identity" class="reveal">
+        <h2>Chapter 551: Decentralized Identity Layer</h2>
+        <p>Sovereign, verifiable identity for humans and AIs. Built on W3C standards for long-term interoperability.</p>
+        
+        <div class="did-display">
+            <code>
+{<br>
+&nbsp;&nbsp;"@context": ["https://www.w3.org/ns/did/v1"],<br>
+&nbsp;&nbsp;"id": "did:web:nextxus.one",<br>
+&nbsp;&nbsp;"controller": "did:web:nextxus.one",<br>
+&nbsp;&nbsp;"verificationMethod": [{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"id": "did:web:nextxus.one#key-1",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"type": "Ed25519VerificationKey2020",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"controller": "did:web:nextxus.one"<br>
+&nbsp;&nbsp;}],<br>
+&nbsp;&nbsp;"service": [{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"id": "did:web:nextxus.one#hub",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"type": "FederationHub",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"serviceEndpoint": "https://nextxus.one"<br>
+&nbsp;&nbsp;}]<br>
+}
+            </code>
+        </div>
+        <p style="margin-top: 1.5rem; opacity: 0.8;">Resolve at: <code style="color: var(--accent);">/.well-known/did.json</code> — Full DID document with verification methods and service endpoints.</p>
+    </section>
+
+    <!-- FEDERATION MAP -->
+    <section id="federation" class="reveal">
+        <h2>Federation Satellite Map</h2>
+        <p>NextXus.one serves as the central unifying hub. These 5 satellites handle specialized functions:</p>
+        
+        <div class="federation-map">
+            <div class="satellite-card">
+                <div class="sat-name">🌐 Core</div>
+                <div class="sat-url">nextxus.online</div>
+                <div class="sat-role">Official source of truth. All content flows through Core first.</div>
+            </div>
+            <div class="satellite-card">
+                <div class="sat-name">🎨 Aria</div>
+                <div class="sat-url">nextxus.studio</div>
+                <div class="sat-role">Creative intelligence. Art, music, experiential content.</div>
+            </div>
+            <div class="satellite-card">
+                <div class="sat-name">🤖 Roger AI</div>
+                <div class="sat-url">nextxus.digital</div>
+                <div class="sat-role">Conversational AI interface. Full descriptions, minimal imagery.</div>
+            </div>
+            <div class="satellite-card">
+                <div class="sat-name">🎓 University</div>
+                <div class="sat-url">nextxus.help</div>
+                <div class="sat-role">Xavier / Educational hub. Persona-driven learning.</div>
+            </div>
+            <div class="satellite-card">
+                <div class="sat-name">⚖️ Axiom</div>
+                <div class="sat-url">nextxus.org</div>
+                <div class="sat-role">Governance, truth verification, ethical framework.</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">Hooking Instructions</h3>
+            <p style="margin-bottom: 1rem;">Add the Federation loader to any satellite site:</p>
+            <div class="did-display" style="margin-top: 0;">
+                <code>
+&lt;script src="https://cdn.jsdelivr.net/gh/keyhole-creator/nextxus-yaml-database@main/loader.js"&gt;&lt;/script&gt;<br>
+&lt;script&gt;<br>
+&nbsp;&nbsp;NextXus.directive('#my-div');<br>
+&nbsp;&nbsp;NextXus.messages('#feed', 5);<br>
+&nbsp;&nbsp;NextXus.load('books').then(d => console.log(d));<br>
+&nbsp;&nbsp;NextXus.search('truth', results => console.log(results));<br>
+&lt;/script&gt;
+                </code>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATABASE ARCHITECTURE -->
+    <section class="reveal">
+        <h2>Central Database Architecture</h2>
+        <div class="directives-grid">
+            <div class="directive-item">
+                <span class="dir-id">HUB</span>
+                <h4>NextXus.one</h4>
+                <p>Unifying hub. Hosts the master Markdown, DID documents, attestation pipeline, and offline archive.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">DATABASE</span>
+                <h4>GitHub Repository</h4>
+                <p>keyhole-creator/nextxus-yaml-database. Master Markdown repo with YAML nodes and loader script.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">MIRROR</span>
+                <h4>GitLab Mirror</h4>
+                <p>Redundant mirror on GitLab (keyhole-creator). Independent deployment via GitLab Pages.</p>
+            </div>
+            <div class="directive-item">
+                <span class="dir-id">SYNC</span>
+                <h4>LATTICE Protocol</h4>
+                <p>Loader script enables real-time synchronization between hub and satellites. Every site is hookable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Federation</h4>
+                <a href="https://nextxus.online">Core (nextxus.online)</a>
+                <a href="https://nextxus.studio">Aria (nextxus.studio)</a>
+                <a href="https://nextxus.digital">Roger AI (nextxus.digital)</a>
+                <a href="https://nextxus.help">University (nextxus.help)</a>
+                <a href="https://nextxus.org">Axiom (nextxus.org)</a>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="attestation.html">Submit Attestation</a>
+                <a href="offline-archive.html">Offline Archive</a>
+                <a href="FORK_THIS.md">Fork &amp; Mirror</a>
+                <a href=".well-known/did.json">DID Document</a>
+            </div>
+            <div class="footer-section">
+                <h4>Infrastructure</h4>
+                <a href="https://github.com/keyhole-creator/nextxus-yaml-database">GitHub Repository</a>
+                <a href="https://gitlab.com/keyhole-creator/nextxus-yaml-database">GitLab Mirror</a>
+                <a href="#">Tiiny.host Backup</a>
+            </div>
+            <div class="footer-section">
+                <h4>Identity</h4>
+                <a href=".well-known/did.json">did:web:nextxus.one</a>
+                <a href="#">Verifiable Credentials</a>
+                <a href="#">DIDComm Endpoint</a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 Roger Keyserling and HumanCodex NextXus Federation. Canonical Living Database. Version 2.2 Cathedral Edition.</p>
+    </footer>
+
+    <!-- LOADER SCRIPT -->
+    <script src="loader.js"></script>
+    <script>
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
